@@ -1033,7 +1033,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'HE-62', game: [-4429, 3684], pixel: [-236, 347], desc: 'Top Left' },
             { id: 'AK-629', game: [4541, 3162], pixel: [-396, 3035], desc: 'Top Right' },
             { id: 'NE-880', game: [4536, -3664], pixel: [-2442, 3041], desc: 'Bottom Right' },
-            { id: 'GE-220', game: [-4909, -1246], pixel: [-2350, 325], desc: 'Bottom Left' },
+            { id: 'GE-220', game: [-4909, -1246], pixel: [-1724, 206], desc: 'Bottom Left' },
             { id: 'HR-465', game: [-254, 424], pixel: [-1328, 1607], desc: 'Center' },
             { id: 'EL-561', game: [770, 2856], pixel: [-446, 2054], desc: 'Eldin Mountains' }
         ],
@@ -1213,6 +1213,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (korok.id === 'GE-290') return { ...processKorokData(korok), coordinates: [-2303, 1087] };
         if (korok.id === 'GE-291') return { ...processKorokData(korok), coordinates: [-2265, 1190] };
         if (korok.id === 'GE-292') return { ...processKorokData(korok), coordinates: [-2235, 1241] };
+        if (korok.id === 'GE-238') return { ...processKorokData(korok), coordinates: [-1615, 589] };
+        if (korok.id === 'GE-219') return { ...processKorokData(korok), coordinates: [-1950, 359] };
+        if (korok.id === 'GE-217') return { ...processKorokData(korok), coordinates: [-1986, 334] };
+        if (korok.id === 'GE-215') return { ...processKorokData(korok), coordinates: [-2019, 333] };
+        if (korok.id === 'GE-214') return { ...processKorokData(korok), coordinates: [-2077, 276] };
         // ... existing code ...
         // Special handling for EL-561 to use exact pixel coordinates
         if (korok.id === 'EL-561') {
@@ -1354,7 +1359,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 HE-62 (Top Left): [-4429, 3684] -> [-236, 347]<br>
                 AK-629 (Top Right): [4541, 3162] -> [-396, 3035]<br>
                 NE-880 (Bottom Right): [4536, -3664] -> [-2442, 3041]<br>
-                GE-220 (Bottom Left): [-4909, -1246] -> [-2350, 325]<br>
+                GE-220 (Bottom Left): [-4909, -1246] -> [-1724, 206]<br>
                 HR-465 (Center): [-254, 424] -> [-1328, 1607]
             `)
             .openOn(map);
@@ -1363,6 +1368,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- Region-specific calibration for GERUDO markers ---
 const GERUDO_ANCHORS = [
+    { game: [-4909, -1246], pixel: [-1724, 206] }, // GE-220
+    { game: [-4538, -1348], pixel: [-1744, 311] }, // GE-222
+    { game: [-4691, -1235], pixel: [-1725, 271] }, // GE-221
+    { game: [-4321, -1089], pixel: [-1681, 379] }, // GE-227
+    { game: [-4389,  -714], pixel: [-1561, 354] }, // GE-226
+    { game: [-4508,  -590], pixel: [-1523, 320] }, // GE-223
+    { game: [-4376,  -525], pixel: [-1504, 332] }, // GE-225
+    { game: [-3968,  -324], pixel: [-1445, 477] }, // GE-230
+    { game: [-3621,  -403], pixel: [-1470, 586] }, // GE-233
+    { game: [-3359,  -916], pixel: [-1615, 589] }, // GE-238
+    // ... keep the previous 12 anchor points for coverage ...
     { game: [-994, -3254], pixel: [-2315, 1384] }, // GE-299
     { game: [-1152, -3304], pixel: [-2336, 1329] }, // GE-298
     { game: [-1179, -3509], pixel: [-2394, 1322] }, // GE-297
