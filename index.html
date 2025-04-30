@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Hyrule Surface Korok Map</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            .filters {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            
+            select, label {
+                width: 100%;
+                padding: 8px;
+                font-size: 16px; /* Prevents iOS zoom on focus */
+            }
+            
+            #map {
+                height: calc(100vh - 150px); /* Adjust for header and footer */
+            }
+            
+            .korok-popup {
+                min-width: 200px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hyrule Surface Korok Map</h1>
+        <div class="filters">
+            <select id="region-filter">
+                <option value="all">All Regions</option>
+            </select>
+            <select id="location-filter">
+                <option value="all">All Locations</option>
+            </select>
+            <label>
+                <input type="checkbox" id="show-found" checked>
+                Show Found Koroks
+            </label>
+        </div>
+    </header>
+
+    <div id="map"></div>
+
+    <footer>
+        <div class="stats">
+            Found: <span id="found-count">0</span> / <span id="total-count">0</span>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="map.js"></script>
+</body>
+</html> 

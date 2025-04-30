@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Hylia Serif Beta';
+    src: url('images/HyliaSerifBeta-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Hylia Serif Beta', Arial, sans-serif;
+}
+
+header {
+    background-color: #1A4D2E;
+    color: #FFC72C;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+select {
+    font-family: 'Hylia Serif Beta', Arial, sans-serif;
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: white;
+    color: #1A4D2E;
+    border: 1px solid #FFC72C;
+}
+
+/* Map styles */
+#map {
+    flex-grow: 1;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1A4D2E;
+    color: #FFC72C;
+    padding: 10px;
+    text-align: center;
+}
+
+.stats {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content {
+    margin: 0.5rem;
+}
+
+.popup-content {
+    padding: 0.5rem;
+}
+
+.popup-content h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.popup-content p {
+    margin: 0.25rem 0;
+    color: #34495e;
+}
+
+.popup-content button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.popup-content button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    select {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+.korok-popup {
+    text-align: center;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.korok-popup h3 {
+    color: #1A4D2E;
+    margin-bottom: 8px;
+}
+
+.korok-popup p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.korok-popup button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Hylia Serif Beta', Arial, sans-serif;
+    transition: background-color 0.3s;
+}
+
+.korok-popup button:hover {
+    background-color: #219a52;
+}
+
+.korok-popup button.found {
+    background-color: #7f8c8d;
+}
+
+.marker-found {
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .filters {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+.filter-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFC72C;
+    cursor: pointer;
+    font-family: 'Hylia Serif Beta', Arial, sans-serif;
+}
+
+.filter-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #FFC72C;
+}
+
+@media (max-width: 768px) {
+    .filter-label {
+        margin: 5px 0;
+    }
+} 

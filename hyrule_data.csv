@@ -1,0 +1,943 @@
+ID,Coordinates (X),Coordinates (Y),Coordinates (Z),Region,Location,Puzzle Type,Description,Found
+HE-62,-4429,3684,0307,Hebra,Hebra Northwest Range,Lift Rock,On the little plateau,FALSE
+HE-63,-4508,3465,0260,Hebra,Hebra West Range,Lift Rock,South Southwest from the Otak Shrine on a little plateau near the edge of the map,FALSE
+HE-64,-4272,3499,0390,Hebra,Sherfin's Secret Hot Springs,Flowers,Small overlook above the Hot Spring,FALSE
+HE-65,-4422,3215,0391,Hebra,Hebra West Summit,Shield Surf,At the peak,FALSE
+HE-66,-3992,3835,0220,Hebra,Hebra North Range,Fly,Fly over to the target,FALSE
+HE-67,-3971,3735,0183,Hebra,Hebra North Range,Shoot Target,Repair the skeleton in Great Fossil Hebra Cave,FALSE
+HE-68,-3975,3713,0235,Hebra,Hebra North Summit,Shoot Target,Repair the skeleton in Great Fossil Hebra Cave,FALSE
+HE-69,-4005,3623,0524,Hebra,Hebra North Summit,Lift Rock,At the summit,FALSE
+HE-70,-4122,3430,0222,Hebra,Sturnida Basin,Find Friend,Bring his friend back from the East,FALSE
+HE-71,-4187,3374,0242,Hebra,Sturnida Basin,Build Puzzle,Side of the mountain next to the huge black rock,FALSE
+HE-72,-4249,3127,0194,Hebra,Hebra West Range,Chase Lights,Group of trees on the side of the mountain,FALSE
+HE-73,-4036,3365,0265,Hebra,Sturnida Basin,Lift Rock,On top of a small peak under a rock,FALSE
+HE-74,-4632,2820,0242,Hebra,Hebra West Summit,Shoot Target,At the edge of the world,FALSE
+HE-75,-4331,2602,0336,Hebra,Hebra West Summit,Build Puzzle,On the mountain peak,FALSE
+HE-76,-4479,1943,0162,Hebra,Lake Kilsie,Chase Lights,Top of the southern rock,FALSE
+HE-77,-4252,2145,0018,Hebra,Lake Kilsie,Build Puzzle,Wood frame with three statues,FALSE
+HE-78,-4261,2176,-0010,Hebra,Lake Kilsie,Find Friend,On the shore,FALSE
+HE-79,-4117,2414,-0013,Hebra,Lake Kilsie,Find Friend,On an island in the lake,FALSE
+HE-80,-4065,2505,0019,Hebra,Lake Kilsie,Rock Pattern,On a cliff above the lake,FALSE
+HE-81,-3851,2738,0029,Hebra,Lake Kilsie,Melt Ice,On a small cliff on the north end of Lake Kilsie,FALSE
+HE-82,-3751,2798,0137,Hebra,Lake Kilsie,Lift Rock,In the valley east of the north end of Lake Kilsie,FALSE
+HE-83,-3797,3028,0246,Hebra,Biron Snowshelf,Build Puzzle,In a small corner of the Biron Snowshelf,FALSE
+HE-84,-3948,3161,0322,Hebra,Biron Snowshelf,Block Puzzle,On top of the mountian,FALSE
+HE-85,-3852,3343,0308,Hebra,Biron Snowshelf,Flowers,"Follow the flowers from here, leading East",FALSE
+HE-86,-3839,3416,0275,Hebra,Biron Snowshelf,Ascend Through Stump,Under the cliff,FALSE
+HE-87,-3760,3844,0269,Hebra,Hebra North Crest,Chase Lights,Atop a high rock structure,FALSE
+HE-88,-3668,3385,0323,Hebra,Hebra Tundra,Find Friend,Bring the Korok to his friend in the West,FALSE
+HE-89,-3577,3265,0387,Hebra,Hebra Tundra,Lift Rock,In an ice block at the top of the mountain,FALSE
+HE-90,-3469,3471,0481,Hebra,Goflam's Secret Hot Spring,Shoot Target,On top of mountain,FALSE
+HE-91,-3414,3508,0436,Hebra,Goflam's Secret Hot Spring,Chase Lights,Top of the tree without leaves,FALSE
+HE-92,-3427,3799,0245,Hebra,Hebras North Crest,Chase Lights,Speed run to the light circle,FALSE
+HE-93,-3237,3687,0243,Hebra,Hebras North Crest,Find Friend,Bring his friend back,FALSE
+HE-94,-2892,3493,0246,Hebra,Hebras East Crest,Find Friend,Atop a rock near some trees,FALSE
+HE-95,-3001,3219,0560,Hebra,Selmie's Spot,Ascend Through Stump,Beneath the hanging rock,FALSE
+HE-96,-3351,2991,0515,Hebra,Hebra Tundra,Lift Rock,On top of the hill,FALSE
+HE-97,-3677,2466,0321,Hebra,Hebra South Summit,Burn Leaves,Atop the peak,FALSE
+HE-98,-3793,2324,0171,Hebra,Dronoc's Pass,Flowers,On the rooftop of the flight range building,FALSE
+HE-99,-3567,2256,0151,Hebra,Hebra Trailhead Lodge,Chase Lights,Sparkle cloud on the roof of the Rito chalet,FALSE
+HE-100,-3957,2036,0207,Hebra,Lake Totori,Lift Rock,Next to the cave entrance,FALSE
+HE-101,-4109,2048,0186,Hebra,Lake Totori,Block Puzzle,West of Lake Totori,FALSE
+HE-102,-3945,1969,0209,Hebra,Lake Totori,Lift Rock,At the top of the tree,FALSE
+HE-103,-4127,1938,0198,Hebra,Passer Hill,Flowers,"On the small mountain northwest of Passer Hill, in a small valley",FALSE
+HE-104,-4061,1794,0150,Hebra,Passer Hill,Ascend Through Stump,Under the rock overhang,FALSE
+HE-105,-4224,1739,0124,Hebra,Dragon Bone Mire,Flowers,Underneath the spine of the dragon bones in the northwest corner of Dragon Bone Mire,FALSE
+HE-106,-4169,1696,0110,Hebra,Dragon Bone Mire,Lift Rock,"In Dragon Bone Mire, on the small island in the mud",FALSE
+HE-107,-3876,1762,0111,Hebra,Rito Village,Block Puzzle,West of Rito Village on a cliffside,FALSE
+HE-108,-3984,1709,0179,Hebra,Passer Hill,Lift Rock,Top of the large tree,FALSE
+HE-109,-4008,1654,0173,Hebra,Passer Hill,Rock Pattern,The missing rock in on the ledge above,FALSE
+HE-110,-3774,1866,0260,Hebra,Lake Totori,Build Puzzle,On top of the highest pillar,FALSE
+HE-111,-3613,1878,0402,Hebra,Lake Totori,Lift Rock,At the highest point,FALSE
+HE-112,-3650,1805,0168,Hebra,Lake Totori,Lift Rock,"In a small ""cave"" immediately to the east of Gatakis Shrine",FALSE
+HE-113,-3551,1754,0183,Hebra,Lake Totori,Shoot Target,On top of rock near Rito Village,FALSE
+HE-114,-3696,1685,0102,Hebra,Lake Totori,Lift Rock,Southwest of Rito Village,FALSE
+HE-115,-3597,1535,0142,Hebra,Old Column Ruins,Flowers,Old column ruins,FALSE
+HE-116,-3820,1318,0287,Hebra,Cuho Mountain,Glide to Stump,Land on the platform to the west,FALSE
+HE-117,-3614,0987,0288,Hebra,Nero Hill,Find Friend,On top of the cube structure,FALSE
+HE-118,-3715,1039,0197,Hebra,Nero Hill,Ascend Through Stump,On the northwest side of Nero Hill,FALSE
+HE-119,-3557,0769,0187,Hebra,Piper Ridge,Find Friend,Bring his friend back,FALSE
+HE-120,-3820,0834,0124,Hebra,Rayne Highlands,Lift Rock,North of Rayne Highlands,FALSE
+HE-121,-3981,0929,0112,Hebra,Gisa Crater,Chase Lights,On top of the tree pointed by their arrows,FALSE
+HE-122,-4056,0773,0102,Hebra,Rayne Highlands,Place an Item,"West of Rayne Highlands, near the edge of the world",FALSE
+HE-123,-3965,0623,0188,Hebra,Rayne Highlands,Glide to Stump,On top of the pillar,FALSE
+HE-124,-3820,0175,0049,Hebra,Tanagar Canyon,Block Puzzle,Windmill,FALSE
+HE-125,-3599,0111,-0102,Hebra,Tanagar Canyon,Ascend Through Stump,Under the arch,FALSE
+HE-126,-3649,0511,0286,Hebra,Ancient Columns,Flowers,Top of pillar,FALSE
+HE-127,-3531,0491,0283,Hebra,Ancient Columns,Block Puzzle,Hanging over the edge of the mountain,FALSE
+HE-128,-3547,0576,0169,Hebra,Tabantha Frontier,Shoot Target,Underneath the rocky arch,FALSE
+HE-129,-3552,0594,0211,Hebra,Tabantha Frontier,Burn Leaves,On top of the rock pile,FALSE
+HE-130,-3540,0756,0186,Hebra,Piper Ridge,Catch Leaves,In the pond,FALSE
+HE-131,-3435,0708,0172,Hebra,Piper Ridge,Ascend Through Stump,In the small alcove,FALSE
+HE-132,-3443,0662,0250,Hebra,Piper Ridge,Flowers,On top of the column,FALSE
+HE-133,-3225,0578,0168,Hebra,Tabantha Great Bridge,Shoot Target,Under the bridge,FALSE
+HE-134,-3440,1314,0120,Hebra,Strock Lake,Build Puzzle,On a cliff along the eastern side of Strock Lake,FALSE
+HE-135,-3283,1340,0188,Hebra,Strock Lake,Lift Rock,Peak of the mountain,FALSE
+HE-136,-3148,1107,0156,Hebra,Kalomi Bridge,Lift Rock,On the cliffside by the black rock,FALSE
+HE-137,-3105,1327,0219,Hebra,Kalomi Bridge,Shoot Target,Hanging under the bridge,FALSE
+HE-138,-3137,1553,0124,Hebra,Tabantha Frontier,Build Puzzle,On a cliffside ledge,FALSE
+HE-139,-3063,2841,0429,Hebra,Coldsnap Hollow,Rock Pattern,On the ice shelf,FALSE
+HE-140,-2797,2876,0600,Hebra,Hebra Mountains,Find Friend,Ruins under mountain ledge,FALSE
+HE-141,-2831,2840,0581,Hebra,Hebra Mountains,Find Friend,Bring him to his Friend to the north,FALSE
+HE-142,-3157,2691,0594,Hebra,Talonto Peak,Chase Lights,"Top of Talonto Peak, at the top of the tree",FALSE
+HE-143,-3161,2465,0314,Hebra,Talonto Peak,Rock Pattern,On the mountainside,FALSE
+HE-144,-3047,2346,0113,Hebra,Corvash Peak,Build Puzzle,Hebra Plunge north dock,FALSE
+HE-145,-3328,2302,0403,Hebra,Corvash Peak,Light Ring,On the hilltop,FALSE
+HE-146,-3424,2067,0164,Hebra,Corvash Peak,Ascend Through Stump,Under the cliff,FALSE
+HE-147,-3086,2121,0121,Hebra,Hebra Plunge,Lift Rock,Atop a column in the water,FALSE
+HE-148,-2837,2318,0391,Hebra,Hebra Headspring,Find Friend,Bring his friend back,FALSE
+HE-149,2371,3020,0441,Hebra,Hebra Headspring,Find Friend,Bring him to his friend above on the cliff,FALSE
+HE-150,-2737,2267,0353,Hebra,Hebra Falls,Hanging Pot,Under the bridge,FALSE
+HE-151,-2796,1948,0273,Hebra,Hebra Plunge,Rock Pattern,Small island in lake,FALSE
+HE-152,-2636,2056,0338,Hebra,Hebra Plunge,Block Puzzle,Island under the rocky peak. Cross the freezing water using Recall on submerged stones or sky debris from the surrounding area,FALSE
+HE-153,-2818,-1598,-0019,Hebra,Tanagar Canyon,Block Puzzle,Complete the fixture,FALSE
+HE-154,-2666,1664,0268,Hebra,Tabantha Hills,Chase Lights,On top of the house's chimney,FALSE
+HE-155,-2528,1849,0284,Hebra,Tabantha Hills,Shoot Target,Acorn hanging of the hillside by a chain,FALSE
+HE-156,-2296,1908,0294,Hebra,Tabantha Village Ruins,Shoot Target,Shoot the acorn hanging inside the hollow log,FALSE
+HE-157,-2382,2133,0393,Hebra,Kopeeki Drifts,Shoot Target,Pinwheel on top of the mountain,FALSE
+HE-158,-2270,2287,0324,Hebra,Kopeeki Drifts,Lift Rock,Place the boulder in the tree holder,FALSE
+HE-159,-2207,2090,0323,Hebra,Tabantha Village Ruins,Build Puzzle,"South of village, Make a roof on the makeshift structure with the two stone statues in it",FALSE
+HE-160,-2074,2077,0285,Hebra,South Tagantha Snowfield,Shoot Target,Shoot the pot hanging from the destroyed building,FALSE
+HE-161,-2603,3233,0387,Hebra,Pikida Stonegrove,Rock Pattern,Around a tree,FALSE
+HE-162,-2481,2748,0511,Hebra,Hebra Peak,Build Puzzle,On top of one of the southeast cliffs of Hebra Peak,FALSE
+HE-163,-2357,3675,0274,Hebra,North Tabantha Snowfield,Shoot Target,Shoot the balloon,FALSE
+HE-164,2372,3018,0441,Hebra,Pikida Stonegrove,Find Friend,Bring the nearby Korok to his friend at this camp,FALSE
+HE-165,-2335,2956,0404,Hebra,Pikida Stonegrove,Find Friend,Bring him to his friend to the north-west,FALSE
+HE-166,-1971,3794,0313,Hebra,North Tabantha Snowfield,Lift Rock,Lift the rock on small peak near ede,FALSE
+HE-167,-1666,3766,0240,Hebra,North Tabantha Snowfield,Chase Lights,Interact with moving sparkles on the ground,FALSE
+HE-168,-1761,3553,0234,Hebra,North Tabantha Snowfield,Lift Rock,Under a single stone inside the Geoglyph,FALSE
+HE-169,-1971,3115,0352,Hebra,Tabantha Tundra,Glide to Stump,On the hilltop,FALSE
+HE-170,-2080,2589,0301,Hebra,Tabantha Tundra,Rock Pattern,Under the Cliff ledge,FALSE
+HE-171,-1811,2197,0273,Hebra,South Tagantha Snowfield,Lift Rock,On top of the the Monster Fortress,FALSE
+HE-172,-1580,2133,-0038,Hebra,Tanagar Canyon,Shoot Target,Top of the pillar,FALSE
+HE-173,-1459,2365,0138,Hebra,Tanagar Canyon,Lift Rock,On top of the cliff hanging over the Forgotten Temple. Put rock in frame,FALSE
+HE-174,-1648,2439,0237,Hebra,Snowfield Stable,Offer Item,"South of Snowfield Stable, Offer a second Ice Fruit to the second statue",FALSE
+HE-175,-1720,2556,0229,Hebra,Snowfield Stable,Ascend Through Stump,"West of Snowfield Stable, Korok Pedestal under the Stone",FALSE
+HE-176,-1348,2791,0203,Hebra,Snowfield Stable,Find Friend,Bring this korok to his friend for 2 seeds,FALSE
+HE-177,-1349,2791,0203,Hebra,South Tagantha Snowfield,Find Friend,Bring his friend back,FALSE
+HE-178,-1384,3631,0256,Hebra,North Tabantha Snowfield,Find Friend,On the same hill as the nearby shrine,FALSE
+HE-179,-1208,3601,0190,Hebra,North Tabantha Snowfield,Build Puzzle,Complete the statue,FALSE
+HE-180,-1033,3519,0229,Hebra,North Lomei Labyrinth,Find Friend,"In front of the labyrinth, right next to a Hudson pile of material",FALSE
+HE-181,-1092,3401,0305,Hebra,North Lomei Labyrinth,Rock Pattern,Complete the Stone path,FALSE
+HE-182,-0687,3535,0284,Hebra,North Lomei Labyrinth,Shoot Target,"On the furthest east edge of the labyrinth, on top of the wall",FALSE
+HE-183,-0874,3313,0223,Hebra,North Lomei Labyrinth,Shoot Target,Inside the tree trunk,FALSE
+HE-184,-1117,3039,3039,Hebra,Mount Drena,Lift Rock,Put the Boulder in the branch,FALSE
+HE-185,-0995,3085,0200,Hebra,Mount Drena,Ascend Through Stump,Ascend through marker,FALSE
+GE-186,-4909,-3775,-0031,Gerudo,Gerudo Desert,Scatter Leaves and Lift Rock,In one of the nostrils of the underground Gerudo Great Skeleton,FALSE
+GE-187,-4875,-3565,0040,Gerudo,Gerudo Desert,Find Friend,Small tent marked with a green smoke trail rising into the sky,FALSE
+GE-188,-4614,-3198,0037,Gerudo,Gerudo Desert,Find Friend,On a stone outcrop in the middle of the open,FALSE
+GE-189,-2547,-3952,0035,Gerudo,Gerudo Desert,Flowers,"On top of a pillar, which is on top of a plateau",FALSE
+GE-190,-2544,-3928,0014,Gerudo,Gerudo Desert,Find Friend,Below the little plateau,FALSE
+GE-191,-2493,-3347,0026,Gerudo,Gerudo Desert,Find Friend,Near a cliff,FALSE
+GE-192,-3742,-3479,0017,Gerudo,Gerudo Desert,Find Friend,Near the Southern Oasis,FALSE
+GE-193,-3816,-3126,0051,Gerudo,Gerudo Desert,Find Friend,"South of Gerudo Town's, on a sand hill",FALSE
+GE-194,-3859,-3017,0085,Gerudo,Gerudo Desert,Light Ring,Stand on Korok stump and Run to the West corner of Gerudo town's walls,FALSE
+GE-195,-3422,-3119,0084,Gerudo,Gerudo Desert,Glide to Stump,Atop the ladder platform to the side of the building,FALSE
+GE-196,-2427,-3264,0044,Gerudo,Gerudo Desert,Chase Lights,"On top of the small plateau, near the small bushes",FALSE
+GE-197,-2732,-2820,0035,Gerudo,Gerudo Desert,Light Ring,"On the hilt of the big sword to the east, Race back over with a rocket shield and get up high to the finish point",FALSE
+GE-198,-3078,-3045,0014,Gerudo,Gerudo Desert,Find Friend,Bring his friend back,FALSE
+GE-199,-3343,-3054,0040,Gerudo,Gerudo Desert,Find Friend,On top of stone wall,FALSE
+GE-200,-3588,-3029,0052,Gerudo,Gerudo Desert,Flowers,Underneath the ruins on the North side,FALSE
+GE-201,-3610,-2844,0070,Gerudo,Gerudo Desert,Flowers,Above the small building,FALSE
+GE-202,-3854,-2862,0060,Gerudo,Gerudo Desert,Chase Lights,On top of a blue chimney,FALSE
+GE-203,-3827,-2859,0026,Gerudo,Gerudo Desert,Ascend Through Stump,Inside the Gerudo Shelter Entrance - let the stream carry you down to the bottom,FALSE
+GE-204,-3266,-2609,0120,Gerudo,Gerudo Desert,Chase Lights,On the tallest tower,FALSE
+GE-205,-3315,-2461,0029,Gerudo,Gerudo Desert,Find Friend,Northwest of the Kara Kara Bazaar,FALSE
+GE-206,-2984,-2326,0025,Gerudo,Gerudo Desert,Find Friend,Just outside the Sand-Seal Rental Shop,FALSE
+GE-207,-3318,-2276,0075,Gerudo,Gerudo Desert,Rock Pattern,"Finish the rock puzzle. Use Ultrahand on the bolder to the south, on the ledge below",FALSE
+GE-208,-3319,-2164,0039,Gerudo,Gerudo Desert,Chase Lights,On top of a cliff,FALSE
+GE-209,-3757,-2442,0058,Gerudo,Gerudo Desert,Ascend Through Stump,On the elevated archway toward the northern end of the area,FALSE
+GE-210,-3749,-2287,0078,Gerudo,Gerudo Desert,Lift Rock,Northern Icehouse,FALSE
+GE-211,-4136,-2581,0053,Gerudo,Gerudo Desert,Chase Lights,Interact with the sparkling that is moving in a circle,FALSE
+GE-212,-4136,-2259,0045,Gerudo,Gerudo Desert,Find Friend,On a rock platform surrounded by flowing sands,FALSE
+GE-213,-4320,-1862,0065,Gerudo,Karusa Valley,Find Friend,Bring his friend back,FALSE
+GE-214,-4592,-2348,0051,Gerudo,West Gerudo Ruins,Ascend Through Stump,Ascend through the Korok log under the bone,FALSE
+GE-215,-4423,-2265,0059,Gerudo,West Gerudo Ruins,Flowers,Follow the flower from the top of the pillar to the ground,FALSE
+GE-216,-4710,-2163,0100,Gerudo,Gerudo Desert,Flowers,Top of skeleton,FALSE
+GE-217,-4482,-2133,0068,Gerudo,Gerudo Desert,Glide to Stump,Top of the platform,FALSE
+GE-218,-4686,-1963,0059,Gerudo,Gerudo Desert,Shoot Target,Pinwheel on top of the bones,FALSE
+GE-219,-4393,-2015,0096,Gerudo,Karusa Valley,Build Puzzle,Put 'L' Shape in the cube shape,FALSE
+GE-220,-4909,-1246,0452,Gerudo,Mount Agaat,Block Puzzle,In the canyon,FALSE
+GE-221,-4691,-1235,0522,Gerudo,Mount Agaat,Chase Lights,On top of a tree,FALSE
+GE-222,-4538,-1348,0528,Gerudo,Risoka Snowfield,Find Friend,Bring him to his Friend located North of here,FALSE
+GE-223,-4508,-0590,0510,Gerudo,Mount Agaat,Find Friend,Bring his friend,FALSE
+GE-224,-4420,-0352,0515,Gerudo,Mount Agaat,Lift Rock,"On the cliffside, near the smooth rocks, place boulder in tree stump",FALSE
+GE-225,-4376,-0525,0451,Gerudo,Statue of the Eighth Heroine,Lift Rock,On a ledge of the Statue of the Eighth Heroine slightly beneath the broken head,FALSE
+GE-226,-4389,-0714,0563,Gerudo,Risoka Snowfield,Shoot Target,To the back right-hand side of the shrine under an arch,FALSE
+GE-227,-4321,-1089,0523,Gerudo,Risoka Snowfield,Rock Pattern,On the mountain,FALSE
+GE-228,-4361,-1848,0089,Gerudo,Karusa Valley,Shoot Target,Acorn hanging below the arch,FALSE
+GE-229,-4149,-1932,0102,Gerudo,Karusa Valley,Lift Rock,At the bottom of the crevice,FALSE
+GE-230,-3968,-0324,0446,Gerudo,Hemaar's Descent,Build Puzzle,Build a roof over the statues with the nearby materials,FALSE
+GE-231,-3969,-0610,0657,Gerudo,Gerudo Summit,Chase Lights,Between three trees,FALSE
+GE-232,-4002,-0968,0714,Gerudo,Gerudo Summit,Lift Rock,On the hilt of the Forgotten Sword of the Eight Heroine near the Frost Gleeok,FALSE
+GE-233,-3621,-0403,0239,Gerudo,Mystathi's Shelf,Light Ring,"Starting stump on the lower platform, get to the top in time",FALSE
+GE-234,-3567,-0735,0556,Gerudo,Cliffs of Ruvara,Rock Pattern,Ledge on edge of the cliff,FALSE
+GE-235,-3143,-0620,0200,Gerudo,Cliffs of Ruvara,Find Friend,Bring his friend back from the top of the hill,FALSE
+GE-236,-3810,-0790,0548,Gerudo,Cliffs of Ruvara,Lift Rock,Ledge on the side of a cliff,FALSE
+GE-237,-3722,-0802,0641,Gerudo,Gerudo Summit,Light Ring,On top of the small plateau,FALSE
+GE-238,-3359,-0916,0506,Gerudo,Vatorsa Snowfield,Lift Rock,Pick up the stone on the ledge,FALSE
+GE-239,-3491,-0983,0612,Gerudo,Vatorsa Snowfield,Chase Lights,Lone tree at edge of cliff,FALSE
+GE-240,-3751,-1081,0524,Gerudo,Vatorsa Snowfield,Flowers,Ledge near the bottom of a cliff,FALSE
+GE-241,-3870,-1176,0493,Gerudo,Vatorsa Snowfield,Build Puzzle,"Northeast cliffside, solve cube structure",FALSE
+GE-242,-3845,-1894,0305,Gerudo,Big Chasm,Flowers,On the top of the left cliff,FALSE
+GE-243,-3898,-1643,0294,Gerudo,Gerudo Highlands,Block Puzzle,"South of Gerudo Highlands Skyview Tower, northeast of Karusa Valley area marker, on a ledge in the canyon full of the Yiga Clan's frog statues",FALSE
+GE-244,-3919,-1592,0240,Gerudo,Gerudo Highlands,Offer Item,"Down the cliff, put 3 bananas on the plates",FALSE
+GE-245,-3845,-1465,0366,Gerudo,Gerudo Highlands,Light Ring,On a small ledge,FALSE
+GE-246,-3666,-1564,0470,Gerudo,Gerudo Highlands,Lift Rock,Grab the large boulder and walk it back the dirt path and balance it on top of the oddly shaped stump,FALSE
+GE-247,-3560,-1559,0452,Gerudo,Sapphia's Table,Rock Pattern,Center of Spiral,FALSE
+GE-248,-3573,-1852,0358,Gerudo,Birida Lookout,Shoot Target,On the wooden platform,FALSE
+GE-249,-3580,-1986,0208,Gerudo,Birida Lookout,Shoot Target,Hanging under the stone promontory; under the pull the plug korok,FALSE
+GE-250,-3584,-1989,0245,Gerudo,Birida Lookout,Pull Plug,On the stone promontory,FALSE
+GE-251,-3248,-1028,0570,Gerudo,Laparoh Mesa,Shoot Target,On a ledge on side of the cliff,FALSE
+GE-252,-3098,-1032,0596,Gerudo,Laparoh Mesa,Build Puzzle,Top of the mountain,FALSE
+GE-253,-3165,-1038,0428,Gerudo,Laparoh Mesa,Ascend Through Stump,Under stone bridge,FALSE
+GE-254,-3197,-1170,0479,Gerudo,Laparoh Mesa Crest,Find Friend,Bring him down the hill to his friend,FALSE
+GE-255,-3247,-1470,0414,Gerudo,Sapphia's Table,Lift Rock,North of Sapphia's Table,FALSE
+GE-256,-3208,-1856,0074,Gerudo,Zirco Mesa Crest,Block Puzzle,"Inside the crevasse, at the base of the mountain",FALSE
+GE-257,-3192,-1742,0352,Gerudo,Zirco Mesa Crest,Shoot Target,On the side of the cliff,FALSE
+GE-258,-3060,-1286,0500,Gerudo,Laparoh Mesa,Pull Plug,Use The Metal Plates to pull out the plug,FALSE
+GE-259,-3010,-1501,0577,Gerudo,Sapphia's Table,Lift Rock,Melt the ice. Lift the rock to reveal the Korok,FALSE
+GE-260,-2869,-1125,0411,Gerudo,Laparoh Mesa,Chase Lights,Top of a tree,FALSE
+GE-261,-2675,-1360,0502,Gerudo,Laparoh Mesa,Ascend Through Stump,Under the stone bridge,FALSE
+GE-262,-2694,-1446,0542,Gerudo,Laparoh Mesa,Light Ring,Finish the race (leads west),FALSE
+GE-263,-2646,-1539,0582,Gerudo,Zirco Mesa,Rock Pattern,On top of the stone slab,FALSE
+GE-264,-2817,-1651,0472,Gerudo,Taafei Hill,Pull Plug,Pull out the plug by attaching rock to end and throwing off cliff,FALSE
+GE-265,-2935,-2214,0209,Gerudo,Gerudo Highlands,Flowers,At the peak,FALSE
+GE-266,-2341,-1104,0144,Gerudo,Dalite Forest,Lift Rock,On top of the large tree,FALSE
+GE-267,-2394,-1034,0125,Gerudo,Dalite Forest,Ascend Through Stump,Under the stone,FALSE
+GE-268,-2505,-1590,0536,Gerudo,Zirco Mesa,Build Puzzle,Build a roof using the wood nearby,FALSE
+GE-269,-2139,-1486,0280,Gerudo,Nephra Hill,Lift Rock,No hint for you,FALSE
+GE-270,-2198,-1680,0061,Gerudo,Nephra Hill,Lift Rock,Beside the river,FALSE
+GE-271,-2243,-1739,0105,Gerudo,Koukot Plateau,Lift Rock,On the small ledge above the cave entrance,FALSE
+GE-272,-2329,-1824,0143,Gerudo,Koukot Plateau,Shoot Target,Under the bridge,FALSE
+GE-273,-1816,-1533,0100,Gerudo,Nephra Hill,Shoot Target,Approach the pinwheel to spawn 3 balloons,FALSE
+GE-274,-2484,-2054,0121,Gerudo,Gerudo Canyon,Lift Rock,At the end of the wooden rail,FALSE
+GE-275,-2432,-2118,0234,Gerudo,Gerudo Canyon,Find Friend,On the lower floor of the lift,FALSE
+GE-276,-2438,-2143,0264,Gerudo,Gerudo Canyon,Find Friend,On the cliff above the lift,FALSE
+GE-277,-2620,-2197,0065,Gerudo,Gerudo Canyon,Chase Lights,Go where the arrows are pointing,FALSE
+GE-278,-2714,-2362,0133,Gerudo,Gerudo Desert Gateway,Shoot Target,Hanging acorn under the stone bridge,FALSE
+GE-279,-2050,-1995,0041,Gerudo,Gerudo Canyon,Find Friend,In the camp just upstream from his friend,FALSE
+GE-280,-1984,-2080,0033,Gerudo,Gerudo Canyon,Find Friend,On the bank of the river,FALSE
+GE-281,-1950,-2134,0081,Gerudo,Gerudo Canyon,Rock Pattern,On the overpass,FALSE
+GE-282,-2264,-2164,0251,Gerudo,Gerudo Canyon,Burn Leaves,Small stone shelter,FALSE
+GE-283,-2243,-2212,2527,Gerudo,Gerudo Canyon,Lift Rock,"East of the Skyview, close to the lower elevator",FALSE
+GE-284,-2249,-2359,0275,Gerudo,Gerudo Canyon,Light Ring,"Almost right outside of Spectacle Rock Cave, just go left and climb",FALSE
+GE-285,-2014,-2468,0222,Gerudo,Spectacle Rock,Shoot Target,"East of Spectacle Rock, under a stone formation",FALSE
+GE-286,-1932,-2822,0152,Gerudo,Yarna Valley,Block Puzzle,On the southwestern cliffside of the Yarna Valley,FALSE
+GE-287,-1709,-2341,-0014,Gerudo,Hudson Building,Find Friend,Beside the Hudson building materials post,FALSE
+GE-288,-1641,-2361,0007,Gerudo,Hudson Building,Find Friend,On the cliffside,FALSE
+GE-289,-1557,-2625,0230,Gerudo,Starlry Plateau,Rock Pattern,Place 2 rocks to fill grid to match neighboring grid of rocks,FALSE
+GE-290,-1945,-3184,0127,Gerudo,Champion Gate,Lift Rock,Tiny rock on big rock,FALSE
+GE-291,-1605,-3090,0201,Gerudo,East Gerudo Mesa,Build Puzzle,Fuse nearby rock to the cork and toss it over the cliff,FALSE
+GE-292,-1427,-2976,0271,Gerudo,East Gerudo Mesa,Ascend Through Stump,Under a natural arch,FALSE
+GE-293,-1795,-3577,0121,Gerudo,South Lomei Labyrinth,Shoot Target,On the center of the southern wall of the South Lomei Labyrinth,FALSE
+GE-294,-1369,-3724,0395,Gerudo,Daval Peak,Rock Pattern,Gerudo Highlands South of Daval Peak,FALSE
+GE-295,-1452,-3638,0436,Gerudo,Daval Peak,Block Puzzle,At the southwestern end of the area of Daval Peak,FALSE
+GE-296,-1385,-3492,0434,Gerudo,Mount Granajh,Lift Rock,On the southern end of Mount Granajh,FALSE
+GE-297,-1179,-3509,0217,Gerudo,Mount Granajh,Chase Lights,On top of the stone,FALSE
+GE-298,-1152,-3304,0276,Gerudo,Mount Granajh,Block Puzzle,On a ledge on Mount Granajh's northeastern cliffside,FALSE
+GE-299,-0994,-3254,0251,Gerudo,Oseria Plains,Flowers,On the top of the tall rock formation between Mount Granajh and Zokassa Ridge,FALSE
+HR-300,-4074,0034,0056,Central Hyrule,Tanagar Canyon,Find Friend,Bring his friend back,FALSE
+HR-301,-3584,0012,0069,Central Hyrule,Tanagar Canyon,Find Friend,On the edge of a slope north of Turakawak Shrine,FALSE
+HR-302,-3467,-0167,0066,Central Hyrule,Lake Illumeni,Build Puzzle,Place board on top of structure to complete roof,FALSE
+HR-303,-3132,-0112,0209,Central Hyrule,Illumeni Plateau,Lift Rock,Lift the rock,FALSE
+HR-304,-3208,0334,-0099,Central Hyrule,Tanagar Canyon,Ascend Through Stump,"Stand on the stump, and use Ascend to beat the timer",FALSE
+HR-305,-3108,0240,0111,Central Hyrule,Illumeni Plateau,Flowers,Follow the flowers,FALSE
+HR-306,-3018,1103,0205,Central Hyrule,Illumeni Plateau,Find Friend,Bring his friend back,FALSE
+HR-307,-2960,0087,0143,Central Hyrule,Illumeni Plateau,Find Friend,Take the korok to his friend located up hills,FALSE
+HR-308,-2918,0285,0207,Central Hyrule,Illumeni Plateau,Light Ring,"On the top of the stone pillar, between Illumeni Plateau and Seres Scablands",FALSE
+HR-309,-3012,0584,0132,Central Hyrule,Tabantha Great Bridge,Lift Rock,Under the bridge,FALSE
+HR-310,-2899,0557,0208,Central Hyrule,Tabantha Bridge Stable,Flowers,On the large mushroom,FALSE
+HR-311,-2875,0498,0179,Central Hyrule,Tabantha Bridge Stable,Find Friend,On the ledge south of Tabantha Bridge Stable,FALSE
+HR-312,-2598,0191,0147,Central Hyrule,Washa's Bluff,Find Friend,Campsite next to the path,FALSE
+HR-313,-2640,-0317,0129,Central Hyrule,Washa's Bluff,Build Puzzle,Hill top next to Washa's Bluff,FALSE
+HR-314,-2839,-0437,0052,Central Hyrule,Tamio River,Glide to Stump,Land on the platform on the rock in the middle of the river,FALSE
+HR-315,-2711,-0496,0087,Central Hyrule,Tamio River,Rock Pattern,Place the rock to complete the design,FALSE
+HR-316,-2601,-0668,0213,Central Hyrule,Rutile Lake,Lift Rock,Inside the dead tree trunk,FALSE
+HR-317,-2536,-0629,0202,Central Hyrule,Rutile Lake,Flowers,On the small island in the middle of the lake,FALSE
+HR-318,-2478,-0509,0222,Central Hyrule,Rutile Lake,Glide to Stump,"Atop the small hill, on a tree stump",FALSE
+HR-319,-2351,-0742,0204,Central Hyrule,Satori Mountain,Lift Rock,Place the rock into the tree stump,FALSE
+HR-320,-2278,-0402,0398,Central Hyrule,Satori Mountain,Lift Rock,On top of the mountain,FALSE
+HR-321,-2830,0694,0244,Central Hyrule,Satori Mountain,Rock Pattern,On the ledge behind Makurukis Shrine,FALSE
+HR-322,-2677,0888,0232,Central Hyrule,Satori Mountain,Glide to Stump,Dive in the lilypad circle,FALSE
+HR-323,-2220,-0693,0205,Central Hyrule,Satori Mountain,Ascend Through Stump,Underneath a small cave,FALSE
+HR-324,-2200,-0797,0170,Central Hyrule,Satori Mountain,Lift Rock,On top of a tree,FALSE
+HR-325,-1969,-1090,0098,Central Hyrule,Dalite Forest,Flowers,By the 2 statues,FALSE
+HR-326,-1820,-0973,0143,Central Hyrule,Safula Hill,Offer Item,At the base of the tree,FALSE
+HR-327,-1556,0816,0062,Central Hyrule,Regencia River,Chase Lights,On a small hill overlooking,FALSE
+HR-328,-1650,-0687,0139,Central Hyrule,Sanidin Park Ruins,Chase Lights,Fountain in Sanidin Park Ruins,FALSE
+HR-329,-1403,-0453,0043,Central Hyrule,Nima Plain,Chase Lights,Under a big tree,FALSE
+HR-330,-1968,-0593,0148,Central Hyrule,Nima Plain,Lift Rock,On top of peak,FALSE
+HR-331,-1954,-0408,0206,Central Hyrule,Satori Mountain,Shoot Target,Acorn inside a hollow tree log,FALSE
+HR-332,-1848, -0329,0162,Central Hyrule,Satori Mountain,Find Friend,Bring his friend back,FALSE
+HR-333,-1798,-0317,0119,Central Hyrule,Nima Plain,Find Friend,Bring him up the hill to his friend,FALSE
+HR-334,-1742,-0401,0121,Central Hyrule,Nima Plain,Lift Rock,On top of a tree,FALSE
+HR-335,-2579,1247,0215,Central Hyrule,Upland Lindor,Light Ring,"Upland Lindor, Hill NW of Runakit Shrine",FALSE
+HR-336,-2435,1137,0163,Central Hyrule,Upland Lindor,Block Puzzle,Cliffside south of Upland Lindor,FALSE
+HR-337,-2232,1070,0107,Central Hyrule,Thundra Plateau,Build Puzzle,Stack the rocks to reach the leaves,FALSE
+HR-338,-2341,0939,0105,Central Hyrule,Thundra Plateau,Burn Leaves,Throw a Fire Fruit at the pile of leaves and lift the stone to reveal the Korok,FALSE
+HR-339,-2065,0770,0100,Central Hyrule,Ludfo's Bog,Chase Lights,On the ground beneath the mushroom,FALSE
+HR-340,-2437,0512,0225,Central Hyrule,Seres Scablands,Burn Leaves,Top of tallest mushroom,FALSE
+HR-341,-2201,0356,0148,Central Hyrule,Seres Scablands,Chase Lights,"Follow the red arrows, climb the mushroom, and examine the lights",FALSE
+HR-342,-2224,1579,0170,Central Hyrule,Upland Lindor,Lift Rock,On an cliffside edge,FALSE
+HR-343,-2023,1302,0283,Central Hyrule,Lindor's Brow,Chase Lights,On top of the dead tree,FALSE
+HR-344,-1730,1163,0231,Central Hyrule,Lindor's Brow,Ascend Through Stump,On an overhang in front of Lindor's Brow Cave,FALSE
+HR-345,-1289,0896,0099,Central Hyrule,Ludfo's Bog,Find Friend,On top of the mushroom,FALSE
+HR-346,-2082,0482,0103,Central Hyrule,Hyrule Ridge,Find Friend,On the edge of the Ludfo's Bog,FALSE
+HR-347,-2023,0077,0156,Central Hyrule,West Hyrule Plains,Chase Lights,Near Small enemy camp in West Hyrule Plains,FALSE
+HR-348,-1863,-0094,0117,Central Hyrule,West Hyrule Plains,Chase Lights,Arrows signs pointing toward sparkles,FALSE
+HR-349,-1703,-0083,0092,Central Hyrule,West Hyrule Plains,Lift Rock,Underneath the northern side of the bridge,FALSE
+HR-350,-1646,0012,0123,Central Hyrule,West Hyrule Plains,Shoot Target,On top of a rock formation with a round opening,FALSE
+HR-351,-1583,0223,0105,Central Hyrule,West Hyrule Plains,Build Puzzle,In the middle of three rocks,FALSE
+HR-352,-1400,0074,0023,Central Hyrule,West Hyrule Plains,Build Puzzle,Ledge against the cliff,FALSE
+HR-353,-1330,0536,0087,Central Hyrule,Breach of Demise Canyon,Shoot Target,Shoot the acorn hanging from the chain,FALSE
+HR-354,-1163,0666,0067,Central Hyrule,North Hyrule Plain,Lift Rock,Place the boulder into the wooden holder,FALSE
+HR-355,-1287,0897,0099,Central Hyrule,North Hyrule Plain,Lift Rock,On a tear in the geoglyph,FALSE
+HR-356,-1434,1476,0193,Central Hyrule,Salari Hill,Find Friend,Top of Salari Hill,FALSE
+HR-357,-1227,1577,0150,Central Hyrule,Salari Hill,Chase Lights,Stand on the rock between the 2 arrow signs and interact with the particle effect,FALSE
+HR-358,-1075,1280,0122,Central Hyrule,Irch Plains,Offer Item,Statue under the tree,FALSE
+HR-359,-1034,1083,0062,Central Hyrule,Irch Plains,Glide to Stump,"Starting at the Leaf-Marked Stump, land on top of the target",FALSE
+HR-360,-0659,1184,0069,Central Hyrule,Irch Plains,Shoot Target,Across the moat to the West of Hyrule Castle,FALSE
+HR-361,-0769,1414,0136,Central Hyrule,Irch Plains,Find Friend,Bring his friend back,FALSE
+HR-362,-1052,2617,0033,Central Hyrule,Forgotten Temple,Build Puzzle,On top of the Forgotten Temple,FALSE
+HR-363,-1147,2535,-0033,Central Hyrule,Forgotten Temple,Lift Rock,"Inside the forgotten temple, on top of the tree growing out of the wall",FALSE
+HR-364,-1186,2482,-0100,Central Hyrule,Forgotten Temple,Lift Rock,"Inside the forgetten temple, inside the trench near the shrine underneath the giant collapse of rocks in a small passage",FALSE
+HR-365,-0980,2239,0120,Central Hyrule,Rowan Plain,Find Friend,Next to Hyrule Restoration Materials,FALSE
+HR-366,-0547,2225,0267,Central Hyrule,Aldor Foothills,Find Friend,Top of the hill,FALSE
+HR-367,-0661,1978,0136,Central Hyrule,Aldor Foothills,Offer Item,There are three statues with bowls in front of them,FALSE
+HR-368,-0577,2602,0385,Central Hyrule,Mount Drena,Build Puzzle,Atop Mount Drena,FALSE
+HR-369,-0334,1746,0193,Central Hyrule,Elma Knolls,Chase Lights,In the ring of trees in Elma Knolls,FALSE
+HR-370,-0041,1678,0142,Central Hyrule,Korok Forest,Lilypad Dive,"South of Korok Forest, at the ruins",FALSE
+HR-371,-0480,3133,0120,Central Hyrule,Drenan Highlands,Rock Pattern,Along to trench in the Drenan Highlands,FALSE
+HR-372,-0323,3158,0099,Central Hyrule,Drenan Highlands,Find Friend,Side of the hill,FALSE
+HR-373,0018,3100,0167,Central Hyrule,Drenan Highlands,Find Friend,West of the bridge that leads to the Thyphlo Ruins,FALSE
+HR-374,0060,3112,0190,Central Hyrule,Drenan Highlands,Glide to Stump,"At the western entrance to Thyphlo Ruins, on the pillar",FALSE
+HR-377,0985,1805,0208,Central Hyrule,Minshi Woods,Shoot Target,Pinwheel on the ground next to two rocks,FALSE
+HR-378,0939,1553,0150,Central Hyrule,Minshi Woods,Shoot Target,Under the wooden railway,FALSE
+HR-379,0776,1529,0148,Central Hyrule,Rauru Hillside,Glide to Stump,On the top of the wooden building,FALSE
+HR-380,0771,1416,0087,Central Hyrule,Rauru Hillside,Lift Rock,In the middle of the small island,FALSE
+HR-381,0661,1373,0040,Central Hyrule,Rauru Settlement Ruins,Shoot Target,Inside the small building by the lake,FALSE
+HR-382,0630,1166,0009,Central Hyrule,Rauru Settlement Ruins,Find Friend,Sitting under a makeshift tent on the riverbank,FALSE
+HR-383,0399,1174,0009,Central Hyrule,Helmhead Bridge,Shoot Target,Under the bridge,FALSE
+HR-384,0534,1109,0016,Central Hyrule,Helmhead Bridge,Find Friend,Sitting under an apple tree next to the river,FALSE
+HR-385,0192,0899,0026,Central Hyrule,Hyrule Forest Park,Chase Lights,Small Water Fountain,FALSE
+HR-386,0271,0700,0021,Central Hyrule,Boneyard Bridge,Shoot Target,Under the bridge,FALSE
+HR-387,0133,0598,0027,Central Hyrule,Hyrule Cathedral,Shoot Target,Break the nut inside the fallen tree trunk,FALSE
+HR-388,0347,0493,0041,Central Hyrule,Hylia River,Flowers,On top of a rampart ruin,FALSE
+HR-389,0433,0482,0029,Central Hyrule,Hylia River,Find Friend,On the wooden platform by the bridge,FALSE
+HR-390,0431,0596,0009,Central Hyrule,Crenel Hills,Find Friend,Under a tent near the river,FALSE
+HR-391,0548,0510,0008,Central Hyrule,Orsedd Bridge,Lilypad Dive,In water under the bridge,FALSE
+HR-392,0619,0755,0077,Central Hyrule,Crenel Hills,Chase Lights,Under the hollow log,FALSE
+HR-393,0691,0625,0059,Central Hyrule,Crenel Hills,Flowers,Flower on the tree,FALSE
+HR-394,0968,1025,0010,Central Hyrule,Crenel Hills,Lift Rock,"Inside the cave, accessible from water level",FALSE
+HR-395,1071,0848,0017,Central Hyrule,Crenel Hills,Shoot Target,In the submerged skull in the river,FALSE
+HR-396,841,693,128,Central Hyrule,Crenel Hills,Flowers,On a tree stump on top of the mountain,FALSE
+HR-397,0974,0674,0084,Central Hyrule,Crenel Hills,Flowers,"On the southeast side of Crenel Hills, on a tree stump",FALSE
+HR-398,0919,0410,0081,Central Hyrule,Crenel Hills,Ascend Through Stump,Inside Skull Rock,FALSE
+HR-399,0713,0364,0009,Central Hyrule,Crenel Hills,Rock Pattern,On a small island in the river,FALSE
+HR-400,1182,0378,0158,Central Hyrule,Crenel Peak,Burn Leaves,At the peak,FALSE
+HR-401,1118,0229,0074,Central Hyrule,Crenel Peak,Flowers,On the tallest rock,FALSE
+HR-402,1478,0440,0008,Central Hyrule,Crenel Peak,Shoot Target,"On the sandbar, inside a waterhole in the river",FALSE
+HR-403,1515,0295,0035,Central Hyrule,Moor Garrison Ruins,Shoot Target,"On top of a pillar, use the falling rocks to get on top",FALSE
+HR-404,1396,0127,0026,Central Hyrule,Moor Garrison Ruins,Burn Leaves,"In destroyed building, in the leaves",FALSE
+HR-405,0761,0003,0031,Central Hyrule,Rebonae Bridge,Build Puzzle,Fix the roof using Ultrahand,FALSE
+HR-406,0807,-0026,0011,Central Hyrule,Rebonae Bridge,Light Ring,Under the bridge,FALSE
+HR-407,0957,-0203,0031,Central Hyrule,Crenel Plains,Find Friend,On a rocky outcrop by the forest,FALSE
+HR-408,0821,-0329,0030,Central Hyrule,Crenel Plains,Chase Lights,On top of a small hill indicated by two red arrows by the river south of Wetland Stable,FALSE
+HR-409,0929,-0365,0039,Central Hyrule,Crenel Plains,Rock Pattern,On a small hill,FALSE
+HR-410,0890,-0556,0009,Central Hyrule,Crenel Plains,Find Friend,By the side of the river,FALSE
+HR-411,1196,-0650,0020,Central Hyrule,Crenel Plains,Find Friend,Bring his friend to him,FALSE
+HR-412,1114,-0731,0062,Central Hyrule,Crenel Plains,Shoot Target,On the underside of the eastern branch,FALSE
+HR-413,0955,-0944,0009,Central Hyrule,Eagus Bridge,Build Puzzle,Drop down below the bridge to a rock,FALSE
+HR-414,1018,-1184,0009,Central Hyrule,Nabi Lake,Find Friend,West of Nabi Lake,FALSE
+HR-415,1032,-1311,0008,Central Hyrule,Nabi Lake,Lilypad Dive,Dive into the ring of flowers on the water,FALSE
+HR-416,0844,-1291,0026,Central Hyrule,Tear of the Dragon 4,Lift Rock,Lone rock on a hill nearby (south-west of) the 3 large boulders,FALSE
+HR-417,0734,-1503,0039,Central Hyrule,Tear of the Dragon 4,Shoot Target,In a tree,FALSE
+HR-418,0585,-1581,0010,Central Hyrule,Squabble River,Find Friend,Bring his friend to him,FALSE
+HR-419,0609,-1466,0047,Central Hyrule,Tear of the Dragon 4,Lift Rock,Carry the boulder up the hill and place into the tree,FALSE
+HR-420,0629,-1161,0013,Central Hyrule,Batrea Lake,Shoot Target,Inside a fallen log by the lake,FALSE
+HR-421,0588,-1234,0008,Central Hyrule,Batrea Lake,Build Puzzle,Inside a tree,FALSE
+HR-422,0544,-1264,0011,Central Hyrule,Batrea Lake,Flowers,The dandelion on top of the pillar,FALSE
+HR-423,0297,-1497,0010,Central Hyrule,Squabble River,Build Puzzle,Match the piece of wood next to the structure to complete the building's roof,FALSE
+HR-424,0629,-0964 ,0012,Central Hyrule,Horwell Bridge,Find Friend,Reunite this Korok with his friend to the southeast near Nabi Lake,FALSE
+HR-425,0333,-1284,0009,Central Hyrule,Owlan Bridge,Lift Rock,A rock below the bridge,FALSE
+HR-426,0291,-1203,0027,Central Hyrule,Whistling Hill,Find Friend,On top of the hill near the river and the bridge,FALSE
+HR-427,0215,-0883,0066,Central Hyrule,Whistling Hill,Chase Lights,On top of the hill,FALSE
+HR-428,-0041,-1113,0022,Central Hyrule,Teniten Shrine,Find Friend,"Bring the Korok to his friend, to the south between Forest of Time and East Post Ruins",FALSE
+HR-429,0625,-0751,0021,Central Hyrule,Bottomless Pond,Lift Rock,Next to the pond,FALSE
+HR-430,0502,-0470,0063,Central Hyrule,Bottomless Pond,Lift Rock,On the cliff,FALSE
+HR-431,0795,-0512,0010,Central Hyrule,Hylia River,Find Friend,Bring him to his friend across the river,FALSE
+HR-432,0754,-0451,0030,Central Hyrule,Hylia River,Lift Rock,Top of the tallest tree,FALSE
+HR-433,0292,-0247,0026,Central Hyrule,Ranch Ruins,Shoot Target,"Near Ranch Ruins, Log on the ground",FALSE
+HR-434,0617,-0075,0053,Central Hyrule,Hylia River,Flowers,On Top of the Stone below the stone pillar,FALSE
+HR-435,0075,-0325,0033,Central Hyrule,Mabe Village Ruins,Lift Rock,Remove the leaves and lift the rock,FALSE
+HR-436,-0217,-0384,0052,Central Hyrule,Passeri Greenbelt,Lift Rock,Lift the large stone on top,FALSE
+HR-437,-0306,-0547,0021,Central Hyrule,Passeri Greenbelt,Shoot Target,"Windvane Meadow, in a big tree",FALSE
+HR-438,-0125,-0936,0043,Central Hyrule,Whistling Hill,Flowers,On top of tree stump,FALSE
+HR-439,0124,1192,0033,Central Hyrule,Hyrule Castle Moat,Shoot Target,Under the small bridge,FALSE
+HR-440,-0303,1123,0090,Central Hyrule,Sanctum,Glide to Stump,Land on the marker,FALSE
+HR-441,-0296,1123,0008,Central Hyrule,Sanctum,Lilypad Dive,Waterway entrance to Docks,FALSE
+HR-442,-0250,1066,0465,Central Hyrule,Hyrule Castle,Block Puzzle,The bell inside the main tower of Hyrule Castle,FALSE
+HR-443,-0253,1061,0561,Central Hyrule,Hyrule Castle,Chase Lights,On the highest point of the castle,FALSE
+HR-444,-0252,0944,0305,Central Hyrule,Hyrule Castle,Lift Rock,Under the stone bridge,FALSE
+HR-445,-0391,0997,0319,Central Hyrule,Princess Zelda's Study,Shoot Target,In front of the window of Zelda's study room,FALSE
+HR-446,-0383,0995,0391,Central Hyrule,Princess Zelda's Study,Chase Lights,On top of the spire above Princess Zelda's Study,FALSE
+HR-447,-0436,1115,0024,Central Hyrule,Lockup,Shoot Target,On the edge of the cliffside cave,FALSE
+HR-448,-0053,0971,0271,Central Hyrule,East Passage,Block Puzzle,Outer side of the ramparts,FALSE
+HR-449,-0086,0912,0317,Central Hyrule,East Passage,Shoot Target,Flag on the wall,FALSE
+HR-450,-0061,0866,0168,Central Hyrule,East Passage,Rock Pattern,On top of a spire of the ramparts,FALSE
+HR-451,-0128,0813,0096,Central Hyrule,Dining Hall,Lift Rock,Under the bridge just outside the Dining Hall Balcony,FALSE
+HR-452,0360,0886,0276,Central Hyrule,Guard's Chamber,Shoot Target,On top of the stairs,FALSE
+HR-453,-0466,0850,0100,Central Hyrule,West Passage,Flowers,At the top of the spire,FALSE
+HR-454,-0421,0843,0085,Central Hyrule,West Passage,Chase Lights,In the grass here,FALSE
+HR-455,-0351,0830,0180,Central Hyrule,Guard's Chamber,Chase Lights,At the very top of the First Gatehouse's top spire,FALSE
+HR-456,-0281,0841,0105,Central Hyrule,First Gatehouse,Lift Rock,Under the small bridge - behind the gates,FALSE
+HR-457,-0344,0781,0053,Central Hyrule,First Gatehouse,Block Puzzle,Under entrance to the Guard's Chamber Entrance,FALSE
+HR-458,-0272,0752,0130,Central Hyrule,Observation Room,Shoot Target,Small windmill on top of the eagle on the battlements,FALSE
+HR-459,-0236,0632,0080,Central Hyrule,Hyrule Castle's Main Gate,Lift Rock,On the broken spire of Hyrule Castle's main gate,FALSE
+HR-460,-0269,0608,0042,Central Hyrule,Hyrule Castle's Main Gate,Lilypad Dive,In the water on the west side of the bridge,FALSE
+HR-461,-0255,0427,0029,Central Hyrule,Central Square,Lift Rock,In the middle of the fountain,FALSE
+HR-462,-0313,0323,0024,Central Hyrule,Central Square,Lift Rock,Inside the building - remove leaves first,FALSE
+HR-463,-0254,0258,0046,Central Hyrule,Central Square,Lift Rock,Lift the large stone on top of the gatehouse,FALSE
+HR-464,-0086,0401,0027,Central Hyrule,Castle Town Watchtower,Ascend Through Stump,In the broken building,FALSE
+HR-465,-0254,0424,0028,Central Hyrule, Lookout Landing,Offer Item,HESTU!! - You must find Hestu's first location and complete Hestu's Concerns to unlock his services. He will sometimes move locations, based on a hint,FALSE																	
+HR-466, -1714,1067,0202,Central Hyrule,Lindor's Brow,Offer Item,HESTU!! - This is Hestu's FIRST location. After completing Hestu's Concerns and getting your first inventory upgrade, he will switch locations based on a hint.,FALSE																	
+HR-467,-0751,1068,0044,Central Hyrule,Hyrule Castle Moat,Find Friend,Help him find his friend on the island to the south,FALSE
+HR-468,-0774,0938,0017,Central Hyrule,Castle Town Prison,Find Friend,Take to Korok to his freind,FALSE
+HR-469,-0667,0963,0010,Central Hyrule,Castle Town Prison,Shoot Target,On a small wooden boardwalk in the Castle Moat,FALSE
+HR-470,0412,2124,0143,Central Hyrule,Great Hyrule Forest,Offer Item,HESTU!! - Hestu moves to the Korok Forest after it has been cleared of gloom if Hestu's Concerns has been completed,FALSE
+HR-471,-0677,0859,0014,Central Hyrule,Castle Town Prison,Chase Lights,Prison ruins near the 3 statues,FALSE
+HR-472,0942,0820,0027,Central Hyrule,Castle Town Prison,Light Ring,A stump on the top of the hill,FALSE
+HR-473,-1015,0568,0010,Central Hyrule,Castle Town Prison,Rock Pattern,On the sandy river bank,FALSE
+HR-474,-0616,0668,0010,Central Hyrule,Hyrule Castle Moat,Shoot Target,Under the bridge,FALSE
+HR-475,-0530,0694,0033,Central Hyrule,West Castle Town,Lift Rock,On the ruined wall,FALSE
+HR-476,-0665,0546,0025,Central Hyrule,Quarry Ruin,Build Puzzle,Assemble structure,FALSE
+HR-477,-0777,0565,0080,Central Hyrule,Quarry Ruin,Chase Lights,Top of the mountain,FALSE
+HR-478,-0525,0186,0062,Central Hyrule,Quarry Ruin,Flowers,Start at the top of the large hill,FALSE
+HR-479,-0749,0199,0026,Central Hyrule,Mount Gustaf,Shoot Target,On the east side of Mount Gustaf,FALSE
+HR-480,-0945,0348,0035,Central Hyrule,Mount Gustaf,Ascend Through Stump,In the small tunnel,FALSE
+HR-481,-1099,0221,0050,Central Hyrule,Mount Gustaf,Shoot Target,Stone bridge west of Mount Gustaf,FALSE
+HR-482,-1129,0018,0039,Central Hyrule,Giant's Forest,Lift Rock,North of the Giant's Forest,FALSE
+HR-483,-0923,-0044,0106,Central Hyrule,Passeri Greenbelt,Lift Rock,At the back of the camp is a cliff overhanging with a single rock,FALSE
+HR-484,-0794,-0013,0069,Central Hyrule,Passeri Greenbelt,Shoot Target,Near a goblin fort,FALSE
+HR-485,-0425,-0148,0029,Central Hyrule,Passeri Greenbelt,Shoot Target,Stump with pinwheel in the grove,FALSE
+HR-486,-1095,-0197,0042,Central Hyrule,Giant's Forest,Flowers,On the large fallen tree,FALSE
+HR-487,-1353,-0192,0009,Central Hyrule,Sage Temple Ruins,Block Puzzle,Ruins of the Temple of the Elders,FALSE
+HR-488,-1109,-0421,0062,Central Hyrule,Ancient Tree Stump,Light Ring,Small korok log on top of the Ancient Tree Stump,FALSE
+HR-489,-1088,-0511,0055,Central Hyrule,Mount Daphnes,Shoot Target,Under bridge,FALSE
+HR-490,-1111,-0569,0094,Central Hyrule,Mount Daphnes,Rock Pattern,On the western peak of Mount Daphnes,FALSE
+HR-491,-1321,-0570,0011,Central Hyrule,Mount Daphnes,Find Friend,Bring his friend back from the south near Manhala Bridge,FALSE
+HR-492,-0778,-0499,0017,Central Hyrule,Hyrule Garrison Ruins,Find Friend,Bring him to his friend,FALSE
+HR-493,-0587,-0559,0024,Central Hyrule,Hyrule Garrison Ruins,Lift Rock,Under the rock upon the fountain,FALSE
+HR-494,-0764,-0672,0029,Central Hyrule,Windvane Meadow,Lift Rock,On the largest tree in the woods,FALSE
+HR-495,-1343,-0687,0010,Central Hyrule,Mount Daphnes,Lift Rock,On the side of the river behind a large rock,FALSE
+HR-496,-1439,-0845,0019,Central Hyrule,Regencia River,Flowers,Catch the dandelion,FALSE
+HR-497,-1544,-1004,0030,Central Hyrule,Manhala Bridge,Find Friend,Reunite with his friend to the north (near Mount Daphnes Well),FALSE
+HR-498,-1588,-1004,0015,Central Hyrule,Manhala Bridge,Shoot Target,Under the eastern side of the bridge,FALSE
+HR-499,-1770,-1242,0010,Central Hyrule,Regencia River,Lift Rock,On the small island in the middle of the river,FALSE
+HR-500,-1658,-1320,0108,Central Hyrule,Outskirt Hill Well,Build Puzzle,North of the Outskirt Hill Well,FALSE
+HR-501,-1764,-1447,0088,Central Hyrule,Outskirt Hill Well,Block Puzzle,Solve the block puzzle near the rivers edge,FALSE
+HR-502,-1428,-1298,0036,Central Hyrule,Outskirt Stable,Shoot Target,Inside the logs,FALSE
+HR-503,-1355,-1311,0046,Central Hyrule,Coliseum Ruins,Find Friend,Next to the Old Coliseum Ruins,FALSE
+HR-504,-1319,-1259,0033,Central Hyrule,Coliseum Ruins,Offer Item,Between Outskirt Stable and Coliseum - find apple bowls,FALSE
+HR-505,-1354,-1309,0046,Central Hyrule,Coliseum Ruins,Find Friend,Brind his freind in the west to him,FALSE
+HR-506,-1053,-1327,0066,Central Hyrule,Coliseum Ruins,Flowers,Top of the broken pillar,FALSE
+HR-507,-1518,-1509,0041,Central Hyrule,Outskirt Hill,Lift Rock,Top of the biggest tree with no leaves,FALSE
+HR-508,-1688,-1601,-0010,Central Hyrule,Digdogg Suspension Bridge,Shoot Target,Under the stone bridge,FALSE
+HR-509,-1702,-1706,-0037,Central Hyrule,Digdogg Suspension Bridge,Pull Plug,Pop the cork under the bridge,FALSE
+HR-510,-1699,-1825,-0016,Central Hyrule,Digdogg Suspension Bridge,Lift Rock,On the cliff under the bridge,FALSE
+HR-511,-1173,-1654,0082,Central Hyrule,Hopper Pond,Flowers,In the tree stump in the water,FALSE
+HR-512,-0964,-1609,0100,Central Hyrule,Forest of Spirits,Shoot Target,"On the tree stump, step on fan",FALSE
+HR-513,-0951,-1719,0096,Central Hyrule,Forest of Spirits,Build Puzzle,Attach something heavy on the loose end of the chain,FALSE
+HR-514,-1151,-1781,0153,Central Hyrule,Great Plateau,Chase Lights,Around the tree,FALSE
+HR-515,-0949,-1840,0090,Central Hyrule,Forest of Spirits,Ascend Through Stump,Inside a cave,FALSE
+HR-516,-1024,-1856,0142,Central Hyrule,Great Plateau,Find Friend,Under a tent beside the Shrine of Resurrection Cave,FALSE
+HR-517,-0694,-1573,0066,Central Hyrule,Chasm,Find Friend,Ground level - beside the patch of glooms,FALSE
+HR-518,-0710,-1843,0095,Central Hyrule,Great Plateau,Glide to Stump,On the broken bridge,FALSE
+HR-519,-0889,-1908,0106,Central Hyrule,Great Plateau,Lift Rock,On the stone pillar in the middle of the lake,FALSE
+HR-520,-0811,-1966,0191,Central Hyrule,Temple of Time Ruins,Chase Lights,"At the very top of the Temple of Time, perch on the tallest tower's spire",FALSE
+HR-521,-0832,-1962,0141,Central Hyrule,Temple of Time Ruins,Shoot Target,Shoot balloon inside tower from below,FALSE
+HR-522,-1128,-1973,0144,Central Hyrule,River of Dead,Find Friend,Take him to his friend across the river,FALSE
+HR-523,-1084,-2047,0143,Central Hyrule,River of Dead,Chase Lights,On the end of the pier in the water,FALSE
+HR-524,-1515,-1922,0132,Central Hyrule,Mount Hylia,Lift Rock,Down on the cliff side under a rock,FALSE
+HR-525,-1434,-1954,0218,Central Hyrule,Mount Hylia,Chase Lights,In the middle of the pond (freeze surface),FALSE
+HR-526,-1178,-2089,0155,Central Hyrule,Mount Hylia,Find Friend,Bring back his friend,FALSE
+HR-527,-1293,-2214,0312,Central Hyrule,Mount Hylia,Lift Rock,On the peak of the mountain,FALSE
+HR-528,-1032,-2399,-0027,Central Hyrule,Chasm,Build Puzzle,Complete the stone squares with two rocks,FALSE
+HR-529,-0927,-2205,0083,Central Hyrule,Bokoblins,Ascend Through Stump,In a small cave near Bokoblins - look for marked stump,FALSE
+HR-530,-0885,-2255,0014,Central Hyrule,Mount Hylia,Build Puzzle,Use ultrahand to solve,FALSE
+HR-531,-0789,-2232,0087,Central Hyrule,Yiga House,Offer Item,Three statues with bowls outside Yiga House,FALSE
+HR-532,-0472,-2036,0072,Central Hyrule,Eastern Abbey,Build Puzzle,Abandoned buildings - complete metal puzzle,FALSE
+HR-533,-0216,-2214,0032,Central Hyrule,Lake Hylia,Build Puzzle,Grab the wooden plank out of the tree crown and insert it into the empty spot on shed roof nearby,FALSE
+HR-534,-0190,-2248,0020,Central Hyrule,Lake Hylia,Find Friend,Bring him to his friend south of the isle,FALSE
+HR-535,-0226,-1917,0043,Central Hyrule,Scout's Hill,Chase Lights,On the edge of a hill,FALSE
+HR-536,0002,-1893,0101,Central Hyrule,Scout's Hill,Flowers,On the top of the stairs of an abandonded building,FALSE
+HR-537,-0103,-2292,0070,Central Hyrule,Gatehouse Tower,Lift Rock,Eastern broken down tower of the gatehouse,FALSE
+HR-538,0062,-1754,0040,Central Hyrule,Scout's Hill,Lift Rock,"North of Scout's Hill, on the cliff",FALSE
+HR-539,0047,-1696,0060,Central Hyrule,Scout's Hill,Find Friend,Bring him to his friend on the other side of the river,FALSE
+HR-540,0147,-1610,0030,Central Hyrule,Proxim Bridge,Lift Rock,On the pillar at the western end of the bridge,FALSE
+HR-541,-0154,-1528,0020,Central Hyrule,East Post Ruins,Find Friend,Bring his friend back,FALSE
+HR-542,-0282,-1578,0052,Central Hyrule,East Post Ruins,Shoot Target,On top of a high-rise platform,FALSE
+HR-543,-0458,-1653,0019,Central Hyrule,Outpost Ruins,Find Friend,Take the korok to his friend,FALSE
+HR-544,-0509,-1696,0077,Central Hyrule,Outpost Ruins,Find Friend,Brind his friend back,FALSE
+HR-545,-0611,-1525,0067,Central Hyrule,Forest of Time,Shoot Target,A nut hanging from the chain off the large tree (between tree and ruin wall),FALSE
+HR-546,-0656,-1389,0053,Central Hyrule,Gatepost Town Ruins,Light Ring,"Top of the rock hill, there will be a wooden pedestal",FALSE
+HR-547,-0665,-1222,0027,Central Hyrule,Lake Kolomo,Lift Rock,West from Lake Kolomo,FALSE
+HR-548,-0516,-1187,0022,Central Hyrule,Lake Kolomo,Rock Pattern,In the middle of Lake Kolomo,FALSE
+HR-549,-0598,-1077,0035,Central Hyrule,Lake Kolomo,Lift Rock,Top of the largest tree near the entryway of the Hyrule Field Skyview Tower,FALSE
+HR-550,-0879,-0927,0019,Central Hyrule,Exchange Ruins,Find Friend,South-west of exchange ruins,FALSE
+HR-551,-1150,-1011,0008,Central Hyrule,Aquame Bridge,Lilypad Dive,In the water on the west side of the bridge,FALSE
+EL-375,0523,3398,0181,Eldin,West Deplian Badlands,Find Friend,Next to pillars to the west of the road,FALSE
+EL-376,0522,3397,0184,Eldin,West Deplian Badlands,Find Friend,On slope to east of road,FALSE
+EL-552,0127,3149,0181,Eldin,Thyphlo Ruins,Lift Rock,On top of the pillar,FALSE
+EL-553,0170,3036,0176,Eldin,Thyphlo Ruins,Lift Rock,Small island to the southwest of Thyphlo Ruins,FALSE
+EL-554,0276,3120,0181,Eldin,Thyphlo Ruins,Block Puzzle,"At the thyphlo ruins, just to the west of the Skyview Tower",FALSE
+EL-555,0521,3400,0183,Eldin,Deplian Badlands,Find Friend,On the slope next to the fallen stone. Does not appear until you interact with his friend,FALSE
+EL-556,1022,3674,0110,Eldin,Deplian Badlands,FInd Friend,Bring him to his friend,FALSE
+EL-557,0488,3055,0175,Eldin,Thyphlo Ruins,Find Friend,Bring him to his friend,FALSE
+EL-558,0593,3044,0188,Eldin,Eldin Mountains,Find Friend,On top of the hillock,FALSE
+EL-559,0859,3354,0209,Eldin,Eldin Mountains,Lift Rock,On the large tree,FALSE
+EL-560,0787,2952,0282,Eldin,Eldin Mountains,Lift Rock,In the center of the hilt of the sword symbol on the ground,FALSE
+EL-561,0770,2856,0215,Eldin,Eldin Mountains,Find Friend,Bring his friend back,FALSE
+EL-562,0773,2857,0224,Eldin,Eldin Mountains,Find Friend,Out in the open near the drop off of a hill,FALSE
+EL-563,1409,3778,0128,Eldin,Eldin Great Skeleton,Chase Lights,At the tail of the Eldin Great Skeleton,FALSE
+EL-564,1714,3059,0393,Eldin,Isle of Rabac,Find Friend,Bring his friend to him,FALSE
+EL-565,1380,2835,0361,Eldin,Darunia Lake,Rock Pattern,At the center of Darunia Lake,FALSE
+EL-566,1573,2951,0398,Eldin,Darunia Lake,Shoot Target,Underneath a bridge to the Northeast of Darunia Lake,FALSE
+EL-567,1602,2826,0466,Eldin,Yunobo Statue,Chase Lights,On top of the head of the Yunobo statue,FALSE
+EL-568,2232,3680,0232,Eldin,Eldin's Flank,Block Puzzle,Solve the stone cube puzzle,FALSE
+EL-569,2671,3443,0374,Eldin,Gut Check Rock,Chase Lights,On top of the souther right pillar,FALSE
+EL-570,2405,3328,0435,Eldin,Sibajitak Shrine,Ascend Through Stump,Next to Sibajitak Shrine on the bottom of the archway,FALSE
+EL-571,2511,2984,0523,Eldin,Death Caldera,Find Friend,Sitting by a campfire,FALSE
+EL-572,2189,2773,0523,Eldin,Death Mountain West Site,Find Friend,On ground west of cart track,FALSE
+EL-573,2198,3006,0507,Eldin,Death Caldera,Glide to Stump,At the glode plate on the mountain,FALSE
+EL-574,2232,3041,0445,Eldin,Death Caldera,Shoot Target,Under the small bridge,FALSE
+EL-575,2170,3035,0453,Eldin,Death Caldera,Flowers,Underneath the rock arch,FALSE
+EL-576,2062,2757,0475,Eldin,Death Mountain West Site,Block Puzzle,In the small canyon,FALSE
+EL-577,1991,2596,0457,Eldin,Death Mountain West Site,Find Friend,Under lean-to-next to the lava flow,FALSE
+EL-578,1815,2641,0400,Eldin,Goro Cove,Find Friend,On ground next to the minecart track,FALSE
+EL-579,2776,2520,0653,Eldin,Death Mountain,Shoot Target,Underneath an arch high above to the eastern side of Death Mountain,FALSE
+EL-580,1724,2606,0431,Eldin,Goron City,Find Friend,Out in the open on a rock ledge,FALSE
+EL-581,1722,2554,0498,Eldin,Goron City,Lift Rock,Atop the first of one of the statues in Goron City,FALSE
+EL-582,1808,2526,0402,Eldin,Goron City,Offer Item,Northeast og Goron City,FALSE
+EL-583,1574,2465,0408,Eldin,Goron City,Shoot Target,Inside the mouth,FALSE
+EL-584,1251,2294,0322,Eldin,Goron City,Rock Pattern,Put the 2 stones in the right place,FALSE
+EL-585,1473,2224,0294,Eldin,Golow River,Lilypad Dive,In the narrow lake west of Goron City,FALSE
+EL-586,1680,2385,0463,Eldin,Stolock Bridge,Shoot Target,Underneath the large bridge on top of the village,FALSE
+EL-587,1722,2421,0309,Eldin,Stolock Bridge,Lilypad Dive,The ring of lilypads in the pond,FALSE
+EL-588,1745,2330,0420,Eldin,Goron City,Block Puzzle,In the valley behind Goron City,FALSE
+EL-589,1799,2209,0497,Eldin,Goron Hot Springs,Glide to Stump,On a ledge beneath the bridge,FALSE
+EL-590,3029,2289,0337,Eldin,Shadow Hamlet Ruins,Build Puzzle,Fix the roof using Ultrahand,FALSE
+EL-591,2711,2389,0623,Eldin,Death Mountain,Chase Lights,On a rock outcropping on the south side of Death Mountain,FALSE
+EL-592,2223,2368,0520,Eldin,Bridge of Eldin,Flowers,Underneath the bridge you will find the first flower,FALSE
+EL-593,2063,2326,0498,Eldin,Gorok Lake,Block Puzzle,Small cliff north of Gorok Lake,FALSE
+EL-594,1999,2121,0466,Eldin,Eldin Canyon,Lift Rock,Return the boulder from the hole below into the stand using Ultrahand,FALSE
+EL-595,1984,2040,0423,Eldin,Gorko Tunnel Entrance,Find Friend,"On the ground, just west of the Gorko Tunnel Entrance",FALSE
+EL-596,1834,1904,0342,Eldin,Gorko Tunnel Entrance,Find Friend,Start from Gorko Cave Entrance to the northeast,FALSE
+EL-597,1670,1980,0342,Eldin,Gortram Cliff,Lift Rock,On top of the pickaxe rock formation next to the mine,FALSE
+EL-598,1433,1953,0337,Eldin,Eldin Canyon,Ascend Through Stump,In a tiny cave inside the wall,FALSE
+EL-599,1543,1808,0283,Eldin,Eldin Canyon,Find Friend,Bring him up to his friend,FALSE
+EL-600,1504,1801,0309,Eldin,Eldin Canyon,Find Friend,On the plateau under a lean-to. He will not appear until you talk to his friend,FALSE
+EL-601,1448,1750,0308,Eldin,Eldin Canyon,Lift Rock,Grab the big rock in the water,FALSE
+EL-602,1699,1743,0343,Eldin,Eldin Canyon,Lift Rock,Put the nearby rock into the stand,FALSE
+EL-603,1334,1314,0167,Eldin,Pico Pond,Shoot Target,Shoot the acorn inside the tree trunk,FALSE
+EL-604,1424,1534,0363,Eldin,Eldin Canyon,Chase Lights,"Up on a tall hill, will be hidden until you climb the rock that all the red arrow signs are pointing at",FALSE
+EL-605,1534,1606,0305,Eldin,Eldin Canyon,Find Friend,On the ground next to the construction materials,FALSE
+EL-606,1767,1539,0309,Eldin,Goronbi Lake,Chase Lights,Top of building,FALSE
+EL-607,1873,1629,0302,Eldin,Bedrock Bistro,Find Friend,To the north east of the bedrock bistro,FALSE
+EL-608,2264,1835,0332,Eldin,Medingo Pool,Flowers,In the skull base near Medingo Pool,FALSE
+EL-609,2431,1708,0149,Eldin,Gero Pond,Pull Plug,In Gero Pond to the northwest of Lake Intenoch,FALSE
+EL-610,2704,1742,0119,Eldin,Broca Island,Rock Pattern,On the island,FALSE
+Ak-611,2968,3648,0224,Akkala,Akkala Wilds,Find Friend,Bring his friend back,FALSE
+Ak-612,3076,3683,0213,Akkala,Gut Check Rock,Shoot Target,To the north east of the Gut Check Rock,FALSE
+Ak-613,3351,3664,0221,Akkala,Akkala Wilds,Find Friend,Take him to his friend,FALSE
+Ak-614,3455,3580,0209,Akkala,Akkala Wilds,Shoot Target,Shoot 3 balloons,FALSE
+Ak-615,3153,3430,0137,Akkala,Skull Lake,Glide to Stump,On a cliff overlooking Skull Lake,FALSE
+Ak-616,3268,3397,0034,Akkala,Skull Lake,Lift Rock,On top of the pillar,FALSE
+Ak-617,3146,3039,0141,Akkala,Rok Woods,Block Puzzle,On the cliffs west of the Rok Woods,FALSE
+Ak-618,3344,3074,0058,Akkala,Rok Woods,Offer Item,Place an apple in the empty altar,FALSE
+Ak-619,3448,3175,0054,Akkala,Rok Woods,Find Friend,Bring his friend back,FALSE
+Ak-620,3768,3376,0171,Akkala,Akkala Wilds,Lift Rock,Put the rock in the tree pedestal,FALSE
+Ak-621,3574,3048,0109,Akkala,Tempest Gulch,Glide to Stump,On top of the rock (can't touch the ground before hitting target),FALSE
+Ak-622,3959,3118,0179,Akkala,Tumlea Heights,Find Friend,Bring him to his friend,FALSE
+Ak-623,4120,3285,0198,Akkala,Tumlea Heights,Shoot Target,In the building remains,FALSE
+Ak-624,4155,3167,0250,Akkala,Tumlea Heights,Lift Rock,On top of the three rocks standing up,FALSE
+Ak-625,4297,3273,0171,Akkala,Tumlea Heights,Find Friend,Bring him to his friend,FALSE
+Ak-626,4415,3265,0206,Akkala,Akkala Ancient Tech Lab,Find Friend,Bring his friend to him,FALSE
+Ak-627,4435,3187,0249,Akkala,Akkala Ancient Tech Lab,Flowers,In the middle of the crator near the wood pile,FALSE
+Ak-628,4493,3148,0245,Akkala,Akkala Ancient Tech Lab,Offer Item,In the three statues bowls place a banana,FALSE
+Ak-629,4541,3162,0270,Akkala,Akkala Ancient Tech Lab,Chase Lights,At the top of the crane on top of the house,FALSE
+Ak-630,4794,3753,0139,Akkala,Lomei Labyrinth Island,Shoot Target,Very top of the wall in the corner,FALSE
+Ak-631,4626,2859,0002,Akkala,North Akkala Beach,Find Friend,Bring his friend back,FALSE
+Ak-632,4277,2942,0143,Akkala,Bloodleaf Lake,Lilypad Dive,On the southern bank of Bloodleaf Lake,FALSE
+Ak-633,4393,2719,0119,Akkala,North Akkala Foothill,Block Puzzle,Complete the puzzle,FALSE
+Ak-634,4274,2826,0147,Akkala,North Akkala Foothill,Burn Leaves,On a ledge near a tree,FALSE
+Ak-635,4202,2741,0127,Akkala,East Akkala Stable,Find Friend,On top of a box ourside East Akkala Stable,FALSE
+Ak-636,3855,2686,0049,Akkala,North Akkala Valley,Find Friend,Bring his friend to him,FALSE
+Ak-637,3767,2696,0018,Akkala,Spring of Power,Chase Lights,One level behind and above the Goddess Statue,FALSE
+Ak-638,3538,2634,0077,Akkala,Ordorac Quarry,Block Puzzle,North of Ordorac Quarry,FALSE
+Ak-639,4353,2535,0077,Akkala,East Akkala Beach,Find Friend,On a cliff overlooking East Akkala Beach,FALSE
+Ak-640,4312,2519,0080,Akkala,East Akkala Beach,Chase Lights,In a small set of ruins north of East Akkala Beach (find the right place between 2 red arrows),FALSE
+Ak-641,4278,2337,0020,Akkala,East Akkala Beach,Find Friend,"On the ground next to the road, will not appear until you interact with his friend",FALSE
+Ak-642,4074,2451,0073,Akkala,Octorok Lake,Burn Leaves,In the middle o fthe Octorok Lake,FALSE
+Ak-643,3746,2305,0093,Akkala,East Akkala Plains,Find Friend,Hill overlooking shrine,FALSE
+Ak-644,3326,2168,0135,Akkala,Shadow Pass,Chase Lights,Follow where the red pointing arrows lead to the top of the tree,FALSE
+Ak-645,3222,2169,0128,Akkala,Shadow Pass,Find Friend,"Along the road, bring his friend back",FALSE
+Ak-646,3223,2170,0138,Akkala,Kanalet Ridge,Find Friend,Bring him to his freind in the north,FALSE
+Ak-647,3232,1787,0226,Akkala,Kanalet Ridge,Lift Rock,On top of the trunk of the tree,FALSE
+Ak-648,3647,1796,0112,Akkala,Torin Wetland,Lift Rock,Top of the building,FALSE
+Ak-649,4527,2047,0000,Akkala,Rist Peninsula,Lift Rock,On the tip of the spiral island there is a small rock in the water,FALSE
+Ak-650,4742,1983,0000,Akkala,Rist Peninsula,Find Friend,Bring his friend back,FALSE
+Ak-651,4599,1858,0009,Akkala,Rist Peninsula,Burn Leaves,Inside a ruined corner wall by the sea,FALSE
+Ak-652,4717,1417,0181,Akkala,Tingel Island,Chase Lights,Follow the arrow signs,FALSE
+Ak-653,4294,1607,0153,Akkala,Malin Bay,Find Friend,Overlooking the cliff,FALSE
+Ak-654,4021,1623,0137,Akkala,Tarrey Town,Lift Rock,Gate leading into Tarrey Town,FALSE
+Ak-655,3972,1612,0127,Akkala,Tarrey Town,Block Puzzle,"In the center of town, ring the bell (pull it all the way up)",FALSE
+Ak-656,4137,1491,0166,Akkala,Akkala Highlands,Build Puzzle,Between Tarrey town and Link's plot of land,FALSE
+Ak-657,4109,1384,0166,Akkala,Akkala Highlands,Chase Lights,In a small pong just south of Tarrey Town,FALSE
+Ak-658,4048,1284,0216,Akkala,Akkala Highlands,Chase Lights,"On top of the big tree, follow the red arrows",FALSE
+Ak-659,3882,1338,0247,Akkala,Akkala Highlands,Flowers,Flower near the three statues,FALSE
+Ak-660,3669,1468,0096,Akkala,Torin Wetland,Flowers,Atop one of the ruins in the Torin Wetland,FALSE
+Ak-661,3869,1092,0223,Akkala,East Sokkala Bridge,Pull Plug,Pop the cork with Ultrahand,FALSE
+Ak-662,4475,0936,0096,Akkala,Ukuku Plains,Light Ring,On the ledge overlooking the canyon,FALSE
+Ak-663,4697,0547,0230,Akkala,Davdi Island,Glide to Stump,Start at the stump and glide to finish without touching the ground,FALSE
+Ak-664,4484,0676,0254,Akkala,Ukuku Plains,Build Puzzle,Make a bridge with the wood nearby to catch the glitter,FALSE
+Ak-665,4360,0776,0280,Akkala,Ukuku Plains,Find Friend,Bring his friend located in the west on the other side of the lake,FALSE
+Ak-666,4055,0943,0276,Akkala,Ukuku Plains,Find Friend,Bring him to his friend,FALSE
+Ak-667,4389,0612,0275,Akkala,Ukuku Plains,Rock Pattern,Complete the stone pattern with nearby stones,FALSE
+Ak-668,4271,0509,0335,Akkala,Ukuku Plains,Shoot Target,Shoot three balloons,FALSE
+Ak-669,4173,0699,0246,Akkala,Ulria Grotto,Pull Plug,Pull the plug out,FALSE
+Ak-670,4078,0821,0232,Akkala,Ukuku Plains,Ascend Through Stump,Small alcove partly down the cliff,FALSE
+Ak-671,3904,0797,0383,Akkala,Ukuku Plains,Block Puzzle,Solve the stone cube puzzle,FALSE
+Ak-672,3801,0856,0276,Akkala,Ukuku Plains,Rock Pattern,Solve the stone triangle,FALSE
+Ak-673,3545,0964,0394,Akkala,Ukuku Plains,Rock Pattern,Solve the stone ring,FALSE
+Ak-674,3357,1306,0289,Akkala,Akkala Parade Ground Ruins,Block Puzzle,Behind a row of canons near the Akkala Parade Ground Ruins,FALSE
+Ak-675,3296,1511,0436,Akkala,Akkala Citadel Ruins,Chase Lights,"At the very top of the broken archway, highest point of the ruins",FALSE
+Ak-676,3272,1398,0285,Akkala,Akkala Citadel Ruins,Lift Rock,Right on the edge of a cliff below the Akkala Citadel Ruins,FALSE
+Ak-677,3160,1426,0256,Akkala,Akkala Bridge Ruins,Burn Leaves,Burn leaves then lift rock,FALSE
+Ak-678,3115,1306,0318,Akkala,South Akkala Plains,Chase Lights,By a tree,FALSE
+Ak-679,3012,1200,0240,Akkala,South Akkala Plains,Pull Plug,"Under the bridge on a broken column, need to pull cork",FALSE
+Ak-680,3074,1138,0281,Akkala,South Akkala Plains,Chase Lights,"Atop ruined beam, find where the red arrows are pointing",FALSE
+La-681,0553,0514,0013,Lanayru,Thims Bridge,Lift Rock,Under the Thims Bridge,FALSE
+La-682,1467,0677,0027,Lanayru,Trilby Plain,Shoot Target,Hole in the west side of tree,FALSE
+La-683,1577,0725,0077,Lanayru,Trilby Plain,Offer Item,"Under the big tree, put an apple in the empty bowl",FALSE
+La-684,1535,0511,0010,Lanayru,Trilby Plain,Find Friend,Near the construction platform on the beach,FALSE
+La-685,1858,0786,0091,Lanayru,Trilby Plain,Lift Rock,Near the dragon tear,FALSE
+La-686,1941,1205,0140,Lanayru,Lake Ferona,Lift Rock,"At the western edge of Lake Ferona, at the peak of the island",FALSE
+La-687,2129,1083,0132,Lanayru,Lake Ferona,Find Friend,Bring his friend here,FALSE
+La-688,2313,1132,0187,Lanayru,Lake Ferona,Ascend Through Stump,Ceiling stump is to the southeast of Lake Ferona,FALSE
+La-689,2371,1401,0129,Lanayru,Maw of Death Mountain,Find Friend,on the bridge at the Maw of Death Mountain,FALSE
+La-690,2436,1243,0119,Lanayru,Maw of Death Mountain,Flowers,You can find a dandelion under the archway,FALSE
+La-691,2290,0943,0111,Lanayru,Trilby Valley,Rock Pattern,South of Lake Ferona,FALSE
+La-692,2751,1374,0126,Lanayru,Cephla Lake,Light Ring,At the shore of the western Cephla Lake,FALSE
+La-693,2179,1154,0178,Lanayru,Cephla Lake,Block Puzzle,"By the lake shore, complete the puzzle",FALSE
+La-694,2639,1109,0158,Lanayru,Cephla Lake,Find Friend,On a hill near a Foothill Stable,FALSE
+La-695,2671,1077,0156,Lanayru,Cephla Lake,Chase Lights,Look for the sparkles near the ruined building,FALSE
+La-696,2556,0763,0117,Lanayru,Ternio Trail,Chase Lights,Running across the rocks,FALSE
+La-697,2760,0770,0199,Lanayru,Ternio Trail,Find Friend,Bring him to his friend,FALSE
+La-698,2642,0635,0177,Lanayru,Ternio Trail,Find Friend,"Mountain side, near three trees",FALSE
+La-699,2545,0639,0127,Lanayru,Ternio Trail,Find Friend,On top of rocks to the east of the construction materials,FALSE
+La-700,2579,0487,0179,Lanayru,Ternio Trail,Light Ring,Atop the pillars,FALSE
+La-701,2425,0412,0195,Lanayru,Ternio Trail,Chase Lights,Atop of tree,FALSE
+La-702,2336,0273,0026,Lanayru,Inogo Bridge,Shoot Target,Top of tower,FALSE
+La-703,2238,0245,0014,Lanayru,Inogo Bridge,Find Friend,Bring him to his friend,FALSE
+La-704,1683,0258,0016,Lanayru,Mercay Island,Find Friend,"Under a tree, near the shore, will not appear unless you talk to his friend first",FALSE
+La-705,1701,0007,0010,Lanayru,Mercay Island,Find Friend,"On the grassy shore, next to the short rock cliff. He will not appear until you talk to his friend",FALSE
+La-706,1891,-0150,0009,Lanayru,Kincean Island,Lift Rock,Under the bridge,FALSE
+La-707,1304,-0179,0008,Lanayru,Zauz Island,Light Ring,West from the Zauz Island,FALSE
+La-708,1505,-0332,0014,Lanayru,Goponga Village Ruins,Find Friend,On a small mound,FALSE
+La-709,1441,-0537,0012,Lanayru,Millennio Sandbar,Flowers,The dandelion on top of the rock,FALSE
+La-710,1824,-0459,0012,Lanayru,Millennio Sandbar,Lift Rock,"Millennio Sandbar, just south of Bannan Island",FALSE
+La-711,2201,0159,0034,Lanayru,Zora River,Find Friend,Bring his friend back,FALSE
+La-712,2211,0046,0050,Lanayru,Zora River,Block Puzzle,"There are 4 fixed pattern, which represents the faces of a dice, from one to four. The piece which can be grab has to be put in the fourth pattern to make the number 4",FALSE
+La-713,2308,0131,0104,Lanayru,Zora River,Shoot Target,"On top of the mountain, in a small ruined shack",FALSE
+La-714,2307,0011,0051,Lanayru,Zora River,Lilypad Dive,Climb to the highest cliff and dive into the circle,FALSE
+La-715,2471,0150,0079,Lanayru,Tabahl Woods,Lift Rock,At the top of the Zonai Ruins,FALSE
+La-716,2461,-0045,0079,Lanayru,Rutala River,Rock Pattern,Edge of a cliff looking over Rutala River,FALSE
+La-717,2750,0250,0109,Lanayru,Tabahl Woods,Flowers,Under the rock arch,FALSE
+La-718,2619,0056,0019,Lanayru,Bank of Wishes,Find Friend,Brind his friend back,FALSE
+La-719,2781,0198,0079,Lanayru,Rutala River,Pull Plug,Pop the cork by the riverbank,FALSE
+La-720,2673,0009,0099,Lanayru,Zodobon Highlands,Ascend Through Stump,In the small cave over a pond on the north side of the Zodobon Highlands,FALSE
+La-721,3013,0931,0379,Lanayru,Upland Zorana,Lift Rock,Most of the way up the cliff on a narrow dead end,FALSE
+La-722,3389,0742,0171,Lanayru,Toto Lake,Lilypad Dive,In the center of the shallow pool,FALSE
+La-723,3166,0586,0116,Lanayru,Upland Zorana,Rock Pattern,On the shore of the water,FALSE
+La-724,3105,0460,0172,Lanayru,Veiled Falls,Light Ring,"At the base of falls, swim up the waterfall",FALSE
+La-725,3329,0532,0112,Lanayru,Zora's Domain,Lift Rock,"Ground level under the walkways of Zora's Domain, hiding under a small rock behind the column in the middle of the water",FALSE
+La-726,3321,0515,0305,Lanayru,Zora's Domain,Chase Lights,"Top of the tail in the center, specifically in the decorative arch",FALSE
+La-727,2807,0183,0146,Lanayru,Zora River,Find Friend,Bring him to his friend,FALSE
+La-728,2940,0206,0205,Lanayru,Ralis Pond,Shoot Target,In the fallen tree stump,FALSE
+La-729,2955,0256,0220,Lanayru,Ralis Pond,Light Ring,"On the top of the hill, close to Ruto Lake",FALSE
+La-730,2851,-0028,0080,Lanayru,Oren Bridge,Lift Rock,In the middle of the Zora River,FALSE
+La-731,2961,-0053,0142,Lanayru,Zodobon Highlands,Chase Lights,At bottom of cliff between the red arrows,FALSE
+La-732,2951,-0080,0315,Lanayru,Zodobon Highlands,Shoot Target,On the top of the mountain,FALSE
+La-733,2943,-0349,0180,Lanayru,Zodobon Highlands,Flowers,Chase the flower,FALSE
+La-734,3277,-0011,0276,Lanayru,Ruto Mountain,Glide to Stump,On top of the hill,FALSE
+La-735,3191,0224,0150,Lanayru,Great Zora Bridge,Chase Lights,At the top of the tree before the Great Zora Bridge,FALSE
+La-736,3218,0283,0078,Lanayru,Great Zora Bridge,Lift Rock,"Under the southern side of the bridge, all the way at the waters edge down below",FALSE
+La-737,3285,0039,0258,Lanayru,Ruto Precipice,Shoot Target,At the edge of the cliff,FALSE
+La-738,3290,0544,0485,Lanayru,Ploymus Mountain,Find Friend,At a small camp at the edge of the mountain,FALSE
+La-739,3781,0043,0531,Lanayru,Shatterback Point,Find Friend,"On the side of the mountain, beside the steps",FALSE
+La-740,3665,0445,0250,Lanayru,Ploymus Mountain,Flowers,Under the broken columns,FALSE
+La-741,3579,0417,0211,Lanayru,Ploymus Mountain,Shoot Target,Under the topmost stairs,FALSE
+La-742,4111,0471,0374,Lanayru,Tal Tal Peak,Lift Rock,Move the boulder on the other side of the waterfall into the holder,FALSE
+La-743,4100,0475,0263,Lanayru,Tal Tal Peak,Lift Rock,Behind the waterfall at the very bottom,FALSE
+La-744,4135,0407,0416,Lanayru,Tal Tal Peak,Lift Rock,On the very top of the mountain,FALSE
+La-745,3879,0265,0211,Lanayru,Tal Tal Peak,Find Friend,Bring his friend here,FALSE
+La-746,3527,-0061,0211,Lanayru,Rutala Damn,Find Friend,Bring him to his friend,FALSE
+La-747,3820,0076,0211,Lanayru,East Reservoir Lake,Shoot Target,At the end of the pier,FALSE
+La-748,4272,0136,0100,Lanayru,Tal Tal Peak,Block Puzzle,"At the edge of cliff, finish the small tower of stones",FALSE
+La-749,4219,0158,0279,Lanayru,East Reservoir Lake,Block Puzzle,"On the cliff east of East Reservoir Lake, close to Spool Bight",FALSE
+La-750,4164,0063,0349,Lanayru,Tal Tal Peak,Lift Rock,On the structer on top of the 3 chests,FALSE
+La-751,4324,-0141,0047,Lanayru,Talus Plateau,Flowers,Hit the dandelion and catch the seed,FALSE
+La-752,4000,-0185,0176,Lanayru,Ja'Abu Ridge,Find Friend,Bring him to his friend to the south east on Lodrun Headland,FALSE
+La-753,3526,-0367,0145,Lanayru,Ja'Abu Ridge,Block Puzzle,Solve the stone structure puzzle,FALSE
+La-754,4457,-0354,0056,Lanayru,Talus Plateau,Lift Rock,In the center spiral,FALSE
+La-755,4400,-0479,-0055,Lanayru,Talus Plateau,Ascend Through Stump,Under the arch,FALSE
+La-756,4396,-0536,0054,Lanayru,Lodrum Headland,Block Puzzle,Complete the structure in a small pond,FALSE
+La-757,4499,-0648,0075,Lanayru,Lodrum Headland,Find Friend,Camping on a hill near the ruins,FALSE
+La-758,4448,-0743,0068,Lanayru,Lodrum Headland,Flowers,On top of the pillar,FALSE
+La-759,4184,0443,0024,Lanayru,Horon Lagoon,Light Ring,On top of the alcove,FALSE
+La-760,4142,-0558,0004,Lanayru,Horon Lagoon,Chase Lights,"On top of a rock, in the middle of 3 arrows",FALSE
+La-761,3944,-0415,0038,Lanayru,Brynna Plain,Rock Pattern,Bring 2 rocks to complete the formation,FALSE
+La-762,3711,-0621,0001,Lanayru,Lanayru Bay,Flowers,Catch the flowers,FALSE
+La-763,3654,-0602,0004,Lanayru,Lanayru Bay,Find Friend,Bring him to his friend,FALSE
+La-764,4513,-1005,0009,Lanayru,Wintre Island,Chase Lights,Chase the sparkles,FALSE
+La-765,3322,-0475,0021,Lanayru,Samasa Plain,Lift Rock,On top of a tree,FALSE
+La-766,3137,-0436,0008,Lanayru,Rutala River,Lilypad Dive,Jump in the flower circle at the end of dock,FALSE
+La-767,3202,-0658,0000,Lanayru,Samasa Plain,Offer Item,Put a porgy in the bowl and light it on fire,FALSE
+La-768,1086,-1048,0010,Lanayru,Nabi Lake,Light Ring,"In the river, stand on the platform to activate trial towards river bank",FALSE
+La-769,1283,-0833,0078,Lanayru,Sahasra Slope,Lift Rock,Stone on top of the tree,FALSE
+La-770,1259,-1005,0152,Lanayru,Sahasra Slope,Flowers,Flower on top of the hill,FALSE
+La-771,1627,-0782,0039,Lanayru,Rikoka Hills,Lift Rock,In the tree along a branch,FALSE
+La-772,1574,-1044,0151,Lanayru,Sahasra Slope,Flowers,On top of the gate,FALSE
+La-773,1693,-0929,0310,Lanayru,Ring Ruins,Lift Rock,On the highest point of the giant Ring Ruin,FALSE
+La-774,1791,-0854,0117,Lanayru,Ring Ruins,Shoot Target,Behind the Ring Ruins on the north side of Kakariko Village,FALSE
+La-775,1778,-0985,0119,Lanayru,Ring Ruins,Chase Lights,Under the house,FALSE
+La-776,1761,-0984,0140,Lanayru,Ring Ruins,Chase Lights,On the roof,FALSE
+La-777,1873,-0804,0239,Lanayru,East Hill,Find Friend,Bring him to his friend,FALSE
+La-778,2175,-0567,0211,Lanayru,Quatta's Shelf,Find Friend,Bring his friend back to him,FALSE
+La-779,1981,-0450,0068,Lanayru,Quatta's Shelf,Shoot Target,A tree on a ledge halfway down the mountain towards Lanayru Wetlands,FALSE
+La-780,1996,-0958,0178,Lanayru,Pierre Plateau,Shoot Target,Under the right side of the bridge,FALSE
+La-781,2241,-0725,0230,Lanayru,Lanayru Road - West Gate,Offer Item,Three statues surrounding a single bowl with an apple (need to place as many apples as there is statues),FALSE
+La-782,2165,-1038,0354,Lanayru,Pierre Plateau,Rock Pattern,On top of the hill,FALSE
+La-783,2030,-1165,0160,Lanayru,Bonooru's Stand,Lift Rock,Above the pond on a ledge,FALSE
+La-784,1926,-1488,0081,Lanayru,Lake Siela,Lift Rock,On top of the tall hill,FALSE
+La-785,2198,-1374,0056,Lanayru,Lake Siela,Chase Lights,On a cliff ledge,FALSE
+La-786,2300,-1356,0129,Lanayru,Lake Siela,Shoot Target,"Below the cliff, above the source of the flowing water",FALSE
+La-787,2294,-1510,0062,Lanayru,Phalian Highlands,Lift Rock,Put the stone over the wooden branches,FALSE
+La-788,2190,-1700,0023,Lanayru,Phalian Highlands,Find Friend,Korok has been separated from their friend to the west,FALSE
+La-789,2510,-1572,0014,Lanayru,Phalian Highlands,Ascend Through Stump,Past two statues under a small stone structure,FALSE
+La-790,2547,-1077,0112,Lanayru,Lanayru Promenade,Shoot Target,On the south bank of the Lanayru Promenade west of Oogim Shrine,FALSE
+La-791,2834,-1119,0102,Lanayru,Lanayru Promenade,Lift Rock,Under the stairs,FALSE
+La-792,2766,-1217,0166,Lanayru,Lanayru Promenade,Flowers,Beside the tree above,FALSE
+La-793,2495,-0892,0196,Lanayru,Lanayru Heights,Lift Rock,Put the boulder in nearby hole in wooden stand on top of a rock,FALSE
+La-794,2546,-0585,0120,Lanayru,Rabia Plain,Lift Rock,On top of a tree,FALSE
+La-795,2634,-0364,0150,Lanayru,Rabia Plain,Shoot Target,Look for an acorn hanging from tree branch that points northeast towards the river,FALSE
+La-796,2690,-0544,0111,Lanayru,Rabia Plain,Find Friend,In front of the lake,FALSE
+La-797,2760,-0582,0133,Lanayru,Rabia Plain,Find Friend,Under a small tent on the plateau just above the pond to the west. He will not appear until you talk with his friend,FALSE
+La-798,3016,-0771,0146,Lanayru,Trotter's Downfall,Rock Pattern,Put the stone in the right place,FALSE
+La-799,3305,-0774,0010,Lanayru,Trotter's Downfall,Find Friend,Bring his friend back,FALSE
+La-800,2921,-1395,0378,Lanayru,Peak of Awakening,Pull Plug,"On top of the mountain, attach platforms to throw cork off mountain",FALSE
+La-801,-0159,0096,0021,Lanayru,Purifier Lake,Block Puzzle,Complete the puzzle piece,FALSE
+La-802,3235,-1538,0197,Lanayru,Nirvata Plateau,Rock Pattern,Complete the moon shape,FALSE
+La-803,3501,-1475,0162,Lanayru,Naydra Snowfield,Find Friend,Take him to his friend uphill to the east,FALSE
+La-804,3668,-1386,0296,Lanayru,Naydra Snowfield,Find Friend,Bring his friend back,FALSE
+La-805,3563,-1114,0254,Lanayru,Mount Lanayru,Chase Lights,On top of a dead tree,FALSE
+La-806,3744,-1154,0437,Lanayru,Mount Lanayru,Flowers,On top of an ice pillar,FALSE
+La-807,4028,-1096,0348,Lanayru,Mount Lanayru,Pull Plug,Stump with a plug at the end of the cliff,FALSE
+La-808,4187,0815,0000,Lanayru,Lanayru Bay,Lilypad Dive,Tall pointy rock in the water near the ring of plants,FALSE
+La-809,4394,-1455,0064,Lanayru,Afromsia Coast,Lift Rock,"Side of the mountain, place rock on stand",FALSE
+La-810,4526,-1514,0011,Lanayru,Afromsia Coast,Flowers,On top of a rock near the shore,FALSE
+La-811,3527,-1686,0360,Lanayru,Madorna Mountain,Chase Lights,Top of the pine tree,FALSE
+La-812,3739,-1687,0385,Lanayru,Madorna Mountain,Chase Lights,Top of the pine tree,FALSE
+La-813,3895,-1686,0384,Lanayru,Madorna Mountain,Chase Lights,On top of the tall dead tree,FALSE
+La-814,3366,-1977,0142,Lanayru,Ovli Plain,Block Puzzle,Ring the bell atop the building to spawn the Korok,FALSE
+La-815,3702,-1938,0176,Lanayru,Lake Sumac,Chase Lights,Island in the middle of the lake,FALSE
+La-816,4337,-1874,0211,Lanayru,Walnot Mountain,Rock Pattern,Complete the rock pattern,FALSE
+La-817,4590,-2159,0002,Lanayru,Afromsia Coast,Block Puzzle,On a small rock island near cave,FALSE
+La-818,4516,-2304,0113,Lanayru,Mapla Point,Lift Rock,On top of the mountain,FALSE
+La-819,4393,-2414,0005,Lanayru,Mapla Point,Block Puzzle,Complete the structure,FALSE
+La-820,4119,-2572,0001,Lanayru,Deepback Bay,Chase Lights,Fairy light in the middle of the arrows,FALSE
+La-821,4038,-2309,0007,Lanayru,Hateno Beach,Flowers,Catch the flower,FALSE
+La-822,3932,-2480,0018,Lanayru,Hateno Bay,Chase Lights,On top of the tree,FALSE
+La-823,3900,-2506,0000,Lanayru,Hateno Bay,Find Friend,Bring his friend back,FALSE
+La-824,3915,-2101,0129,Lanayru,Retsam Forest,Shoot Target,Activate a pinwheel on a small rock on the south side of the pond,FALSE
+La-825,3783,-2124,0285,Lanayru,Retsam Forest,Chase Lights,"On top of the research lab, on the guardians head",FALSE
+La-826,3731,-2160,0201,Lanayru,Retsam Forest,Find Friend,Near the base of the hill the research lab is on,FALSE
+La-827,3250,-2114,0099,Lanayru,Ginner Woods,Find Friend,Bring his friend back,FALSE
+Ne-828,1291,-1331,0160,Necluda,Mable Ridge,Shoot Target,Shoot the acorn in the tree,FALSE
+Ne-829,1536,-1302,0062,Necluda,Lake Siela,Lift Rock,On the ledge overlooking the lake,FALSE
+Ne-830,1626,-1360,0011,Necluda,Lake Siela,Flowers,Flower on a rock beside the structure,FALSE
+Ne-831,1785,-1551,0010,Necluda,Kakariko Bridge,Burn Leaves,Under the bridge,FALSE
+Ne-832,1153,-1703,0157,Necluda,Mable Ridge,Shoot Target,Shoot the balloon hidden in the tree,FALSE
+Ne-833,1373,-1679,0229,Necluda,Mable Ridge,Flowers,On top of a rock,FALSE
+Ne-834,1195,-1842,0010,Necluda,Dueling Peaks,Find Friend,Bring his friend back,FALSE
+Ne-835,1241,-1850,0347,Necluda,Dueling Peaks,Block Puzzle,On an alcove just under the peak of the mountain,FALSE
+Ne-836,1252,-1856,0385,Necluda,Dueling Peaks,Shoot Target,On the top of the north mountain of Dueling Peaks,FALSE
+Ne-837,1521,-1858,0289,Necluda,Dueling Peaks,Shoot Target,Windmill at the foot of the tree,FALSE
+Ne-838,1171,-1882,0009,Necluda,Squabble River,Find Friend,Bring him to his friend,FALSE
+Ne-839,1243,-1940,0436,Necluda,Dueling Peaks,Glide to Stump,"Step on the korok stump between the two statues, follow the sparkle, paraglide, and land on target",FALSE
+Ne-840,1327,-1963,0185,Necluda,Dueling Peaks,Pull Plug,"At the end of the walkway ledge halfway down the mountain, pull the cork",FALSE
+Ne-841,1652,-1908,0010,Necluda,Dueling Peaks,Pull Plug,"By the waterfall next to the Dueling Peaks stable, pull the cork",FALSE
+Ne-842,1767,-1868,0015,Necluda,Ash Swamp,Find Friend,Bring the korok to his friend,FALSE
+Ne-843,2011,-1895,0015,Necluda,Ash Swamp,Chase Lights,Inside the tree trunk in the pond,FALSE
+Ne-844,2051,-2092,0046,Necluda,Bubinga Forest,Flowers,Catch the dandelion,FALSE
+Ne-845,2000,-2281,0009,Necluda,Bubinga Forest,Shoot Target,Break the nut inside the fallen tree,FALSE
+Ne-846,2141,-2220,0006,Necluda,Bubinga Forest,Lilypad Dive,Jump from cliff into the water flower ring,FALSE
+Ne-847,2325,-1829,0027,Necluda,Fort Hateno,Lift Rock,"On top of the gate, right over the road",FALSE
+Ne-848,2397,-1844,0022,Necluda,Fort Hateno,Chase Lights,On top of the chimney,FALSE
+Ne-849,2473,-1741,0010,Necluda,Fort Hateno,Find Friend,The lost and exhausted korok is found right next to the raod above Fort Hateno,FALSE
+Ne-850,2528,-1750,0056,Necluda,Cliffs of Quince,Shoot Target,Shoot down balloon under the archway,FALSE
+Ne-851,2507,-1869,0135,Necluda,Cliffs of Quince,Pull Plug,"At the top of the mountain, attach a stone to plug to pull",FALSE
+Ne-852,2613,-1868,0019,Necluda,Cliffs of Quince,Find Friend,Bring his friend back,FALSE
+Ne-853,2801,-1849,0008,Necluda,Fir River,Lilypad Dive,Jump into circle of lilypads below,FALSE
+Ne-854,2857,-1910,0040,Necluda,Fir River,Find Friend,Bring him to his friend,FALSE
+Ne-855,3018,-2033,0050,Necluda,Camphor Pond,Glide to Stump,"On top of the hill, glide to small target",FALSE
+Ne-856,2482,-2048,0009,Necluda,Oakle's Navel,Find Friend,Bring his friend to him,FALSE
+Ne-857,2490,-2122,0033,Necluda,Oakle's Navel,Lift Rock,Under a rock on a cliff overlooking Oakle's Navel,FALSE
+Ne-858,2645,-2118,0127,Necluda,Marblod Plain,Find Friend,Bring him to his friend,FALSE
+Ne-859,2724,-2123,0148,Necluda,Marblod Plain,Offer Item,Offer apples to 2 statues,FALSE
+Ne-860,2811,-2248,0125,Necluda,Marblod Plain,Lift Rock,Lift rock on top of skull base,FALSE
+Ne-861,2835,-2120,0020,Necluda,Midla Woods,Chase Lights,On top of the building,FALSE
+Ne-862,2866,-2186,0034,Necluda,Midla Woods,Chase Lights,On the small hill with ruins,FALSE
+Ne-863,3288,-2179,0169,Necluda,Firly Pond,Flowers,On top of a pole,FALSE
+Ne-864,3256,-2226,0107,Necluda,Firly Pond,Lift Rock,Island in the middle of the lake,FALSE
+Ne-865,3246,-2282,0130,Necluda,Firly Pond,Find Friend,Bring him to his friend,FALSE
+Ne-866,3261,-2394,0217,Necluda,Ebon Mountain,Find Friend,Top of the mountain,FALSE
+Ne-867,3444,-2497,0209,Necluda,Ebon Mountain,Block Puzzle,Match the towers to complete the puzzle,FALSE
+Ne-868,3418,-2385,0234,Necluda,Ebon Mountain,Shoot Target,Top of the mountain,FALSE
+Ne-869,3675,-2194,0217,Necluda,Retsam Forest,Lift Rock,On top of the tree,FALSE
+Ne-870,3748,-2630,0020,Necluda,Kitano Bay,Lift Rock,On the rock formation just south of Kitano Bay,FALSE
+Ne-871,4085,-2973,0002,Necluda,Tenoko Island,Pull Plug,Pull the cork,FALSE
+Ne-872,3966,-2994,0000,Necluda,Tenoko Island,Chase Lights,On the top of the palm tree on Tenoko Island,FALSE
+Ne-873,3665,-3278,0206,Necluda,Cape Cales,Lift Rock,On the ledge of the cliff,FALSE
+Ne-874,3686,-3316,0244,Necluda,Cape Cales,Find Friend,Eastern tip of Cape Cales,FALSE
+Ne-875,3494,-3311,0226,Necluda,Cape Cales,Shoot Target,Shoot the nut in the tree,FALSE
+Ne-876,3432,-3325,0020,Necluda,Cape Cales,Chase Lights,"On top of pillar, find the place that the arrows show",FALSE
+Ne-877,4491,-3396,0018,Necluda,Toronbo Beach,Shoot Target,Pinwheel on the rocky island,FALSE
+Ne-878,4596,-3561,0020,Necluda,Toronbo Beach,Chase Lights,On the tree stump in the center of the swampy pond,FALSE
+Ne-879,4495,-3615,0000,Necluda,Toronbo Beach,Find Friend,Bring his friend to him that's located on the edge of Cape Cales to the west,FALSE
+Ne-880,4536,-3664,0044,Necluda,Eventide Island,Lift Rock,On top of the tall stone ruin,FALSE
+Ne-881,4897,-3693,0002,Necluda,Eventide Island,Chase Lights,Catch the sparkles,FALSE
+Ne-882,3081,-3386,0049,Necluda,Mount Dunsel,Light Ring,On top of the waterfall,FALSE
+Ne-883,3099,-2950,0182,Necluda,Dunsel Plateau,Rock Pattern,There are 2 stones that you need to place to complete pattern,FALSE
+Ne-884,2919,-3083,0146,Necluda,Dunsel Plateau,Find Friend,Bring his friend to him,FALSE
+Ne-885,3017,-2540,0123,Necluda,Firly Plateau,Lilypad Dive,A small pond under some cliffs,FALSE
+Ne-886,2876,-2685,0190,Necluda,Stinger Cliffs,Pull Plug,Pull the cork from the tree trunk,FALSE
+Ne-887,2714,-2960,0189,Necluda,Uten Marsh,Chase Lights,Uten Marsh on a tip of a rib bone,FALSE
+Ne-888,2632,-2856,0228,Necluda,Tartan Pass,Chase Lights,The top of a dead tree east of Rabella Wetlands tower,FALSE
+Ne-889,2412,-2269,0113,Necluda,Mount Rozudo,Rock Pattern,Complete the stone structure,FALSE
+Ne-890,2278,-2359,0180,Necluda,Mount Rozudo,Shoot Target,Shoot the balloon hidden at the top of the tree,FALSE
+Ne-891,2563,-2484,0248,Necluda,Mount Rozudo,Block Puzzle,On top of the mountain next to chasm,FALSE
+Ne-892,2409,-2670,0258,Necluda,Mount Taran,Light Ring,Finish the race,FALSE
+Ne-893,2283,-2661,-0181,Necluda,Mount Taran,Shoot Target,Next to the tree,FALSE
+Ne-894,2452,-2912,0220,Necluda,Rabella Wetlands,Find Friend,Bring him to his friend,FALSE
+Ne-895,2296,-3030,0181,Necluda,Courage Steppe,Chase Lights,Next to the tree,FALSE
+Ne-896,2135,-2607,0257,Necluda,Breman Peak,Offer Item,In a small cave next to the waterfall,FALSE
+Ne-897,2043,-2660,0307,Necluda,Breman Peak,Lift Rock,Lift the stone on top of the hill,FALSE
+Ne-898,1970,-2533,0247,Necluda,Breman Peak,Shoot Target,Underside of the tree's western branch,FALSE
+Ne-899,1939,-2563,0025,Necluda,Breman Peak,Pull Plug,Pull out the plug in water,FALSE
+Ne-900,1884,-2419,0039,Necluda,Hickaly Woods,Flowers,In a small hollow tree trunk still in the ground upright with the opening facing the river,FALSE
+Ne-901,1936,-2779,0387,Necluda,Mount Floria,Shoot Target,On top of the hill,FALSE
+Ne-902,1775,-2769,0316,Necluda,Angel Peak,Chase Lights,On top of the tree,FALSE
+Ne-903,1773,-2932,0239,Necluda,Riola Spring,Lift Rock,On the small platform of Riola Spring,FALSE
+Ne-904,1776,-2993,0082,Necluda,Riola Spring,Burn Leaves,Behind the waterfall,FALSE
+Ne-905,1580,-3033,0225,Necluda,Kamah Plateau,Flowers,On top of the pillar,FALSE
+Ne-906,1553,-2910,0181,Necluda,Keelay Plain,Rock Pattern,"Ledge on cliffside, move the stone from the left to the right to match other rocks",FALSE
+Ne-907,1371,-2763,0125,Necluda,Tobio's Hollow,Ascend Through Stump,In the tunnel running north-south under the archway,FALSE
+Ne-908,1366,-2273,0187,Necluda,Dueling Peaks,Chase Lights,In the tree between 2 arrow signs,FALSE
+Ne-909,1150,-2282,0219,Necluda,Dueling Peaks,Find Friend,Bring his friend to him,FALSE
+Ne-910,1799,-3179,0082,Necluda,Rodai Lake,Lilypad Dive,South of the waterfall of Rodai Lake,FALSE
+Fa-911,3798,-3616,0017,Faron,Soka Point,Chase Lights,Examine the glitter on the tree,FALSE
+Fa-912,3598,-3780,0001,Faron,Cape Cresia,Find Friend,Bring him his friend on the opposite beach to the north,FALSE
+Fa-913,3118,-3718,0001,Faron,Rimba Beach,Burn Leaves,On Rimba Beack under a patch of flowers in the tear shaped marking,FALSE
+Fa-914,3539,-3458,0000,Faron,Palmorae Beach,Find Friend,Under a palm tree,FALSE
+Fa-915,2829,-3884,0000,Faron,Clarnet Coast,Find Friend,Bring him to his friend west of here,FALSE
+Fa-916,2429,-3944,0000,Faron,Clarnet Coast,Find Friend,Bring his friend in the east to here,FALSE
+Fa-917,2228,-3832,0002,Faron,Clarnet Coast,Find Friend,Bring his freind back,FALSE
+Fa-918,2562,-3599,0238,Faron,Yambi Lake,Shoot Target,At the very top of the mountain,FALSE
+Fa-919,2415,-3401,0080,Faron,Temto Hill,Rock Pattern,Complete the stone structure,FALSE
+Fa-920,2549,-3206,0092,Faron,Atun Valley,Glide to Stump,Tree stump on the edge of the hill,FALSE
+Fa-921,2242,-3466,0029,Faron,Temto Hill,Find Friend,West of Temto Hill,FALSE
+Fa-922,2199,-3492,0083,Faron,Temto Hill,Light Ring,Finish the race,FALSE
+Fa-923,1973,-3922,0003,Faron,Aris Beach,Light Ring,Among the rocks by the beach,FALSE
+Fa-924,1976,-3392,0050,Faron,Ebara Forest,Find Friend,Bring his friend back,FALSE
+Fa-925,1832,-3365,0054,Faron,Ebara Forest,Offer Item,Place 3 bananas on the offering platform of the statue,FALSE
+Fa-926,1690,-3323,0059,Faron,Floria Falls,Build Puzzle,At the middle of the terrain between Floria Falls and Bronas Forest,FALSE
+Fa-927,1737,-3465,0060,Faron,Floria Bridge,Lift Rock,Under the bridge in the tree,FALSE
+Fa-928,1792,-3579,0027,Faron,Lake Floria,Chase Lights,"Next to the waterfall, find the place that the arrows are showing",FALSE
+Fa-929,1612,-3492,0061,Faron,Floria Bridge,Find Friend,Atop a small piece of debris,FALSE
+Fa-930,1641,-3674,0173,Faron,Ubota Point,Lilypad Dive,In the small pond,FALSE
+Fa-931,1609,-3802,0091,Faron,Ubota Point,Chase Lights,Around big red rocks,FALSE
+Fa-932,1398,-3642,0001,Faron,Ubota Point,Find Friend,"Standing on the shore, bring him to reach his friend on western shore",FALSE
+Fa-933,1449,-3530,0117,Faron,Ubota Point,Chase Lights,On the rock,FALSE
+Fa-934,1372,-3508,0169,Faron,Ubota Point,Flowers,On the statue,FALSE
+Fa-935,1539,-3243,0094,Faron,Bronas Forest,Flowers,In the forest under a large fallen tree trunk,FALSE
+Fa-936,1476,-3264,0086,Faron,Bronas Forest,Lift Rock,Top of giant tree stump,FALSE
+Fa-937,1332,-3278,0088,Faron,Bronas Forest,Block Puzzle,East of the Bronas Forest,FALSE
+Fa-938,1235,-3217,0043,Faron,Bronas Forest,Ascend Through Stump,Ascend through the roof of a hollow hill,FALSE
+Fa-939,1272,-3190,0102,Faron,Bronas Forest,Flowers,Catch the dandelion,FALSE
+Fa-940,1097,-3832,0002,Faron,Martha's Landing,Lift Rock,On the small rock platforms,FALSE
+Fa-941,0995,-3804,0001,Faron,Martha's Landing,Find Friend,Bring his friend back,FALSE
+Fa-942,1022,-3227,0019,Faron,Sarjon Bridge,Shoot Target,Under the bridge,FALSE
+Fa-943,0954,-3476,0021,Faron,Herin Lake,Chase Lights,Inside the hollow tree trunk,FALSE
+Fa-944,0814,-3718,0107,Faron,Ibara Butte,Flowers,On a small cliff,FALSE
+Fa-945,0792,-3342,0081,Faron,Guchini Plain,Shoot Target,On top of the tall pillar,FALSE
+Fa-946,0574,-3851,0030,Faron,Ibara Butte,Block Puzzle,Northwest of the Komo Shoreline,FALSE
+Fa-947,0589,-3735,0028,Faron,Horse God Bridge,Lilypad Dive,In the water by the bridge,FALSE
+Fa-948,0524,-3679,0058,Faron,Horse God Bridge,Lift Rock,"South of Horse God Bridge, put rock in holder",FALSE
+Fa-949,0397,-3862,0000,Faron,Puffer Beach,Find Friend,at camp at the edge of the shoal,FALSE
+Fa-950,0269,-3905,-0001,Faron,Puffer Beach,Shoot Target,Floating in the water,FALSE
+Fa-951,0099,-3841,0031,Faron,Puffer Beach,Pull Plug,"At the top of the rock spire, pop the cork",FALSE
+Fa-952,0082,-3769,0006,Faron,Puffer Beach,Find Friend,Along the bottom of the cliff,FALSE
+Fa-953,0522,-3482,0048,Faron,Fural Plain,Find Friend,On a rock in the southern fence surrounding the Highland Stable,FALSE
+Fa-954,0518,-3483,0048,Faron,Fural Plain,Find Friend,At the back of the stables,FALSE
+Fa-955,0383,-3609,0071,Faron,Nette Plateau,Lift Rock,"In between the Nette Plateau and Lake of Horse, place rock in holder",FALSE
+Fa-956,0222,-3530,0069,Faron,Fural Plain,Find Friend,By the side of the road through the mountains,FALSE
+Fa-957,0205,-3311,0060,Faron,Barula Plain,Lift Rock,"In a small forest, in a hollow tree trunk",FALSE
+Fa-958,0051,-3393,0025,Faron,Harfin Valley,Find Friend,Bring his friend to him,FALSE
+Fa-959,-0106,-3436,-0001,Faron,Harfin Valley,Lilypad Dive,Under the bridge that connects Pappetto Grove and Harfin Valley,FALSE
+Fa-960,-0243,3918,0004,Faron,Laverra Beach,Chase Lights,On a large rock in the sea,FALSE
+Fa-961,-0799,-3256,0089,Faron,Oseira Plains,Shoot Target,Southeast of the Oseira Plains,FALSE
+Fa-962,-0594,-3336,0149,Faron,Zokassa Ridge,Find Friend,Bring his friend back,FALSE
+Fa-963,-0417,-3372,0032,Faron,Parache Plains,Chase Lights,Near the row of statues,FALSE
+Fa-964,-0304,-3290,0024,Faron,Parache Plains,Find Friend,Bring him to his friend,FALSE
+Fa-965,-0224,-3341,0071,Faron,Parache Plains,Lift Rock,At the top of the mountain,FALSE
+Fa-966,-1015,-2631,0199,Faron,Mount Faloraa,Find Friend,Next to a tree at the top of the hill,FALSE
+Fa-967,-0711,-2623,0098,Faron,Mount Faloraa,Lift Rock,"In an empty tear shape in the geoglyph, in the center near the top",FALSE
+Fa-968,0467,2899,0010,Faron,Grinnden Plains,Block Puzzle,Complete the puzzle,FALSE
+Fa-969,-1373,-2443,0105,Faron,Mount Faloraa,Find Friend,Camping right under a cliff,FALSE
+Fa-970,-0635,-2381,-0010,Faron,Mount Faloraa,Chase Lights,Use materials from the nearby pier to build seomthing to stand on to get him,FALSE
+Fa-971,-0399,-2557,-0001,Faron,Hylia Island,Chase Lights,Climb the tree and interact with the sparkles at the top,FALSE
+Fa-972,-0216,-2595,0001,Faron,Hylia Island,FInd Friend,On the small island,FALSE
+Fa-973,-0066,-2434,0011,Faron,Bridge of Hylia,Shoot Target,Second destroyed column in the water,FALSE
+Fa-974,-0009,-2587,0005,Faron,Bridge of Hylia,Chase Lights,In the half broken pillar,FALSE
+Fa-975,0049,-2720,0080,Faron,Bridge of Hylia,Light Ring,Korok log on top of th eastern gatehouse tower,FALSE
+Fa-976,0204,-2640,-0010,Faron,Lake Hylia,Shoot Target,"On a rock, in the middle of the island",FALSE
+Fa-977,-0151,-3067,-0037,Faron,Cora Lake,Lift Rock,On ledge halfway up the cliff,FALSE
+Fa-978,-0040,2964,0111,Faron,Barula Plain,Flowers,Starts on top of the northern rock,FALSE
+Fa-979,0116,-2961,0034,Faron,Barula Plain,Lift Rock,"In between Cora Lake and Finra woods, place rock in holder",FALSE
+Fa-980,0237,-2876,0030,Faron,Finra Woods,Lift Rock,"Move the boulder in the holder, outside of woods closer to Lake Hylia",FALSE
+Fa-981,0341,-2832,-0014,Faron,Lake Hylia,Lift Rock,On the south shores of Lake Hylia,FALSE
+Fa-982,0419,-2883,0023,Faron,Finra Woods,Lift Rock,"North of Finra Woods, up on the hill, place stone in holder",FALSE
+Fa-983,0698,-2954,0014,Faron,Pagos Woods,Block Puzzle,At the very top of the Floria River,FALSE
+Fa-984,0782,-2763,0006,Faron,Damel Woods,Lilypad Dive,In the water,FALSE
+Fa-985,0885,-2424,0065,Faron,Spring of Courage,Light Ring,"On top of the tree on top of the ruins, step on log to start",FALSE
+Fa-986,0895,-2216,0146,Faron,Popla Foothills,Lift Rock,"Northeast of Jiukoum Shrine, put boulder in holder",FALSE
+Fa-987,0764,-2138,0136,Faron,Popla Foothills,Find Friend,Take him to his friend,FALSE
+Fa-988,0635,-2314,0056,Faron,Popla Foothills,Offer Item,Near the wall of a mountain south of the Popla Foothills South Well,FALSE
+Fa-989,0532,-2195,0055,Faron,Popla Foothills,Find Friend,Bring him to his friend,FALSE
+Fa-990,0566,-2383,0112,Faron,Farosh Hills,Lift Rock,Lift the rock on top of the hill,FALSE
+Fa-991,0343,-2382,0023,Faron,Farosh Hills,Lift Rock,South of the Deya Lake and a little northeast of Lake Hylia - put rock in holder,FALSE
+Fa-992,0282,-2240,0036,Faron,Farosh Hills,Flowers,In the little swamp,FALSE
+Fa-993,0345,-2183,0057,Faron,Farosh Hills,FInd Friend,Bring him to his friend,FALSE
+Fa-994,0460,-2141,0009,Faron,Farosh Hills,Light Ring,"Inside huge broken up tree laying down the slope, stand on right to start",FALSE
+Fa-995,0352,-2002,0008,Faron,Deya Lake,Chase Lights,Inside the hollow of a tree trunk in the Deya Village Ruins,FALSE
+Fa-996,0043,-2137,-0017,Faron,Lake Hylia,Lilypad Dive,By the waterfall next to chasm,FALSE
+Fa-997,0164,-1942,0045,Faron,Hills of Baumer,Offer Item,"On the ridge, under a tree offer 2 apples",FALSE
+Fa-998,0296,-1833,0017,Faron,Hills of Baumer,Burn Leaves,"North of the Deya Lake, in a tree trunk with a hollow opening",FALSE
+Fa-999,0310,-1768,0050,Faron,Hills of Baumer,Flowers,Catch the dandelion,FALSE
+Fa-1000,0513,-1795,0061,Faron,Hills of Baumer,Flowers,On top of the stump,FALSE
+Fa-1001,0651,-1769,0010,Faron,Hills of Baumer,Lift Rock,Move the rock in the hole in the woods near the fiver,FALSE
+Fa-1002,0342,-1661,0018,Faron,Hills of Baumer,FInd Friend,Sitting by a campfire close to Proxim Bridge,FALSE
+Fa-1003,0229,-1608,0009,Faron,Proxim Bridge,Ascend Through Stump,"Under the bridge, ext to the frist pillar from the east, youll see the wood stump",

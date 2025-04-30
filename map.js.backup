@@ -1,0 +1,599 @@
+// Initialize the map
+const map = L.map('map', {
+    crs: L.CRS.Simple,
+    minZoom: -3,
+    maxZoom: 2
+});
+
+// Set map bounds
+const bounds = [[0, 0], [2575, 3309]];
+const image = L.imageOverlay('images/Surface Map.jpg', bounds).addTo(map);
+map.fitBounds(bounds);
+map.setView([1200, 1600], 0);
+
+// Add click handler for coordinate debugging
+map.on('click', function(e) {
+    const coord = e.latlng;
+    console.log(`Clicked coordinates - Y: ${Math.round(coord.lat)}, X: ${Math.round(coord.lng)}`);
+    L.popup()
+        .setLatLng(e.latlng)
+        .setContent(`Coordinates:<br>Y: ${Math.round(coord.lat)}<br>X: ${Math.round(coord.lng)}`)
+        .openOn(map);
+});
+
+// Custom icon for Koroks
+const korokIcon = L.icon({
+    iconUrl: 'images/Seed.png',
+    iconSize: [25, 25],
+    iconAnchor: [12, 12],
+    popupAnchor: [0, -12]
+});
+
+// Known exact pixel coordinates for markers
+const KNOWN_POSITIONS = {
+    'HR-459': { game: [-236, 632], pixel: [1420, 1604] },
+    'HR-460': { game: [-269, 608], pixel: [1415, 1589] },
+    'HR-465': { game: [-254, 424], pixel: [1355, 1600] },
+    'NE-828': { game: [1291, -1331], pixel: [830, 2063] },
+    'NE-829': { game: [1536, -1302], pixel: [840, 2135] },
+    'NE-830': { game: [1626, -1360], pixel: [818, 2163] }
+};
+
+// Store all markers and data
+let markers = [];
+let korokData = [];
+let filteredMarkers = [];
+
+// Initialize filters
+const regionFilter = document.getElementById('region-filter');
+const locationFilter = document.getElementById('location-filter');
+const foundFilter = document.getElementById('found-filter');
+
+// Initial known markers
+const INITIAL_MARKERS = [
+    {
+        id: 'HR-459',
+        gameX: '-236',
+        gameY: '632',
+        gameZ: '50',
+        region: 'Hyrule Field',
+        location: 'Central Square',
+        puzzleType: 'Lift Rock',
+        description: 'Rock under the broken statue'
+    },
+    {
+        id: 'HR-460',
+        gameX: '-269',
+        gameY: '608',
+        gameZ: '45',
+        region: 'Hyrule Field',
+        location: 'Central Square',
+        puzzleType: 'Chase Lights',
+        description: 'Follow the light pattern'
+    },
+    {
+        id: 'HR-465',
+        gameX: '-254',
+        gameY: '424',
+        gameZ: '60',
+        region: 'Hyrule Field',
+        location: 'Castle Town',
+        puzzleType: 'Find Friend',
+        description: 'Find the Korok hiding in the ruins'
+    },
+    {
+        id: 'NE-828',
+        gameX: '1291',
+        gameY: '-1331',
+        gameZ: '100',
+        region: 'Necluda',
+        location: 'Cliffs of Quince',
+        puzzleType: 'Shoot Target',
+        description: 'Shoot the balloon under the cliff'
+    },
+    {
+        id: 'NE-829',
+        gameX: '1536',
+        gameY: '-1302',
+        gameZ: '120',
+        region: 'Necluda',
+        location: 'Cliffs of Quince',
+        puzzleType: 'Pull Plug',
+        description: 'Pull the stone plug at the top'
+    },
+    {
+        id: 'NE-830',
+        gameX: '1626',
+        gameY: '-1360',
+        gameZ: '95',
+        region: 'Necluda',
+        location: 'Cliffs of Quince',
+        puzzleType: 'Light Ring',
+        description: 'Complete the light ring puzzle'
+    }
+];
+
+// Load CSV data
+async function loadCSVData() {
+    try {
+        // Start with a clean slate
+        const seenIds = new Set();
+        korokData = [];
+        let stats = {
+            duplicateCount: 0,
+            invalidCount: 0,
+            calibrationPoints: 0
+        };
+        
+        // First add INITIAL_MARKERS
+        console.log('\nAdding initial markers...');
+        INITIAL_MARKERS.forEach(marker => {
+            seenIds.add(marker.id);
+            korokData.push(marker);
+            console.log(`Added initial marker: ${marker.id}`);
+        });
+        
+        console.log(`Initial markers added: ${korokData.length}`);
+        
+        // Load and process CSV with cache-busting
+        const timestamp = new Date().getTime();
+        const response = await fetch(`./Hyrule Surface Seed Data - Surf 2.csv?t=${timestamp}`);
+        const csvText = await response.text();
+        const allRows = csvText.split('\n');
+        
+        // Log the first few rows for debugging
+        console.log('\nFirst few rows of CSV:');
+        allRows.slice(0, 5).forEach((row, i) => console.log(`Row ${i}: ${row}`));
+        
+        console.log('\nCSV Statistics:');
+        console.log(`- Total rows in file: ${allRows.length}`);
+        
+        // Track all IDs for debugging
+        const allIds = new Set();
+        const duplicateIds = new Set();
+        
+        // Process each row
+        allRows.forEach((row, index) => {
+            // Skip header row
+            if (index === 0) return;
+            
+            // Clean the row
+            const trimmedRow = row.trim();
+            if (!trimmedRow) return;
+            
+            const columns = trimmedRow.split(',');
+            
+            // Basic format validation - need at least id and coordinates
+            if (columns.length < 4) return;
+            
+            let id = columns[0]?.trim();
+            if (!id) return;
+            
+            // Track duplicate IDs
+            if (allIds.has(id)) {
+                duplicateIds.add(id);
+                stats.duplicateCount++;
+                console.log(`Row ${index + 1}: Found duplicate ID: ${id}`);
+                return;
+            }
+            allIds.add(id);
+            
+            // Skip duplicates from initial markers
+            if (seenIds.has(id)) {
+                stats.duplicateCount++;
+                console.log(`Row ${index + 1}: Skipping duplicate ID: ${id}`);
+                return;
+            }
+            
+            // Validate coordinates
+            const gameX = columns[1]?.trim();
+            const gameY = columns[2]?.trim();
+            const gameZ = columns[3]?.trim();
+            
+            if (!gameX || !gameY || !gameZ || 
+                isNaN(gameX) || isNaN(gameY) || isNaN(gameZ)) {
+                stats.invalidCount++;
+                console.log(`Row ${index + 1}: Invalid coordinates for ID: ${id}`);
+                return;
+            }
+            
+            // Create valid korok entry
+            const korok = {
+                id,
+                gameX,
+                gameY,
+                gameZ,
+                region: columns[4]?.trim() || 'Unknown',
+                location: columns[5]?.trim() || 'Unknown',
+                puzzleType: columns[6]?.trim() || 'Unknown',
+                description: columns[7]?.trim() || '',
+                found: columns[8]?.trim().toLowerCase() === 'true'
+            };
+            
+            seenIds.add(id);
+            korokData.push(korok);
+        });
+        
+        console.log('\nDetailed Statistics:');
+        console.log(`- Initial markers: ${INITIAL_MARKERS.length}`);
+        console.log(`- Valid new entries: ${korokData.length - INITIAL_MARKERS.length}`);
+        console.log(`- Total rows processed: ${allRows.length}`);
+        console.log(`- Unique IDs found: ${allIds.size}`);
+        console.log(`- Duplicates found: ${duplicateIds.size}`);
+        if (duplicateIds.size > 0) {
+            console.log('Duplicate IDs:', Array.from(duplicateIds));
+        }
+        console.log(`- Duplicates skipped: ${stats.duplicateCount}`);
+        console.log(`- Invalid entries: ${stats.invalidCount}`);
+        console.log(`- Total unique koroks: ${korokData.length}`);
+        console.log(`- Unique IDs in set: ${seenIds.size}`);
+        
+        // Process markers
+        processKorokData();
+        updateFilters();
+        loadProgress();
+        updateStats();
+        
+    } catch (error) {
+        console.error('Error loading CSV:', error);
+        // Process initial markers even if CSV fails
+        korokData = [...INITIAL_MARKERS];
+        processKorokData();
+        updateFilters();
+        loadProgress();
+        updateStats();
+    }
+}
+
+// Convert game coordinates to pixel coordinates
+function gameToPixel(gameX, gameY, region) {
+    // Handle string IDs
+    if (typeof gameX === 'string') {
+        const id = gameX;
+        
+        // Special handling for known positions
+        if (KNOWN_POSITIONS[id]) {
+            console.log(`Using exact position for ${id}:`, KNOWN_POSITIONS[id].pixel);
+            return KNOWN_POSITIONS[id].pixel;
+        }
+        
+        // Extract numeric coordinates from korokData
+        const korok = korokData.find(k => k.id === id);
+        if (korok) {
+            gameX = parseFloat(korok.gameX);
+            gameY = parseFloat(korok.gameY);
+            region = korok.region;
+        }
+    }
+
+    // Convert coordinates to numbers if they're strings
+    gameX = parseFloat(gameX);
+    gameY = parseFloat(gameY);
+
+    // Get region prefix for logging
+    const regionPrefix = region?.substring(0, 2).toUpperCase();
+    
+    console.log(`\nProcessing ${regionPrefix} coordinates:`, {
+        gameX,
+        gameY,
+        region
+    });
+
+    // Find the closest known point in the same region to use as reference
+    let closestPoint = null;
+    let minDistance = Infinity;
+    let closestId = null;
+    
+    // First try to find reference point in same region
+    for (const [id, data] of Object.entries(KNOWN_POSITIONS)) {
+        if (!id.startsWith(region?.substring(0, 2))) continue;
+        
+        const distance = Math.sqrt(
+            Math.pow(gameX - data.game[0], 2) + 
+            Math.pow(gameY - data.game[1], 2)
+        );
+        if (distance < minDistance) {
+            minDistance = distance;
+            closestPoint = data;
+            closestId = id;
+        }
+    }
+
+    // If no reference point in same region, find closest overall
+    if (!closestPoint) {
+        console.log(`No reference point found in ${regionPrefix} region, using closest overall`);
+        for (const [id, data] of Object.entries(KNOWN_POSITIONS)) {
+            const distance = Math.sqrt(
+                Math.pow(gameX - data.game[0], 2) + 
+                Math.pow(gameY - data.game[1], 2)
+            );
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestPoint = data;
+                closestId = id;
+            }
+        }
+    }
+
+    // Calculate relative position
+    const deltaX = gameX - closestPoint.game[0];
+    const deltaY = gameY - closestPoint.game[1];
+
+    // Base scale on distance from reference point
+    let scale = 0.5;
+    if (minDistance > 1000) {
+        scale = 0.3; // Use smaller scale for far distances
+    } else if (minDistance > 500) {
+        scale = 0.4; // Medium distance
+    }
+
+    // Calculate final coordinates
+    const pixelY = closestPoint.pixel[0] + (deltaY * scale);
+    const pixelX = closestPoint.pixel[1] + (deltaX * scale);
+
+    console.log(`Coordinate calculation for ${regionPrefix}:`, {
+        referencePoint: closestId,
+        distance: Math.round(minDistance),
+        scale,
+        deltaX: Math.round(deltaX),
+        deltaY: Math.round(deltaY),
+        finalY: Math.round(pixelY),
+        finalX: Math.round(pixelX)
+    });
+
+    // Check if coordinates are reasonable
+    const mapBounds = {
+        minY: 0,
+        maxY: 2575,
+        minX: 0,
+        maxX: 3309
+    };
+
+    if (pixelY < mapBounds.minY || pixelY > mapBounds.maxY || 
+        pixelX < mapBounds.minX || pixelX > mapBounds.maxX) {
+        console.log(`WARNING: Coordinates out of bounds for ${regionPrefix}:`, {
+            pixelY: Math.round(pixelY),
+            pixelX: Math.round(pixelX),
+            bounds: mapBounds
+        });
+        return null;
+    }
+
+    return [pixelY, pixelX];
+}
+
+// Initialize data and markers
+function initializeData() {
+    console.log('Initializing data...'); // Debug log
+    korokData = KOROK_DATA;
+    processKorokData();
+    updateFilters();
+    loadProgress();
+    updateStats();
+}
+
+// Process Korok data and create markers
+function processKorokData() {
+    console.log('\nProcessing Korok data...'); 
+    console.log(`Total koroks to process: ${korokData.length}`);
+    
+    // Clear existing markers
+    markers.forEach(marker => {
+        if (marker._map) {
+            map.removeLayer(marker);
+        }
+    });
+    markers = [];
+    
+    // Track processing statistics
+    const stats = {
+        totalProcessed: 0,
+        markersCreated: 0,
+        invalidCoordinates: 0,
+        outOfBounds: 0,
+        failed: 0
+    };
+    
+    // Track processed IDs for debugging
+    const processedIds = new Set();
+    const failedIds = new Set();
+    
+    // Process each korok
+    korokData.forEach((korok, index) => {
+        stats.totalProcessed++;
+        
+        try {
+            // Get pixel coordinates
+            let coords = gameToPixel(korok.id, null, korok.region);
+            
+            // Validate coordinates
+            if (!coords) {
+                console.log(`Error: Could not calculate coordinates for ${korok.id}`);
+                stats.invalidCoordinates++;
+                failedIds.add(korok.id);
+                return;
+            }
+            
+            // Check bounds
+            if (coords[0] < 0 || coords[0] > 2575 || coords[1] < 0 || coords[1] > 3309) {
+                console.log(`Error: ${korok.id} coordinates out of bounds: [${coords}]`);
+                stats.outOfBounds++;
+                failedIds.add(korok.id);
+                return;
+            }
+            
+            // Create marker
+            const marker = L.marker(coords, { 
+                icon: korokIcon,
+                opacity: korok.found ? 0.5 : 1
+            });
+            
+            marker.bindPopup(createPopupContent(korok));
+            marker.korokData = korok;
+            markers.push(marker);
+            processedIds.add(korok.id);
+            stats.markersCreated++;
+            
+        } catch (error) {
+            console.error(`Error processing korok ${korok.id}:`, error);
+            stats.failed++;
+            failedIds.add(korok.id);
+        }
+    });
+    
+    console.log('\nMarker Processing Results:');
+    console.log(`- Total koroks processed: ${stats.totalProcessed}`);
+    console.log(`- Markers successfully created: ${stats.markersCreated}`);
+    console.log(`- Failed due to invalid coordinates: ${stats.invalidCoordinates}`);
+    console.log(`- Failed due to out of bounds: ${stats.outOfBounds}`);
+    console.log(`- Failed due to errors: ${stats.failed}`);
+    console.log(`- Total failed IDs: ${failedIds.size}`);
+    console.log(`- Final marker count: ${markers.length}`);
+    console.log(`- Unique IDs processed: ${processedIds.size}`);
+    
+    if (failedIds.size > 0) {
+        console.log('\nFailed IDs:', Array.from(failedIds));
+    }
+    
+    // Double check our counts
+    console.log('\nCount Verification:');
+    console.log(`- korokData length: ${korokData.length}`);
+    console.log(`- markers array length: ${markers.length}`);
+    console.log(`- processedIds size: ${processedIds.size}`);
+    console.log(`- failedIds size: ${failedIds.size}`);
+    console.log(`- Total (processed + failed): ${processedIds.size + failedIds.size}`);
+    
+    // Update filtered markers and display
+    filteredMarkers = [...markers];
+    updateMarkers();
+}
+
+// Create popup content for markers
+function createPopupContent(korok) {
+    const div = document.createElement('div');
+    div.className = 'korok-popup';
+    
+    div.innerHTML = `
+        <h3>${korok.id}</h3>
+        <p><strong>Region:</strong> ${korok.region}</p>
+        <p><strong>Location:</strong> ${korok.location}</p>
+        <p><strong>Puzzle Type:</strong> ${korok.puzzleType}</p>
+        <p><strong>Description:</strong> ${korok.description}</p>
+        <button onclick="toggleFound('${korok.id}')" class="${korok.found ? 'found' : ''}">
+            ${korok.found ? 'Mark as Not Found' : 'Mark as Found'}
+        </button>
+    `;
+    
+    return div;
+}
+
+// Update markers on the map
+function updateMarkers() {
+    console.log('Updating markers on map...', filteredMarkers.length); 
+    markers.forEach(marker => {
+        if (marker._map) {
+            map.removeLayer(marker);
+        }
+    });
+    filteredMarkers.forEach(marker => {
+        const coords = marker.getLatLng();
+        console.log(`Adding marker: ${marker.korokData.id} at coordinates: [${Math.round(coords.lat)}, ${Math.round(coords.lng)}]`);
+        marker.addTo(map);
+    });
+}
+
+// Filter markers based on selected criteria
+function filterMarkers() {
+    const region = regionFilter.value;
+    const location = locationFilter.value;
+    const foundStatus = foundFilter.value;
+    
+    filteredMarkers = markers.filter(marker => {
+        const korok = marker.korokData;
+        return (region === 'all' || korok.region === region) &&
+               (location === 'all' || korok.location === location) &&
+               (foundStatus === 'all' || 
+                (foundStatus === 'found' && korok.found) ||
+                (foundStatus === 'not-found' && !korok.found));
+    });
+    
+    updateMarkers();
+    updateStats();
+}
+
+// Update filter options
+function updateFilters() {
+    // Clear existing options except 'all'
+    while (regionFilter.children.length > 1) {
+        regionFilter.removeChild(regionFilter.lastChild);
+    }
+    while (locationFilter.children.length > 1) {
+        locationFilter.removeChild(locationFilter.lastChild);
+    }
+
+    const regions = [...new Set(korokData.map(k => k.region))].sort();
+    const locations = [...new Set(korokData.map(k => k.location))].sort();
+    
+    regions.forEach(region => {
+        const option = document.createElement('option');
+        option.value = region;
+        option.textContent = region;
+        regionFilter.appendChild(option);
+    });
+    
+    locations.forEach(location => {
+        const option = document.createElement('option');
+        option.value = location;
+        option.textContent = location;
+        locationFilter.appendChild(option);
+    });
+}
+
+// Toggle found status for a Korok
+function toggleFound(id) {
+    const korok = korokData.find(k => k.id === id);
+    if (korok) {
+        korok.found = !korok.found;
+        const marker = markers.find(m => m.korokData.id === id);
+        if (marker) {
+            marker.setOpacity(korok.found ? 0.5 : 1);
+            marker.setPopupContent(createPopupContent(korok));
+        }
+        saveProgress();
+        updateStats();
+        filterMarkers();
+    }
+}
+
+// Update statistics
+function updateStats() {
+    const totalKoroks = korokData.length;
+    const foundKoroks = korokData.filter(k => k.found).length;
+    document.querySelector('.stats').textContent = 
+        `Found: ${foundKoroks} / Total: ${totalKoroks}`;
+}
+
+// Save progress to localStorage
+function saveProgress() {
+    const progress = korokData.reduce((acc, korok) => {
+        acc[korok.id] = korok.found;
+        return acc;
+    }, {});
+    localStorage.setItem('korokProgress', JSON.stringify(progress));
+}
+
+// Load progress from localStorage
+function loadProgress() {
+    const progress = JSON.parse(localStorage.getItem('korokProgress') || '{}');
+    korokData.forEach(korok => {
+        korok.found = progress[korok.id] || false;
+    });
+}
+
+// Event listeners
+regionFilter.addEventListener('change', filterMarkers);
+locationFilter.addEventListener('change', filterMarkers);
+foundFilter.addEventListener('change', filterMarkers);
+
+// Initialize the map
+loadCSVData(); 

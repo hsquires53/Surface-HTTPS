@@ -348,6 +348,618 @@ function gameToPixel(gameX, gameY, region) {
         const pixelX = d * gameX + e * gameY + f;
         return [pixelY, pixelX];
     }
+    // Otherwise, use the original global calibration
+    const ref1GameX = -4429;  // HE-62 (Top Left)
+    const ref1GameY = 3684;
+    const ref1PixelX = 347;
+    const ref1PixelY = -236;
+    const ref2GameX = 4541;   // AK-629 (Top Right)
+    const ref2GameY = 3162;
+    const ref2PixelX = 3035;
+    const ref2PixelY = -396;
+    const xScale = (ref2PixelX - ref1PixelX) / (ref2GameX - ref1GameX);
+    const yScale = (ref2PixelY - ref1PixelY) / (ref2GameY - ref1GameY);
+    const pixelX = Math.round(ref1PixelX + (gameX - ref1GameX) * xScale);
+    const pixelY = Math.round(ref1PixelY + (gameY - ref1GameY) * yScale);
+    return [pixelY, pixelX];
+}
+
+// Initialize korokData from filtered newKoroks array and sheet data
+function parseCSVData() {
+    return [
+        // Eldin Region
+        { id: 'EL-552', gameX: 127, gameY: 3149, gameZ: 181, region: 'Eldin', location: 'Thyphlo Ruins', puzzleType: 'Lift Rock', description: 'On top of the pillar', found: false },
+        { id: 'EL-553', gameX: 170, gameY: 3036, gameZ: 176, region: 'Eldin', location: 'Thyphlo Ruins', puzzleType: 'Lift Rock', description: 'Small island to the southwest of Thyphlo Ruins', found: false },
+        { id: 'EL-554', gameX: 276, gameY: 3120, gameZ: 181, region: 'Eldin', location: 'Thyphlo Ruins', puzzleType: 'Block Puzzle', description: 'At the thyphlo ruins, just to the west of the Skyview Tower', found: false },
+        { id: 'EL-555', gameX: 521, gameY: 3400, gameZ: 183, region: 'Eldin', location: 'Deplian Badlands', puzzleType: 'Find Friend', description: 'On the slope next to the fallen stone. Does not appear until you interact with his friend', found: false },
+        { id: 'EL-556', gameX: 1022, gameY: 3674, gameZ: 110, region: 'Eldin', location: 'Deplian Badlands', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'EL-557', gameX: 488, gameY: 3055, gameZ: 175, region: 'Eldin', location: 'Thyphlo Ruins', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'EL-558', gameX: 593, gameY: 3044, gameZ: 188, region: 'Eldin', location: 'Eldin Mountains', puzzleType: 'Find Friend', description: 'On top of the hillock', found: false },
+        { id: 'EL-559', gameX: 859, gameY: 3354, gameZ: 209, region: 'Eldin', location: 'Eldin Mountains', puzzleType: 'Lift Rock', description: 'On the large tree', found: false },
+        { id: 'EL-560', gameX: 787, gameY: 2952, gameZ: 282, region: 'Eldin', location: 'Eldin Mountains', puzzleType: 'Lift Rock', description: 'In the center of the hilt of the sword symbol on the ground', found: false },
+        { id: 'EL-561', gameX: 770, gameY: 2856, gameZ: 215, region: 'Eldin', location: 'Eldin Mountains', puzzleType: 'Find Friend', description: 'Bring his friend back', found: false },
+        { id: 'EL-562', gameX: 773, gameY: 2857, gameZ: 224, region: 'Eldin', location: 'Eldin Mountains', puzzleType: 'Find Friend', description: 'Out in the open near the drop off of a hill', found: false },
+        { id: 'EL-563', gameX: 1409, gameY: 3778, gameZ: 128, region: 'Eldin', location: 'Eldin Great Skeleton', puzzleType: 'Chase Lights', description: 'At the tail of the Eldin Great Skeleton', found: false },
+        { id: 'EL-564', gameX: 1714, gameY: 3059, gameZ: 393, region: 'Eldin', location: 'Isle of Rabac', puzzleType: 'Find Friend', description: 'Bring his friend to him', found: false },
+        { id: 'EL-565', gameX: 1380, gameY: 2835, gameZ: 361, region: 'Eldin', location: 'Darunia Lake', puzzleType: 'Rock Pattern', description: 'At the center of Darunia Lake', found: false },
+        { id: 'EL-566', gameX: 1573, gameY: 2951, gameZ: 398, region: 'Eldin', location: 'Darunia Lake', puzzleType: 'Shoot Target', description: 'Underneath a bridge to the Northeast of Darunia Lake', found: false },
+        { id: 'EL-567', gameX: 1602, gameY: 2826, gameZ: 466, region: 'Eldin', location: 'Yunobo Statue', puzzleType: 'Chase Lights', description: 'On top of the head of the Yunobo statue', found: false },
+        { id: 'EL-568', gameX: 2232, gameY: 3680, gameZ: 232, region: 'Eldin', location: 'Eldin\'s Flank', puzzleType: 'Block Puzzle', description: 'Solve the stone cube puzzle', found: false },
+        { id: 'EL-569', gameX: 2671, gameY: 3443, gameZ: 374, region: 'Eldin', location: 'Gut Check Rock', puzzleType: 'Chase Lights', description: 'On top of the souther right pillar', found: false },
+        { id: 'EL-570', gameX: 2405, gameY: 3328, gameZ: 435, region: 'Eldin', location: 'Sibajitak Shrine', puzzleType: 'Ascend Through Stump', description: 'Next to Sibajitak Shrine on the bottom of the archway', found: false },
+        { id: 'EL-571', gameX: 2511, gameY: 2984, gameZ: 523, region: 'Eldin', location: 'Death Caldera', puzzleType: 'Find Friend', description: 'Sitting by a campfire', found: false },
+        { id: 'EL-572', gameX: 2189, gameY: 2773, gameZ: 523, region: 'Eldin', location: 'Death Mountain West Site', puzzleType: 'Find Friend', description: 'On ground west of cart track', found: false },
+        { id: 'EL-573', gameX: 2198, gameY: 3006, gameZ: 507, region: 'Eldin', location: 'Death Caldera', puzzleType: 'Glide to Stump', description: 'At the glode plate on the mountain', found: false },
+        { id: 'EL-574', gameX: 2232, gameY: 3041, gameZ: 445, region: 'Eldin', location: 'Death Caldera', puzzleType: 'Shoot Target', description: 'Under the small bridge', found: false },
+        { id: 'EL-575', gameX: 2170, gameY: 3035, gameZ: 453, region: 'Eldin', location: 'Death Caldera', puzzleType: 'Flowers', description: 'Underneath the rock arch', found: false },
+        { id: 'EL-576', gameX: 2062, gameY: 2757, gameZ: 475, region: 'Eldin', location: 'Death Mountain West Site', puzzleType: 'Block Puzzle', description: 'In the small canyon', found: false },
+        { id: 'EL-577', gameX: 1991, gameY: 2596, gameZ: 457, region: 'Eldin', location: 'Death Mountain West Site', puzzleType: 'Find Friend', description: 'Under lean-to-next to the lava flow', found: false },
+        { id: 'EL-578', gameX: 1815, gameY: 2641, gameZ: 400, region: 'Eldin', location: 'Goro Cove', puzzleType: 'Find Friend', description: 'On ground next to the minecart track', found: false },
+        { id: 'EL-579', gameX: 2776, gameY: 2520, gameZ: 653, region: 'Eldin', location: 'Death Mountain', puzzleType: 'Shoot Target', description: 'Underneath an arch high above to the eastern side of Death Mountain', found: false },
+        { id: 'EL-580', gameX: 1724, gameY: 2606, gameZ: 431, region: 'Eldin', location: 'Goron City', puzzleType: 'Find Friend', description: 'Out in the open on a rock ledge', found: false },
+        { id: 'EL-581', gameX: 1722, gameY: 2554, gameZ: 498, region: 'Eldin', location: 'Goron City', puzzleType: 'Lift Rock', description: 'Atop the first of one of the statues in Goron City', found: false },
+        { id: 'EL-582', gameX: 1808, gameY: 2526, gameZ: 402, region: 'Eldin', location: 'Goron City', puzzleType: 'Offer Item', description: 'Northeast og Goron City', found: false },
+        { id: 'EL-583', gameX: 1574, gameY: 2465, gameZ: 408, region: 'Eldin', location: 'Goron City', puzzleType: 'Shoot Target', description: 'Inside the mouth', found: false },
+        { id: 'EL-584', gameX: 1251, gameY: 2294, gameZ: 322, region: 'Eldin', location: 'Goron City', puzzleType: 'Rock Pattern', description: 'Put the 2 stones in the right place', found: false },
+        { id: 'EL-585', gameX: 1473, gameY: 2224, gameZ: 294, region: 'Eldin', location: 'Golow River', puzzleType: 'Lilypad Dive', description: 'In the narrow lake west of Goron City', found: false },
+        { id: 'EL-586', gameX: 1680, gameY: 2385, gameZ: 463, region: 'Eldin', location: 'Stolock Bridge', puzzleType: 'Shoot Target', description: 'Underneath the large bridge on top of the village', found: false },
+        { id: 'EL-587', gameX: 1722, gameY: 2421, gameZ: 309, region: 'Eldin', location: 'Stolock Bridge', puzzleType: 'Lilypad Dive', description: 'The ring of lilypads in the pond', found: false },
+        { id: 'EL-588', gameX: 1745, gameY: 2330, gameZ: 420, region: 'Eldin', location: 'Goron City', puzzleType: 'Block Puzzle', description: 'In the valley behind Goron City', found: false },
+        { id: 'EL-589', gameX: 1799, gameY: 2209, gameZ: 497, region: 'Eldin', location: 'Goron Hot Springs', puzzleType: 'Glide to Stump', description: 'On a ledge beneath the bridge', found: false },
+        { id: 'EL-590', gameX: 3029, gameY: 2289, gameZ: 337, region: 'Eldin', location: 'Shadow Hamlet Ruins', puzzleType: 'Build Puzzle', description: 'Fix the roof using Ultrahand', found: false },
+        { id: 'EL-591', gameX: 2711, gameY: 2389, gameZ: 623, region: 'Eldin', location: 'Death Mountain', puzzleType: 'Chase Lights', description: 'On a rock outcropping on the south side of Death Mountain', found: false },
+        { id: 'EL-592', gameX: 2223, gameY: 2368, gameZ: 520, region: 'Eldin', location: 'Bridge of Eldin', puzzleType: 'Flowers', description: 'Underneath the bridge you will find the first flower', found: false },
+        { id: 'EL-593', gameX: 2063, gameY: 2326, gameZ: 498, region: 'Eldin', location: 'Gorok Lake', puzzleType: 'Block Puzzle', description: 'Small cliff north of Gorok Lake', found: false },
+        { id: 'EL-594', gameX: 1999, gameY: 2121, gameZ: 466, region: 'Eldin', location: 'Eldin Canyon', puzzleType: 'Lift Rock', description: 'Return the boulder from the hole below into the stand using Ultrahand', found: false },
+        { id: 'EL-595', gameX: 1984, gameY: 2040, gameZ: 423, region: 'Eldin', location: 'Gorko Tunnel Entrance', puzzleType: 'Find Friend', description: 'On the ground, just west of the Gorko Tunnel Entrance', found: false },
+        { id: 'EL-596', gameX: 1834, gameY: 1904, gameZ: 342, region: 'Eldin', location: 'Gorko Tunnel Entrance', puzzleType: 'Find Friend', description: 'Start from Gorko Cave Entrance to the northeast', found: false },
+        { id: 'EL-597', gameX: 1670, gameY: 1980, gameZ: 342, region: 'Eldin', location: 'Gortram Cliff', puzzleType: 'Lift Rock', description: 'On top of the pickaxe rock formation next to the mine', found: false },
+        { id: 'EL-598', gameX: 1433, gameY: 1953, gameZ: 337, region: 'Eldin', location: 'Eldin Canyon', puzzleType: 'Ascend Through Stump', description: 'In a tiny cave inside the wall', found: false },
+        { id: 'EL-599', gameX: 1543, gameY: 1808, gameZ: 283, region: 'Eldin', location: 'Eldin Canyon', puzzleType: 'Find Friend', description: 'Bring him up to his friend', found: false },
+        { id: 'EL-600', gameX: 1504, gameY: 1801, gameZ: 309, region: 'Eldin', location: 'Eldin Canyon', puzzleType: 'Find Friend', description: 'On the plateau under a lean-to. He will not appear until you talk to his friend', found: false },
+        { id: 'EL-601', gameX: 1448, gameY: 1750, gameZ: 308, region: 'Eldin', location: 'Eldin Canyon', puzzleType: 'Lift Rock', description: 'Grab the big rock in the water', found: false },
+        { id: 'EL-602', gameX: 1699, gameY: 1743, gameZ: 343, region: 'Eldin', location: 'Eldin Canyon', puzzleType: 'Lift Rock', description: 'Put the nearby rock into the stand', found: false },
+        { id: 'EL-603', gameX: 1334, gameY: 1314, gameZ: 167, region: 'Eldin', location: 'Pico Pond', puzzleType: 'Shoot Target', description: 'Shoot the acorn inside the tree trunk', found: false },
+        { id: 'EL-604', gameX: 1424, gameY: 1534, gameZ: 363, region: 'Eldin', location: 'Eldin Canyon', puzzleType: 'Chase Lights', description: 'Up on a tall hill, will be hidden until you climb the rock that all the red arrow signs are pointing at', found: false },
+        { id: 'EL-605', gameX: 1534, gameY: 1606, gameZ: 305, region: 'Eldin', location: 'Eldin Canyon', puzzleType: 'Find Friend', description: 'On the ground next to the construction materials', found: false },
+        { id: 'EL-606', gameX: 1767, gameY: 1539, gameZ: 309, region: 'Eldin', location: 'Goronbi Lake', puzzleType: 'Chase Lights', description: 'Top of building', found: false },
+        { id: 'EL-607', gameX: 1873, gameY: 1629, gameZ: 302, region: 'Eldin', location: 'Bedrock Bistro', puzzleType: 'Find Friend', description: 'To the north east of the bedrock bistro', found: false },
+        { id: 'EL-608', gameX: 2264, gameY: 1835, gameZ: 332, region: 'Eldin', location: 'Medingo Pool', puzzleType: 'Flowers', description: 'In the skull base near Medingo Pool', found: false },
+        { id: 'EL-609', gameX: 2431, gameY: 1708, gameZ: 149, region: 'Eldin', location: 'Gero Pond', puzzleType: 'Pull Plug', description: 'In Gero Pond to the northwest of Lake Intenoch', found: false },
+        { id: 'EL-610', gameX: 2704, gameY: 1742, gameZ: 119, region: 'Eldin', location: 'Broca Island', puzzleType: 'Rock Pattern', description: 'On the island', found: false },
+        { id: 'EL-375', gameX: 523, gameY: 3398, gameZ: 181, region: 'Eldin', location: 'West Deplian Badlands', puzzleType: 'Find Friend', description: 'Next to pillars to the west of the road', found: false },
+        { id: 'EL-376', gameX: 522, gameY: 3397, gameZ: 184, region: 'Eldin', location: 'West Deplian Badlands', puzzleType: 'Find Friend', description: 'On slope to east of road', found: false },
+        
+        // Akkala Region
+        { id: 'AK-615', gameX: 3153, gameY: 3430, gameZ: 137, region: 'Akkala', location: 'Skull Lake', puzzleType: 'Glide to Stump', description: 'On a cliff overlooking Skull Lake', found: false },
+        { id: 'AK-616', gameX: 3268, gameY: 3397, gameZ: 34, region: 'Akkala', location: 'Skull Lake', puzzleType: 'Lift Rock', description: 'On top of the pillar', found: false },
+        { id: 'AK-617', gameX: 3146, gameY: 3039, gameZ: 141, region: 'Akkala', location: 'Rok Woods', puzzleType: 'Block Puzzle', description: 'On the cliffs west of the Rok Woods', found: false },
+        { id: 'AK-618', gameX: 3344, gameY: 3074, gameZ: 58, region: 'Akkala', location: 'Rok Woods', puzzleType: 'Offer Item', description: 'Place an apple in the empty altar', found: false },
+        { id: 'AK-619', gameX: 3448, gameY: 3175, gameZ: 54, region: 'Akkala', location: 'Rok Woods', puzzleType: 'Find Friend', description: 'Bring his friend back', found: false },
+        { id: 'AK-621', gameX: 3574, gameY: 3048, gameZ: 109, region: 'Akkala', location: 'Tempest Gulch', puzzleType: 'Glide to Stump', description: 'On top of the rock (can\'t touch the ground before hitting target)', found: false },
+        { id: 'AK-622', gameX: 3959, gameY: 3118, gameZ: 179, region: 'Akkala', location: 'Tumlea Heights', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'AK-624', gameX: 4155, gameY: 3167, gameZ: 250, region: 'Akkala', location: 'Tumlea Heights', puzzleType: 'Lift Rock', description: 'On top of the three rocks standing up', found: false },
+        { id: 'AK-627', gameX: 4435, gameY: 3187, gameZ: 249, region: 'Akkala', location: 'Akkala Ancient Tech Lab', puzzleType: 'Flowers', description: 'In the middle of the crator near the wood pile', found: false },
+        { id: 'AK-628', gameX: 4493, gameY: 3148, gameZ: 245, region: 'Akkala', location: 'Akkala Ancient Tech Lab', puzzleType: 'Offer Item', description: 'In the three statues bowls place a banana', found: false },
+        { id: 'AK-630', gameX: 4794, gameY: 3753, gameZ: 139, region: 'Akkala', location: 'Lomei Labyrinth Island', puzzleType: 'Shoot Target', description: 'Very top of the wall in the corner', found: false },
+        { id: 'AK-632', gameX: 4277, gameY: 2942, gameZ: 143, region: 'Akkala', location: 'Bloodleaf Lake', puzzleType: 'Lilypad Dive', description: 'On the southern bank of Bloodleaf Lake', found: false },
+        { id: 'AK-633', gameX: 4393, gameY: 2719, gameZ: 119, region: 'Akkala', location: 'North Akkala Foothill', puzzleType: 'Block Puzzle', description: 'Complete the puzzle', found: false },
+        { id: 'AK-634', gameX: 4274, gameY: 2826, gameZ: 147, region: 'Akkala', location: 'North Akkala Foothill', puzzleType: 'Burn Leaves', description: 'On a ledge near a tree', found: false },
+        { id: 'AK-635', gameX: 4202, gameY: 2741, gameZ: 127, region: 'Akkala', location: 'East Akkala Stable', puzzleType: 'Find Friend', description: 'On top of a box ourside East Akkala Stable', found: false },
+        { id: 'AK-636', gameX: 3855, gameY: 2686, gameZ: 49, region: 'Akkala', location: 'North Akkala Valley', puzzleType: 'Find Friend', description: 'Bring his friend to him', found: false },
+        { id: 'AK-637', gameX: 3767, gameY: 2696, gameZ: 18, region: 'Akkala', location: 'Spring of Power', puzzleType: 'Chase Lights', description: 'One level behind and above the Goddess Statue', found: false },
+        { id: 'AK-638', gameX: 3538, gameY: 2634, gameZ: 77, region: 'Akkala', location: 'Ordorac Quarry', puzzleType: 'Block Puzzle', description: 'North of Ordorac Quarry', found: false },
+        { id: 'AK-640', gameX: 4312, gameY: 2519, gameZ: 80, region: 'Akkala', location: 'East Akkala Beach', puzzleType: 'Chase Lights', description: 'In a small set of ruins north of East Akkala Beach (find the right place between 2 red arrows)', found: false },
+        { id: 'AK-642', gameX: 4074, gameY: 2451, gameZ: 73, region: 'Akkala', location: 'Octorok Lake', puzzleType: 'Burn Leaves', description: 'In the middle o fthe Octorok Lake', found: false },
+        { id: 'AK-643', gameX: 3746, gameY: 2305, gameZ: 93, region: 'Akkala', location: 'East Akkala Plains', puzzleType: 'Find Friend', description: 'Hill overlooking shrine', found: false },
+        { id: 'AK-644', gameX: 3326, gameY: 2168, gameZ: 135, region: 'Akkala', location: 'Shadow Pass', puzzleType: 'Chase Lights', description: 'Follow where the red pointing arrows lead to the top of the tree', found: false },
+        { id: 'AK-645', gameX: 3222, gameY: 2169, gameZ: 128, region: 'Akkala', location: 'Shadow Pass', puzzleType: 'Find Friend', description: 'Along the road, bring his friend back', found: false },
+        { id: 'AK-646', gameX: 3223, gameY: 2170, gameZ: 138, region: 'Akkala', location: 'Kanalet Ridge', puzzleType: 'Find Friend', description: 'Bring him to his freind in the north', found: false },
+        { id: 'AK-647', gameX: 3232, gameY: 1787, gameZ: 226, region: 'Akkala', location: 'Kanalet Ridge', puzzleType: 'Lift Rock', description: 'On top of the trunk of the tree', found: false },
+        { id: 'AK-648', gameX: 3647, gameY: 1796, gameZ: 112, region: 'Akkala', location: 'Torin Wetland', puzzleType: 'Lift Rock', description: 'Top of the building', found: false },
+        { id: 'AK-649', gameX: 4527, gameY: 2047, gameZ: 0, region: 'Akkala', location: 'Rist Peninsula', puzzleType: 'Lift Rock', description: 'On the tip of the spiral island there is a small rock in the water', found: false },
+        { id: 'AK-651', gameX: 4599, gameY: 1858, gameZ: 9, region: 'Akkala', location: 'Rist Peninsula', puzzleType: 'Burn Leaves', description: 'Inside a ruined corner wall by the sea', found: false },
+        { id: 'AK-652', gameX: 4717, gameY: 1417, gameZ: 181, region: 'Akkala', location: 'Tingel Island', puzzleType: 'Chase Lights', description: 'Follow the arrow signs', found: false },
+        { id: 'AK-653', gameX: 4294, gameY: 1607, gameZ: 153, region: 'Akkala', location: 'Malin Bay', puzzleType: 'Find Friend', description: 'Overlooking the cliff', found: false },
+        { id: 'AK-654', gameX: 4021, gameY: 1623, gameZ: 137, region: 'Akkala', location: 'Tarrey Town', puzzleType: 'Lift Rock', description: 'Gate leading into Tarrey Town', found: false },
+        { id: 'AK-655', gameX: 3972, gameY: 1612, gameZ: 127, region: 'Akkala', location: 'Tarrey Town', puzzleType: 'Block Puzzle', description: 'In the center of town, ring the bell (pull it all the way up)', found: false },
+        { id: 'AK-656', gameX: 4137, gameY: 1491, gameZ: 166, region: 'Akkala', location: 'Akkala Highlands', puzzleType: 'Build Puzzle', description: 'Between Tarrey town and Link\'s plot of land', found: false },
+        { id: 'AK-657', gameX: 4109, gameY: 1384, gameZ: 166, region: 'Akkala', location: 'Akkala Highlands', puzzleType: 'Chase Lights', description: 'In a small pong just south of Tarrey Town', found: false },
+        { id: 'AK-658', gameX: 4048, gameY: 1284, gameZ: 216, region: 'Akkala', location: 'Akkala Highlands', puzzleType: 'Chase Lights', description: 'On top of the big tree, follow the red arrows', found: false },
+        { id: 'AK-659', gameX: 3882, gameY: 1338, gameZ: 247, region: 'Akkala', location: 'Akkala Highlands', puzzleType: 'Flowers', description: 'Flower near the three statues', found: false },
+        { id: 'AK-660', gameX: 3669, gameY: 1468, gameZ: 96, region: 'Akkala', location: 'Torin Wetland', puzzleType: 'Flowers', description: 'Atop one of the ruins in the Torin Wetland', found: false },
+        { id: 'AK-661', gameX: 3869, gameY: 1092, gameZ: 223, region: 'Akkala', location: 'East Sokkala Bridge', puzzleType: 'Pull Plug', description: 'Pop the cork with Ultrahand', found: false },
+        { id: 'AK-663', gameX: 4697, gameY: 547, gameZ: 230, region: 'Akkala', location: 'Davdi Island', puzzleType: 'Glide to Stump', description: 'Start at the stump and glide to finish without touching the ground', found: false },
+        { id: 'AK-665', gameX: 4360, gameY: 776, gameZ: 280, region: 'Akkala', location: 'Ukuku Plains', puzzleType: 'Find Friend', description: 'Bring his friend located in the west on the other side of the lake', found: false },
+        { id: 'AK-666', gameX: 4055, gameY: 943, gameZ: 276, region: 'Akkala', location: 'Ukuku Plains', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'AK-669', gameX: 4173, gameY: 699, gameZ: 246, region: 'Akkala', location: 'Ulria Grotto', puzzleType: 'Pull Plug', description: 'Pull the plug out', found: false },
+        { id: 'AK-670', gameX: 4078, gameY: 821, gameZ: 232, region: 'Akkala', location: 'Ukuku Plains', puzzleType: 'Ascend Through Stump', description: 'Small alcove partly down the cliff', found: false },
+        { id: 'AK-671', gameX: 3904, gameY: 797, gameZ: 383, region: 'Akkala', location: 'Ukuku Plains', puzzleType: 'Block Puzzle', description: 'Solve the stone cube puzzle', found: false },
+        { id: 'AK-672', gameX: 3801, gameY: 856, gameZ: 276, region: 'Akkala', location: 'Ukuku Plains', puzzleType: 'Rock Pattern', description: 'Solve the stone triangle', found: false },
+        { id: 'AK-673', gameX: 3545, gameY: 964, gameZ: 394, region: 'Akkala', location: 'Ukuku Plains', puzzleType: 'Rock Pattern', description: 'Solve the stone ring', found: false },
+        { id: 'AK-674', gameX: 3357, gameY: 1306, gameZ: 289, region: 'Akkala', location: 'Akkala Parade Ground Ruins', puzzleType: 'Block Puzzle', description: 'Behind a row of canons near the Akkala Parade Ground Ruins', found: false },
+        { id: 'AK-675', gameX: 3296, gameY: 1511, gameZ: 436, region: 'Akkala', location: 'Akkala Citadel Ruins', puzzleType: 'Chase Lights', description: 'At the very top of the broken archway, highest point of the ruins', found: false },
+        { id: 'AK-676', gameX: 3272, gameY: 1398, gameZ: 285, region: 'Akkala', location: 'Akkala Citadel Ruins', puzzleType: 'Lift Rock', description: 'Right on the edge of a cliff below the Akkala Citadel Ruins', found: false },
+        { id: 'AK-677', gameX: 3160, gameY: 1426, gameZ: 256, region: 'Akkala', location: 'Akkala Bridge Ruins', puzzleType: 'Burn Leaves', description: 'Burn leaves then lift rock', found: false },
+        { id: 'AK-678', gameX: 3115, gameY: 1306, gameZ: 318, region: 'Akkala', location: 'South Akkala Plains', puzzleType: 'Chase Lights', description: 'By a tree', found: false },
+        { id: 'AK-679', gameX: 3012, gameY: 1200, gameZ: 240, region: 'Akkala', location: 'South Akkala Plains', puzzleType: 'Pull Plug', description: 'Under the bridge on a broken column, need to pull cork', found: false },
+        { id: 'AK-680', gameX: 3074, gameY: 1138, gameZ: 281, region: 'Akkala', location: 'South Akkala Plains', puzzleType: 'Chase Lights', description: 'Atop ruined beam, find where the red arrows are pointing', found: false },
+        
+        // Lanayru Region
+        { id: 'LA-681', gameX: 553, gameY: 514, gameZ: 13, region: 'Lanayru', location: 'Thims Bridge', puzzleType: 'Lift Rock', description: 'Under the Thims Bridge', found: false },
+        { id: 'LA-682', gameX: 1467, gameY: 677, gameZ: 27, region: 'Lanayru', location: 'Trilby Plain', puzzleType: 'Shoot Target', description: 'Hole in the west side of tree', found: false },
+        { id: 'LA-683', gameX: 1577, gameY: 725, gameZ: 77, region: 'Lanayru', location: 'Trilby Plain', puzzleType: 'Offer Item', description: 'Under the big tree, put an apple in the empty bowl', found: false },
+        { id: 'LA-684', gameX: 1535, gameY: 511, gameZ: 10, region: 'Lanayru', location: 'Trilby Plain', puzzleType: 'Find Friend', description: 'Near the construction platform on the beach', found: false },
+        { id: 'LA-685', gameX: 1858, gameY: 786, gameZ: 91, region: 'Lanayru', location: 'Trilby Plain', puzzleType: 'Lift Rock', description: 'Near the dragon tear', found: false },
+        { id: 'LA-686', gameX: 1941, gameY: 1205, gameZ: 140, region: 'Lanayru', location: 'Lake Ferona', puzzleType: 'Lift Rock', description: 'At the western edge of Lake Ferona, at the peak of the island', found: false },
+        { id: 'LA-687', gameX: 2129, gameY: 1083, gameZ: 132, region: 'Lanayru', location: 'Lake Ferona', puzzleType: 'Find Friend', description: 'Bring his friend here', found: false },
+        { id: 'LA-688', gameX: 2313, gameY: 1132, gameZ: 187, region: 'Lanayru', location: 'Lake Ferona', puzzleType: 'Ascend Through Stump', description: 'Ceiling stump is to the southeast of Lake Ferona', found: false },
+        { id: 'LA-689', gameX: 2371, gameY: 1401, gameZ: 129, region: 'Lanayru', location: 'Maw of Death Mountain', puzzleType: 'Find Friend', description: 'on the bridge at the Maw of Death Mountain', found: false },
+        { id: 'LA-690', gameX: 2436, gameY: 1243, gameZ: 119, region: 'Lanayru', location: 'Maw of Death Mountain', puzzleType: 'Flowers', description: 'You can find a dandelion under the archway', found: false },
+        { id: 'LA-691', gameX: 2290, gameY: 943, gameZ: 111, region: 'Lanayru', location: 'Trilby Valley', puzzleType: 'Rock Pattern', description: 'South of Lake Ferona', found: false },
+        { id: 'LA-692', gameX: 2751, gameY: 1374, gameZ: 126, region: 'Lanayru', location: 'Cephla Lake', puzzleType: 'Light Ring', description: 'At the shore of the western Cephla Lake', found: false },
+        { id: 'LA-693', gameX: 2179, gameY: 1154, gameZ: 178, region: 'Lanayru', location: 'Cephla Lake', puzzleType: 'Block Puzzle', description: 'By the lake shore, complete the puzzle', found: false },
+        { id: 'LA-694', gameX: 2639, gameY: 1109, gameZ: 158, region: 'Lanayru', location: 'Cephla Lake', puzzleType: 'Find Friend', description: 'On a hill near a Foothill Stable', found: false },
+        { id: 'LA-695', gameX: 2671, gameY: 1077, gameZ: 156, region: 'Lanayru', location: 'Cephla Lake', puzzleType: 'Chase Lights', description: 'Look for the sparkles near the ruined building', found: false },
+        { id: 'LA-696', gameX: 2556, gameY: 763, gameZ: 117, region: 'Lanayru', location: 'Ternio Trail', puzzleType: 'Chase Lights', description: 'Running across the rocks', found: false },
+        { id: 'LA-697', gameX: 2760, gameY: 770, gameZ: 199, region: 'Lanayru', location: 'Ternio Trail', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'LA-698', gameX: 2642, gameY: 635, gameZ: 177, region: 'Lanayru', location: 'Ternio Trail', puzzleType: 'Find Friend', description: 'Mountain side, near three trees', found: false },
+        { id: 'LA-699', gameX: 2545, gameY: 639, gameZ: 127, region: 'Lanayru', location: 'Ternio Trail', puzzleType: 'Find Friend', description: 'On top of rocks to the east of the construction materials', found: false },
+        { id: 'LA-700', gameX: 2579, gameY: 487, gameZ: 179, region: 'Lanayru', location: 'Ternio Trail', puzzleType: 'Light Ring', description: 'Atop the pillars', found: false },
+        { id: 'LA-701', gameX: 2425, gameY: 412, gameZ: 195, region: 'Lanayru', location: 'Ternio Trail', puzzleType: 'Chase Lights', description: 'Atop of tree', found: false },
+        { id: 'LA-702', gameX: 2336, gameY: 273, gameZ: 26, region: 'Lanayru', location: 'Inogo Bridge', puzzleType: 'Shoot Target', description: 'Top of tower', found: false },
+        { id: 'LA-703', gameX: 2238, gameY: 245, gameZ: 14, region: 'Lanayru', location: 'Inogo Bridge', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'LA-704', gameX: 1683, gameY: 258, gameZ: 16, region: 'Lanayru', location: 'Mercay Island', puzzleType: 'Find Friend', description: 'Under a tree, near the shore, will not appear unless you talk to his friend first', found: false },
+        { id: 'LA-705', gameX: 1701, gameY: 7, gameZ: 10, region: 'Lanayru', location: 'Mercay Island', puzzleType: 'Find Friend', description: 'On the grassy shore, next to the short rock cliff. He will not appear until you talk to his friend', found: false },
+        { id: 'LA-706', gameX: 1891, gameY: -150, gameZ: 9, region: 'Lanayru', location: 'Kincean Island', puzzleType: 'Lift Rock', description: 'Under the bridge', found: false },
+        { id: 'LA-707', gameX: 1304, gameY: -179, gameZ: 8, region: 'Lanayru', location: 'Zauz Island', puzzleType: 'Light Ring', description: 'West from the Zauz Island', found: false },
+        { id: 'LA-708', gameX: 1505, gameY: -332, gameZ: 14, region: 'Lanayru', location: 'Goponga Village Ruins', puzzleType: 'Find Friend', description: 'On a small mound', found: false },
+        { id: 'LA-709', gameX: 1441, gameY: -537, gameZ: 12, region: 'Lanayru', location: 'Millennio Sandbar', puzzleType: 'Flowers', description: 'The dandelion on top of the rock', found: false },
+        { id: 'LA-710', gameX: 1824, gameY: -459, gameZ: 12, region: 'Lanayru', location: 'Millennio Sandbar', puzzleType: 'Lift Rock', description: 'Millennio Sandbar, just south of Bannan Island', found: false },
+        { id: 'LA-711', gameX: 2201, gameY: 159, gameZ: 34, region: 'Lanayru', location: 'Zora River', puzzleType: 'Find Friend', description: 'Bring his friend back', found: false },
+        { id: 'LA-712', gameX: 2211, gameY: 46, gameZ: 50, region: 'Lanayru', location: 'Zora River', puzzleType: 'Block Puzzle', description: 'There are 4 fixed pattern, which represents the faces of a dice, from one to four. The piece which can be grab has to be put in the fourth pattern', found: false },
+        { id: 'LA-713', gameX: 2308, gameY: 131, gameZ: 104, region: 'Lanayru', location: 'Zora River', puzzleType: 'Shoot Target', description: 'On top of the mountain, in a small ruined shack', found: false },
+        { id: 'LA-714', gameX: 2307, gameY: 11, gameZ: 51, region: 'Lanayru', location: 'Zora River', puzzleType: 'Lilypad Dive', description: 'Climb to the highest cliff and dive into the circle', found: false },
+        { id: 'LA-715', gameX: 2471, gameY: 150, gameZ: 79, region: 'Lanayru', location: 'Tabahl Woods', puzzleType: 'Lift Rock', description: 'At the top of the Zonai Ruins', found: false },
+        { id: 'LA-716', gameX: 2461, gameY: -45, gameZ: 79, region: 'Lanayru', location: 'Rutala River', puzzleType: 'Rock Pattern', description: 'Edge of a cliff looking over Rutala River', found: false },
+        { id: 'LA-717', gameX: 2750, gameY: 250, gameZ: 109, region: 'Lanayru', location: 'Tabahl Woods', puzzleType: 'Flowers', description: 'Under the rock arch', found: false },
+        { id: 'LA-718', gameX: 2619, gameY: 56, gameZ: 19, region: 'Lanayru', location: 'Bank of Wishes', puzzleType: 'Find Friend', description: 'Bring his friend back', found: false },
+        { id: 'LA-719', gameX: 2781, gameY: 198, gameZ: 79, region: 'Lanayru', location: 'Rutala River', puzzleType: 'Pull Plug', description: 'Pop the cork by the riverbank', found: false },
+        { id: 'LA-720', gameX: 2673, gameY: 9, gameZ: 99, region: 'Lanayru', location: 'Zodobon Highlands', puzzleType: 'Ascend Through Stump', description: 'In the small cave over a pond on the north side of the Zodobon Highlands', found: false },
+        
+        // Lanayru Region (continued)
+        { id: 'LA-721', gameX: 3013, gameY: 931, gameZ: 379, region: 'Lanayru', location: 'Upland Zorana', puzzleType: 'Lift Rock', description: 'Most of the way up the cliff on a narrow dead end', found: false },
+        { id: 'LA-722', gameX: 3389, gameY: 742, gameZ: 171, region: 'Lanayru', location: 'Toto Lake', puzzleType: 'Lilypad Dive', description: 'In the center of the shallow pool', found: false },
+        { id: 'LA-723', gameX: 3166, gameY: 586, gameZ: 116, region: 'Lanayru', location: 'Upland Zorana', puzzleType: 'Rock Pattern', description: 'On the shore of the water', found: false },
+        { id: 'LA-724', gameX: 3105, gameY: 460, gameZ: 172, region: 'Lanayru', location: 'Veiled Falls', puzzleType: 'Light Ring', description: 'At the base of falls, swim up the waterfall', found: false },
+        { id: 'LA-725', gameX: 3329, gameY: 532, gameZ: 112, region: 'Lanayru', location: "Zora's Domain", puzzleType: 'Lift Rock', description: "Ground level under the walkways of Zora's Domain, hiding under a small rock behind the column in the middle of the water", found: false },
+        { id: 'LA-726', gameX: 3321, gameY: 515, gameZ: 305, region: 'Lanayru', location: "Zora's Domain", puzzleType: 'Chase Lights', description: 'Top of the tail in the center, specifically in the decorative arch', found: false },
+        { id: 'LA-727', gameX: 2807, gameY: 183, gameZ: 146, region: 'Lanayru', location: 'Zora River', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'LA-728', gameX: 2940, gameY: 206, gameZ: 205, region: 'Lanayru', location: 'Ralis Pond', puzzleType: 'Shoot Target', description: 'In the fallen tree stump', found: false },
+        { id: 'LA-729', gameX: 2955, gameY: 256, gameZ: 220, region: 'Lanayru', location: 'Ralis Pond', puzzleType: 'Light Ring', description: 'On the top of the hill, close to Ruto Lake', found: false },
+        { id: 'LA-730', gameX: 2851, gameY: -28, gameZ: 80, region: 'Lanayru', location: 'Oren Bridge', puzzleType: 'Lift Rock', description: 'In the middle of the Zora River', found: false },
+        { id: 'LA-731', gameX: 2961, gameY: -53, gameZ: 142, region: 'Lanayru', location: 'Zodobon Highlands', puzzleType: 'Chase Lights', description: 'At bottom of cliff between the red arrows', found: false },
+        { id: 'LA-732', gameX: 2951, gameY: -80, gameZ: 315, region: 'Lanayru', location: 'Zodobon Highlands', puzzleType: 'Shoot Target', description: 'On the top of the mountain', found: false },
+        { id: 'LA-733', gameX: 2943, gameY: -349, gameZ: 180, region: 'Lanayru', location: 'Zodobon Highlands', puzzleType: 'Flowers', description: 'Chase the flower', found: false },
+        { id: 'LA-734', gameX: 3277, gameY: -11, gameZ: 276, region: 'Lanayru', location: 'Ruto Mountain', puzzleType: 'Glide to Stump', description: 'On top of the hill', found: false },
+        { id: 'LA-735', gameX: 3191, gameY: 224, gameZ: 150, region: 'Lanayru', location: 'Great Zora Bridge', puzzleType: 'Chase Lights', description: 'At the top of the tree before the Great Zora Bridge', found: false },
+        { id: 'LA-736', gameX: 3218, gameY: 283, gameZ: 78, region: 'Lanayru', location: 'Great Zora Bridge', puzzleType: 'Lift Rock', description: "Under the southern side of the bridge, all the way at the waters edge down below", found: false },
+        { id: 'LA-737', gameX: 3285, gameY: 39, gameZ: 258, region: 'Lanayru', location: 'Ruto Precipice', puzzleType: 'Shoot Target', description: 'At the edge of the cliff', found: false },
+        { id: 'LA-738', gameX: 3290, gameY: 544, gameZ: 485, region: 'Lanayru', location: 'Ploymus Mountain', puzzleType: 'Find Friend', description: 'At a small camp at the edge of the mountain', found: false },
+        { id: 'LA-739', gameX: 3781, gameY: 43, gameZ: 531, region: 'Lanayru', location: 'Shatterback Point', puzzleType: 'Find Friend', description: 'On the side of the mountain, beside the steps', found: false },
+        { id: 'LA-740', gameX: 3665, gameY: 445, gameZ: 250, region: 'Lanayru', location: 'Ploymus Mountain', puzzleType: 'Flowers', description: 'Under the broken columns', found: false },
+        { id: 'LA-741', gameX: 3579, gameY: 417, gameZ: 211, region: 'Lanayru', location: 'Ploymus Mountain', puzzleType: 'Shoot Target', description: 'Under the topmost stairs', found: false },
+        { id: 'LA-742', gameX: 4111, gameY: 471, gameZ: 374, region: 'Lanayru', location: 'Tal Tal Peak', puzzleType: 'Lift Rock', description: 'Move the boulder on the other side of the waterfall into the holder', found: false },
+        { id: 'LA-743', gameX: 4100, gameY: 475, gameZ: 263, region: 'Lanayru', location: 'Tal Tal Peak', puzzleType: 'Lift Rock', description: 'Behind the waterfall at the very bottom', found: false },
+        { id: 'LA-744', gameX: 4135, gameY: 407, gameZ: 416, region: 'Lanayru', location: 'Tal Tal Peak', puzzleType: 'Lift Rock', description: 'On the very top of the mountain', found: false },
+        { id: 'LA-745', gameX: 3879, gameY: 265, gameZ: 211, region: 'Lanayru', location: 'Tal Tal Peak', puzzleType: 'Find Friend', description: 'Bring his friend here', found: false },
+        { id: 'LA-746', gameX: 3527, gameY: -61, gameZ: 211, region: 'Lanayru', location: 'Rutala Damn', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'LA-747', gameX: 3820, gameY: 76, gameZ: 211, region: 'Lanayru', location: 'East Reservoir Lake', puzzleType: 'Shoot Target', description: 'At the end of the pier', found: false },
+        { id: 'LA-749', gameX: 4219, gameY: 158, gameZ: 279, region: 'Lanayru', location: 'East Reservoir Lake', puzzleType: 'Block Puzzle', description: 'On the cliff east of East Reservoir Lake, close to Spool Bight', found: false },
+        { id: 'LA-750', gameX: 4164, gameY: 63, gameZ: 349, region: 'Lanayru', location: 'Tal Tal Peak', puzzleType: 'Lift Rock', description: 'On the structer on top of the 3 chests', found: false },
+        { id: 'LA-752', gameX: 4000, gameY: -185, gameZ: 176, region: 'Lanayru', location: "Ja'Abu Ridge", puzzleType: 'Find Friend', description: 'Bring him to his friend to the south east on Lodrun Headland', found: false },
+        { id: 'LA-753', gameX: 3526, gameY: -367, gameZ: 145, region: 'Lanayru', location: "Ja'Abu Ridge", puzzleType: 'Block Puzzle', description: 'Solve the stone structure puzzle', found: false },
+        { id: 'LA-755', gameX: 4400, gameY: -479, gameZ: -55, region: 'Lanayru', location: 'Talus Plateau', puzzleType: 'Ascend Through Stump', description: 'Under the arch', found: false },
+        { id: 'LA-756', gameX: 4396, gameY: -536, gameZ: 54, region: 'Lanayru', location: 'Lodrum Headland', puzzleType: 'Block Puzzle', description: 'Complete the structure in a small pond', found: false },
+        { id: 'LA-758', gameX: 4448, gameY: -743, gameZ: 68, region: 'Lanayru', location: 'Lodrum Headland', puzzleType: 'Flowers', description: 'On top of the pillar', found: false },
+        { id: 'LA-759', gameX: 4184, gameY: 443, gameZ: 24, region: 'Lanayru', location: 'Horon Lagoon', puzzleType: 'Light Ring', description: 'On top of the alcove', found: false },
+        { id: 'LA-760', gameX: 4142, gameY: -558, gameZ: 4, region: 'Lanayru', location: 'Horon Lagoon', puzzleType: 'Chase Lights', description: 'On top of a rock, in the middle of 3 arrows', found: false },
+        { id: 'LA-761', gameX: 3944, gameY: -415, gameZ: 38, region: 'Lanayru', location: 'Brynna Plain', puzzleType: 'Rock Pattern', description: 'Bring 2 rocks to complete the formation', found: false },
+        { id: 'LA-762', gameX: 3711, gameY: -621, gameZ: 1, region: 'Lanayru', location: 'Lanayru Bay', puzzleType: 'Flowers', description: 'Catch the flowers', found: false },
+        { id: 'LA-763', gameX: 3654, gameY: -602, gameZ: 4, region: 'Lanayru', location: 'Lanayru Bay', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'LA-765', gameX: 3322, gameY: -475, gameZ: 21, region: 'Lanayru', location: 'Samasa Plain', puzzleType: 'Lift Rock', description: 'On top of a tree', found: false },
+        { id: 'LA-766', gameX: 3137, gameY: -436, gameZ: 8, region: 'Lanayru', location: 'Rutala River', puzzleType: 'Lilypad Dive', description: 'Jump in the flower circle at the end of dock', found: false },
+        { id: 'LA-767', gameX: 3202, gameY: -658, gameZ: 0, region: 'Lanayru', location: 'Samasa Plain', puzzleType: 'Offer Item', description: 'Put a porgy in the bowl and light it on fire', found: false },
+        { id: 'LA-768', gameX: 1086, gameY: -1048, gameZ: 10, region: 'Lanayru', location: 'Nabi Lake', puzzleType: 'Light Ring', description: 'In the river, stand on the platform to activate trial towards river bank', found: false },
+        { id: 'LA-769', gameX: 1283, gameY: -833, gameZ: 78, region: 'Lanayru', location: 'Sahasra Slope', puzzleType: 'Lift Rock', description: 'Stone on top of the tree', found: false },
+        { id: 'LA-770', gameX: 1259, gameY: -1005, gameZ: 152, region: 'Lanayru', location: 'Sahasra Slope', puzzleType: 'Flowers', description: 'Flower on top of the hill', found: false },
+        { id: 'LA-771', gameX: 1627, gameY: -782, gameZ: 39, region: 'Lanayru', location: 'Rikoka Hills', puzzleType: 'Lift Rock', description: 'In the tree along a branch', found: false },
+        { id: 'LA-772', gameX: 1574, gameY: -1044, gameZ: 151, region: 'Lanayru', location: 'Sahasra Slope', puzzleType: 'Flowers', description: 'On top of the gate', found: false },
+        { id: 'LA-773', gameX: 1693, gameY: -929, gameZ: 310, region: 'Lanayru', location: 'Ring Ruins', puzzleType: 'Lift Rock', description: 'On the highest point of the giant Ring Ruin', found: false },
+        { id: 'LA-774', gameX: 1791, gameY: -854, gameZ: 117, region: 'Lanayru', location: 'Ring Ruins', puzzleType: 'Shoot Target', description: 'Behind the Ring Ruins on the north side of Kakariko Village', found: false },
+        { id: 'LA-775', gameX: 1778, gameY: -985, gameZ: 119, region: 'Lanayru', location: 'Ring Ruins', puzzleType: 'Chase Lights', description: 'Under the house', found: false },
+        { id: 'LA-776', gameX: 1761, gameY: -984, gameZ: 140, region: 'Lanayru', location: 'Ring Ruins', puzzleType: 'Chase Lights', description: 'On the roof', found: false },
+        { id: 'LA-777', gameX: 1873, gameY: -804, gameZ: 239, region: 'Lanayru', location: 'East Hill', puzzleType: 'Find Friend', description: 'Bring him to his friend', found: false },
+        { id: 'LA-778', gameX: 2175, gameY: -567, gameZ: 211, region: 'Lanayru', location: "Quatta's Shelf", puzzleType: 'Find Friend', description: 'Bring his friend back to him', found: false },
+        { id: 'LA-779', gameX: 1981, gameY: -450, gameZ: 68, region: 'Lanayru', location: "Quatta's Shelf", puzzleType: 'Shoot Target', description: 'A tree on a ledge halfway down the mountain towards Lanayru Wetlands', found: false },
+        { id: 'LA-780', gameX: 1996, gameY: -958, gameZ: 178, region: 'Lanayru', location: 'Pierre Plateau', puzzleType: 'Shoot Target', description: 'Under the right side of the bridge', found: false },
+        
+        // ... existing code ...
+        // Necluda Region
+        { id: 'NE-828', gameX: 1291, gameY: -1331, gameZ: 160, region: 'Necluda', location: 'Mable Ridge', puzzleType: 'Shoot Target', description: 'Shoot the acorn in the tree', found: false },
+        { id: 'NE-829', gameX: 1536, gameY: -1302, gameZ: 62, region: 'Necluda', location: 'Lake Siela', puzzleType: 'Lift Rock', description: 'On the ledge overlooking the lake', found: false },
+        { id: 'NE-830', gameX: 1626, gameY: -1360, gameZ: 11, region: 'Necluda', location: 'Lake Siela', puzzleType: 'Flowers', description: 'Flower on a rock beside the structure', found: false },
+        { id: 'NE-831', gameX: 1785, gameY: -1551, gameZ: 10, region: 'Necluda', location: 'Kakariko Bridge', puzzleType: 'Burn Leaves', description: 'Under the bridge', found: false },
+        { id: 'NE-832', gameX: 1153, gameY: -1703, gameZ: 157, region: 'Necluda', location: 'Mable Ridge', puzzleType: 'Shoot Target', description: 'Shoot the balloon hidden in the tree', found: false },
+        { id: 'NE-833', gameX: 1373, gameY: -1679, gameZ: 229, region: 'Necluda', location: 'Mable Ridge', puzzleType: 'Flowers', description: 'On top of a rock', found: false },
+        { id: 'NE-834', gameX: 1195, gameY: -1842, gameZ: 10, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Find Friend', description: 'Bring his friend back', found: false },
+        { id: 'NE-835', gameX: 1241, gameY: -1850, gameZ: 347, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Block Puzzle', description: 'On an alcove just under the peak of the mountain', found: false },
+        { id: 'NE-836', gameX: 1252, gameY: -1856, gameZ: 385, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Shoot Target', description: 'On the top of the north mountain of Dueling Peaks', found: false },
+        { id: 'NE-837', gameX: 1241, gameY: -1850, gameZ: 347, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Block Puzzle', description: 'On an alcove just under the peak of the mountain', found: false },
+        { id: 'NE-838', gameX: 1252, gameY: -1856, gameZ: 385, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Shoot Target', description: 'On the top of the north mountain of Dueling Peaks', found: false },
+        { id: 'NE-839', gameX: 1241, gameY: -1850, gameZ: 347, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Block Puzzle', description: 'On an alcove just under the peak of the mountain', found: false },
+        { id: 'NE-840', gameX: 1252, gameY: -1856, gameZ: 385, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Shoot Target', description: 'On the top of the north mountain of Dueling Peaks', found: false },
+        { id: 'NE-841', gameX: 1241, gameY: -1850, gameZ: 347, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Block Puzzle', description: 'On an alcove just under the peak of the mountain', found: false },
+        { id: 'NE-842', gameX: 1252, gameY: -1856, gameZ: 385, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Shoot Target', description: 'On the top of the north mountain of Dueling Peaks', found: false },
+        { id: 'NE-843', gameX: 1241, gameY: -1850, gameZ: 347, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Block Puzzle', description: 'On an alcove just under the peak of the mountain', found: false },
+        { id: 'NE-844', gameX: 1252, gameY: -1856, gameZ: 385, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Shoot Target', description: 'On the top of the north mountain of Dueling Peaks', found: false },
+        { id: 'NE-845', gameX: 1241, gameY: -1850, gameZ: 347, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Block Puzzle', description: 'On an alcove just under the peak of the mountain', found: false },
+        { id: 'NE-846', gameX: 1252, gameY: -1856, gameZ: 385, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Shoot Target', description: 'On the top of the north mountain of Dueling Peaks', found: false },
+        { id: 'NE-847', gameX: 1241, gameY: -1850, gameZ: 347, region: 'Necluda', location: 'Dueling Peaks', puzzleType: 'Block Puzzle', description: 'On an alcove just under the peak of the mountain', found: false },
+        { id: 'NE-848', gameX: 2397, gameY: -1844, gameZ: 22, region: 'Necluda', location: 'Fort Hateno', puzzleType: 'Chase Lights', description: 'On top of the chimney', found: false },
+        { id: 'NE-849', gameX: 2473, gameY: -1741, gameZ: 10, region: 'Necluda', location: 'Fort Hateno', puzzleType: 'Find Friend', description: 'The lost and exhausted korok is found right next to the raod above Fort Hateno', found: false },
+        { id: 'NE-850', gameX: 2528, gameY: -1750, gameZ: 56, region: 'Necluda', location: 'Cliffs of Quince', puzzleType: 'Shoot Target', description: 'Shoot down balloon under the archway', found: false },
+        { id: 'NE-851', gameX: 2507, gameY: -1869, gameZ: 135, region: 'Necluda', location: 'Cliffs of Quince', puzzleType: 'Pull Plug', description: 'At the top of the mountain, attach a stone to plug to pull', found: false },
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTK Hyrule Surface Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+
+    <!-- Font -->
+    <style>
+        @font-face {
+            font-family: 'Hylia Serif Beta';
+            src: url('HyliaSerifBeta-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #1A4D2E;
+            color: #FFC72C;
+            padding: 10px;
+        }
+        .header-title {
+            font-family: 'Hylia Serif Beta', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            font-family: 'Hylia Serif Beta', serif;
+            font-size: 1rem;
+        }
+        .filters select {
+            font-family: 'Hylia Serif Beta', serif;
+            font-size: 1rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: white;
+            color: #1A4D2E;
+        }
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .toggle-container label {
+            font-family: 'Hylia Serif Beta', serif;
+            font-size: 1rem;
+        }
+        #map {
+            flex-grow: 1;
+            width: 100%;
+        }
+        footer {
+            background-color: #1A4D2E;
+            color: #FFC72C;
+            padding: 10px;
+            text-align: center;
+        }
+        .stats {
+            font-family: 'Hylia Serif Beta', serif;
+            font-size: 1.2rem;
+        }
+        .korok-popup {
+            text-align: center;
+        }
+        .korok-popup button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .korok-popup button.found {
+            background-color: #7f8c8d;
+        }
+        .marker-found {
+            filter: grayscale(100%);
+            opacity: 0.3;
+        }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .filters {
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="app-container">
+    <header>
+        <div class="header-title">Hyrule Surface Map</div>
+        <div class="filters">
+            <select id="region-filter">
+                <option value="all">All Regions</option>
+            </select>
+            <select id="location-filter">
+                <option value="all">All Locations</option>
+            </select>
+            <div class="toggle-container">
+                <label for="show-found">Show Found</label>
+                <input type="checkbox" id="show-found" checked>
+            </div>
+        </div>
+    </header>
+    <div id="map"></div>
+    <footer>
+        <div class="stats">
+            <span id="found-count">0</span> / <span id="total-count">0</span> Koroks Found
+        </div>
+    </footer>
+</div>
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+let map;
+let markers = [];
+let korokData = [];
+
+const customKorokIcon = L.icon({
+    iconUrl: 'images/Seed.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -35]
+});
+
+// All calibration points
+    const newKoroks = [
+        { id: 'HR-443', gameX: -253, gameY: 1061 },
+        { id: 'HR-444', gameX: -252, gameY: 944 },
+        { id: 'HR-445', gameX: -391, gameY: 997 },
+        { id: 'HR-446', gameX: -383, gameY: 995 },
+        { id: 'HR-447', gameX: -436, gameY: 1115 },
+        { id: 'HR-448', gameX: -53, gameY: -971 },
+        { id: 'HR-449', gameX: -86, gameY: 912 },
+        { id: 'HR-450', gameX: -61, gameY: 866 },
+        { id: 'HR-451', gameX: -156, gameY: 840 },
+        { id: 'HR-452', gameX: 360, gameY: 886 },
+        { id: 'HE-74', gameX: -4632, gameY: 2820 },  // Top-left calibration point
+        { id: 'HE-65', gameX: -4422, gameY: 3215 },  // Top-left calibration point
+        { id: 'HE-63', gameX: -4508, gameY: 3465 },  // Top-left calibration point
+        { id: 'HE-62', gameX: -4429, gameY: 3684 },  // Top-left calibration point
+        { id: 'HE-66', gameX: -3992, gameY: 3835 },  // Top-left calibration point
+        { id: 'HE-87', gameX: -3760, gameY: 3844 },  // Top-left calibration point
+        { id: 'HE-92', gameX: -3427, gameY: 3799 },  // Top-left calibration point
+        { id: 'HE-93', gameX: -3237, gameY: 3687 },  // Top-left calibration point
+        { id: 'HE-94', gameX: -2892, gameY: 3493 },  // Top-left calibration point
+        { id: 'HE-161', gameX: -2603, gameY: 3233 },  // Top-left calibration point
+        { id: 'HE-163', gameX: -2357, gameY: 3675 },  // Top edge calibration point
+        { id: 'HE-166', gameX: -1971, gameY: 3794 },  // Top edge calibration point
+        { id: 'HE-167', gameX: -1666, gameY: 3766 },  // Top edge calibration point
+        { id: 'HE-178', gameX: -1384, gameY: 3631 },  // Top edge calibration point
+        { id: 'HE-179', gameX: -1208, gameY: 3601 },  // Top edge calibration point
+        { id: 'HE-180', gameX: -1033, gameY: 3519 },  // Top edge calibration point
+        { id: 'HE-182', gameX: -687, gameY: 3535 },   // Top edge calibration point
+        { id: 'HE-183', gameX: -874, gameY: 3313 },   // Top edge calibration point
+        { id: 'HE-185', gameX: -995, gameY: 3085 },   // Top edge calibration point
+        { id: 'HR-371', gameX: -480, gameY: 3133 },   // Top edge calibration point
+        { id: 'HR-372', gameX: -323, gameY: 3158 },   // Top edge calibration point
+        { id: 'EL-375', gameX: 523, gameY: 3398 },    // Top edge calibration point
+        { id: 'EL-555', gameX: 521, gameY: 3400 },    // Top edge calibration point
+        { id: 'FA-942', gameX: 1022, gameY: -3227 },   // Top edge calibration point
+        { id: 'EL-563', gameX: 1409, gameY: 3778 },     // Top edge calibration point
+        { id: 'EL-568', gameX: 2232, gameY: 3680 },      // Top edge calibration point
+        { id: 'AK-611', gameX: 2968, gameY: 3648 },       // Top edge calibration point
+        { id: 'AK-612', gameX: 3076, gameY: 3683 },       // Top edge calibration point
+        { id: 'AK-613', gameX: 3351, gameY: 3664 },        // Top edge calibration point
+        { id: 'AK-614', gameX: 3455, gameY: 3580 },         // Top edge calibration point
+        { id: 'AK-620', gameX: 3768, gameY: 3376 },          // Top edge calibration point
+        { id: 'AK-623', gameX: 4120, gameY: 3285 },           // Top edge calibration point
+        { id: 'AK-625', gameX: 4297, gameY: 3273 },            // Top edge calibration point
+        { id: 'AK-626', gameX: 4415, gameY: 3265 },             // Top edge calibration point
+        { id: 'AK-629', gameX: 4541, gameY: 3162 },              // Top edge calibration point
+        { id: 'AK-631', gameX: 4626, gameY: 2859 },               // Top edge calibration point
+        { id: 'AK-639', gameX: 4353, gameY: 2535 },                // Top edge calibration point
+        { id: 'AK-641', gameX: 4278, gameY: 2337 },                 // Top edge calibration point
+        { id: 'AK-650', gameX: 4742, gameY: 1983 },                  // Top edge calibration point
+        { id: 'AK-662', gameX: 4475, gameY: 936 },                    // Right edge calibration point
+        { id: 'AK-664', gameX: 4484, gameY: 676 },                     // Right edge calibration point
+        { id: 'AK-667', gameX: 4389, gameY: 612 },                      // Right edge calibration point
+        { id: 'AK-668', gameX: 4271, gameY: 509 },                       // Right edge calibration point
+        { id: 'LA-748', gameX: 4272, gameY: 136 },                        // Right edge calibration point
+        { id: 'LA-751', gameX: 4324, gameY: -141 },                        // Right edge calibration point
+        { id: 'LA-754', gameX: 4457, gameY: -354 },                         // Right edge calibration point
+        { id: 'LA-757', gameX: 4499, gameY: -648 },                          // Right edge calibration point
+        { id: 'LA-764', gameX: 4513, gameY: -1005 },                          // Right edge calibration point
+        { id: 'LA-810', gameX: 4526, gameY: -1514 },                           // Right edge calibration point
+        { id: 'LA-817', gameX: 4590, gameY: -2159 },                            // Right edge calibration point
+        { id: 'NE-881', gameX: 4897, gameY: -3693 },                             // Bottom right corner calibration point
+        { id: 'NE-880', gameX: 4536, gameY: -3664, pixel: [-2442, 3041] },          // Bottom edge calibration point
+        { id: 'FA-911', gameX: 3798, gameY: -3616 },                               // Bottom edge calibration point
+        { id: 'FA-912', gameX: 3598, gameY: -3780 },                                // Bottom edge calibration point
+        { id: 'FA-913', gameX: 3118, gameY: -3718 },                                 // Bottom edge calibration point
+        { id: 'FA-915', gameX: 2829, gameY: -3884 },                                  // Bottom edge calibration point
+        { id: 'FA-916', gameX: 2429, gameY: -3944 },                                   // Bottom edge calibration point
+        { id: 'FA-917', gameX: 2228, gameY: -3832 },                                    // Bottom edge calibration point
+        { id: 'FA-923', gameX: 1973, gameY: -3922 },                                     // Bottom edge calibration point
+        { id: 'FA-931', gameX: 1609, gameY: -3802 },                                      // Bottom edge calibration point
+        { id: 'FA-932', gameX: 1398, gameY: -3642 },                                       // Bottom edge calibration point
+        { id: 'FA-940', gameX: 1097, gameY: -3832 },                                        // Bottom edge calibration point
+        { id: 'FA-946', gameX: 574, gameY: -3851 },                                          // Bottom edge calibration point
+        { id: 'FA-949', gameX: 397, gameY: -3862 },                                           // Bottom edge calibration point
+        { id: 'FA-950', gameX: 269, gameY: -3905 },                                            // Bottom edge calibration point
+        { id: 'FA-951', gameX: 99, gameY: -3841 },                                              // Bottom edge calibration point
+        { id: 'FA-952', gameX: 82, gameY: -3769 },                                               // Bottom edge calibration point
+        { id: 'GE-294', gameX: -1369, gameY: -3724 },                                             // Bottom edge calibration point
+        { id: 'FA-960', gameX: -243, gameY: 3918 },                                                // Bottom edge calibration point
+        { id: 'GE-189', gameX: -2547, gameY: -3952 },                                               // Bottom edge calibration point
+        { id: 'GE-186', gameX: -4909, gameY: -3775 },                                               // Bottom edge calibration point
+        { id: 'GE-187', gameX: -4875, gameY: -3565 },                                                // Bottom edge calibration point
+        { id: 'GE-216', gameX: -4710, gameY: -2163 },                                                 // Bottom edge calibration point
+        { id: 'GE-220', gameX: -4909, gameY: -1246 },                                                  // Right side calibration point
+        { id: 'GE-223', gameX: -4508, gameY: -590 },                                                    // Right side calibration point
+        { id: 'GE-224', gameX: -4420, gameY: -352 },                                                     // Right side calibration point
+        { id: 'HR-300', gameX: -4074, gameY: 34 },                                                        // Right side calibration point
+        { id: 'HE-122', gameX: -4056, gameY: 773 },                                                        // Right side calibration point
+        { id: 'HE-121', gameX: -3981, gameY: 929 },                                                         // Right side calibration point
+        { id: 'HE-116', gameX: -3820, gameY: 1318 },                                                         // Right side calibration point
+    { id: 'HE-106', gameX: -4169, gameY: 1696 },                                                          // Right side calibration point
+    { id: 'HE-105', gameX: -4224, gameY: 1739 },                                                          // Right side calibration point
+    { id: 'HE-76', gameX: -4479, gameY: 1943 },                                                           // Right side calibration point
+    { id: 'HE-75', gameX: -4331, gameY: 2602 },                                                           // Right side calibration point
+    { id: 'HR-459', gameX: -236, gameY: 632 },                                                            // Center map reference point
+    { id: 'HR-460', gameX: -269, gameY: 608 },                                                            // Center map reference point
+    { id: 'HR-465', gameX: -254, gameY: 424 }                                                             // Center map reference point
+];
+
+// Image dimensions: 3309 × 2575
+const MAP_WIDTH = 3309;
+const MAP_HEIGHT = 2575;
+
+// --- Region-specific calibration for NE markers ---
+const NE_ANCHORS = [
+    { game: [1291, -1331], pixel: [-1744, 2062] }, // NE-828
+    { game: [1536, -1302], pixel: [-1733, 2131] }, // NE-829
+    { game: [1626, -1360], pixel: [-1755, 2158] }, // NE-830
+    { game: [1785, -1551], pixel: [-1812, 2214] }, // NE-831
+    { game: [1153, -1703], pixel: [-1858, 2024] }, // NE-832
+    { game: [1373, -1679], pixel: [-1842, 2086] }, // NE-833
+    { game: [1195, -1842], pixel: [-1897, 2036] }, // NE-834
+    { game: [1241, -1850], pixel: [-1898, 2048] }, // NE-835
+    { game: [1252, -1856], pixel: [-1900, 2054] }, // NE-836
+    { game: [1521, -1858], pixel: [-1901, 2131] }, // NE-837
+    { game: [1171, -1882], pixel: [-1916, 2027] }, // NE-838
+    { game: [1243, -1940], pixel: [-1929, 2045] }, // NE-839
+    { game: [1327, -1963], pixel: [-1935, 2074] }, // NE-840
+    { game: [1652, -1908], pixel: [-1918, 2173] }, // NE-841
+    { game: [1767, -1868], pixel: [-1919, 2206] }, // NE-842
+    { game: [2011, -1895], pixel: [-1915, 2277] }, // NE-843
+    { game: [2051, -2092], pixel: [-1979, 2297] }, // NE-844
+    { game: [2000, -2281], pixel: [-2026, 2273] }, // NE-845
+    { game: [2141, -2220], pixel: [-2007, 2321] }, // NE-846
+    { game: [2325, -1829], pixel: [-1897, 2373] }, // NE-847
+];
+
+// Compute least-squares affine fit for NE region (pure JS, no dependencies)
+function fitAffine2D(anchors) {
+    // Solves for [a, b, c, d, e, f] in:
+    //   pixelY = a*gameX + b*gameY + c
+    //   pixelX = d*gameX + e*gameY + f
+    // Using normal equations: X^T X beta = X^T y
+    const n = anchors.length;
+    const X = [], yY = [], yX = [];
+    for (const pt of anchors) {
+        const [gx, gy] = pt.game;
+        X.push([gx, gy, 1]);
+        yY.push(pt.pixel[0]);
+        yX.push(pt.pixel[1]);
+    }
+    function transpose(A) {
+        return A[0].map((_, i) => A.map(row => row[i]));
+    }
+    function multiply(A, B) {
+        return A.map(row => B[0].map((_, j) => row.reduce((sum, v, i) => sum + v * B[i][j], 0)));
+    }
+    function invert3x3(m) {
+        const [a, b, c] = m[0];
+        const [d, e, f] = m[1];
+        const [g, h, i] = m[2];
+        const A = e*i - f*h, B = c*h - b*i, C = b*f - c*e;
+        const D = f*g - d*i, E = a*i - c*g, F = c*d - a*f;
+        const G = d*h - e*g, H = b*g - a*h, I = a*e - b*d;
+        const det = a*A + b*D + c*G;
+        if (Math.abs(det) < 1e-12) return null;
+        return [
+            [A/det, B/det, C/det],
+            [D/det, E/det, F/det],
+            [G/det, H/det, I/det]
+        ];
+    }
+    function solve3x3(A, b) {
+        const invA = invert3x3(A);
+        if (!invA) return [0,0,0];
+        return invA.map(row => row[0]*b[0] + row[1]*b[1] + row[2]*b[2]);
+    }
+    // Compute (X^T X) and (X^T y)
+    const XT = transpose(X);
+    const XTX = multiply(XT, X);
+    const XTyY = XT.map(row => row.reduce((sum, v, i) => sum + v * yY[i], 0));
+    const XTyX = XT.map(row => row.reduce((sum, v, i) => sum + v * yX[i], 0));
+    const betaY = solve3x3(XTX, XTyY);
+    const betaX = solve3x3(XTX, XTyX);
+    // Return [a, b, c, d, e, f]
+    return [betaY[0], betaY[1], betaY[2], betaX[0], betaX[1], betaX[2]];
+}
+
+const NE_AFFINE = fitAffine2D(NE_ANCHORS);
+
+function gameToPixel(gameX, gameY, region) {
+    // Use Gerudo region-specific calibration if region is 'Gerudo' or id starts with 'GE-'
+    if (region === 'Gerudo' || (typeof region === 'undefined' && typeof gameX === 'string' && gameX.startsWith('GE-'))) {
+        const [a, b, c, d, e, f] = GERUDO_AFFINE;
+        const pixelY = a * gameX + b * gameY + c;
+        const pixelX = d * gameX + e * gameY + f;
+        return [pixelY, pixelX];
+    }
+    // Use NE region-specific calibration if region is 'Necluda' or id starts with 'NE-'
+    if (region === 'Necluda' || (typeof region === 'undefined' && typeof gameX === 'string' && gameX.startsWith('NE-'))) {
+        const [a, b, c, d, e, f] = NE_AFFINE;
+        const pixelY = a * gameX + b * gameY + c;
+        const pixelX = d * gameX + e * gameY + f;
+        return [pixelY, pixelX];
+    }
     // Use LA region-specific calibration if region is 'Lanayru' or id starts with 'LA-'
     // (If you have LA_AFFINE, add similar logic here)
     // Otherwise, use the original global calibration for all other regions
@@ -1291,6 +1903,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'LA-773': return { ...processKorokData(korok), coordinates: [-1620, 2182] };
                 case 'LA-777': return { ...processKorokData(korok), coordinates: [-1589, 2237] };
                 case 'LA-780': return { ...processKorokData(korok), coordinates: [-1624, 2275] };
+                case 'LA-748': return { ...processKorokData(korok), coordinates: [-1301, 2955] };
+                case 'LA-751': return { ...processKorokData(korok), coordinates: [-1389, 2974] };
+                case 'LA-754': return { ...processKorokData(korok), coordinates: [-1446, 3017] };
+                case 'LA-757': return { ...processKorokData(korok), coordinates: [-1538, 3025] };
+                case 'LA-764': return { ...processKorokData(korok), coordinates: [-1649, 3031] };
+                case 'LA-810': return { ...processKorokData(korok), coordinates: [-1798, 3026] };
+                case 'LA-817': return { ...processKorokData(korok), coordinates: [-1996, 3049] };
+                case 'LA-787': return { ...processKorokData(korok), coordinates: [-1810, 2346] };
+                case 'LA-788': return { ...processKorokData(korok), coordinates: [-1842, 2359] };
+                case 'LA-789': return { ...processKorokData(korok), coordinates: [-1874, 2372] };
+                case 'LA-790': return { ...processKorokData(korok), coordinates: [-1906, 2385] };
+                case 'LA-791': return { ...processKorokData(korok), coordinates: [-1938, 2398] };
+                case 'LA-792': return { ...processKorokData(korok), coordinates: [-1970, 2411] };
+                case 'LA-793': return { ...processKorokData(korok), coordinates: [-2002, 2424] };
+                case 'LA-794': return { ...processKorokData(korok), coordinates: [-2034, 2437] };
+                case 'LA-795': return { ...processKorokData(korok), coordinates: [-2066, 2450] };
+                case 'LA-796': return { ...processKorokData(korok), coordinates: [-2098, 2463] };
+                case 'LA-797': return { ...processKorokData(korok), coordinates: [-2130, 2476] };
+                case 'LA-798': return { ...processKorokData(korok), coordinates: [-2162, 2489] };
+                case 'LA-799': return { ...processKorokData(korok), coordinates: [-2194, 2502] };
+                case 'LA-800': return { ...processKorokData(korok), coordinates: [-2226, 2515] };
             }
         }
     
@@ -1410,15 +2043,79 @@ function gameToPixel(gameX, gameY, region) {
         const pixelX = d * gameX + e * gameY + f;
         return [pixelY, pixelX];
     }
-    // Use LA region-specific calibration if region is 'Lanayru' or id starts with 'LA-'
-    // (If you have LA_AFFINE, add similar logic here)
-    // Otherwise, use the original global calibration for all other regions
-    // Reference points from the map:
-    // Center:       HR-465 game [-254, 424] -> pixel [-1326, 1608]
-    // Top Left:     HE-62  game [-4429, 3684] -> pixel [-236, 347]
-    // Top Right:    AK-629 game [4541, 3162] -> pixel [-396, 3035]
-    // Bottom Right: NE-880 game [4536, -3664] -> pixel [-2434, 3042]
-    // Bottom Left:  GE-220 game [-4909, -1246] -> pixel [-2350, 325]
+    // Use Lanayru region-specific calibration if region is 'Lanayru' or id starts with 'LA-'
+    if (region === 'Lanayru' || (typeof region === 'undefined' && typeof gameX === 'string' && gameX.startsWith('LA-'))) {
+        const [a, b, c, d, e, f] = LANAYRU_AFFINE;
+        const pixelY = a * gameX + b * gameY + c;
+        const pixelX = d * gameX + e * gameY + f;
+        return [pixelY, pixelX];
+    }
+    // ... existing code ...
+    const ref1GameX = -4429;  // HE-62 (Top Left)
+    const ref1GameY = 3684;
+    const ref1PixelX = 347;
+    const ref1PixelY = -236;
+    const ref2GameX = 4541;   // AK-629 (Top Right)
+    const ref2GameY = 3162;
+    const ref2PixelX = 3035;
+    const ref2PixelY = -396;
+    const xScale = (ref2PixelX - ref1PixelX) / (ref2GameX - ref1GameX);
+    const yScale = (ref2PixelY - ref1PixelY) / (ref2GameY - ref1GameY);
+    const pixelX = Math.round(ref1PixelX + (gameX - ref1GameX) * xScale);
+    const pixelY = Math.round(ref1PixelY + (gameY - ref1GameY) * yScale);
+    return [pixelY, pixelX];
+}
+
+// --- Region-specific calibration for LANAYRU markers ---
+const LANAYRU_ANCHORS = [
+    { game: [4272, 136], pixel: [-1301, 2955] },   // LA-748
+    { game: [4324, -141], pixel: [-1389, 2974] },  // LA-751
+    { game: [4457, -354], pixel: [-1446, 3017] },  // LA-754
+    { game: [4499, -648], pixel: [-1538, 3025] },  // LA-757
+    { game: [4513, -1005], pixel: [-1649, 3031] }, // LA-764
+    { game: [4526, -1514], pixel: [-1798, 3026] }, // LA-810
+    { game: [4590, -2159], pixel: [-1996, 3049] }, // LA-817
+    { game: [2294, -1510], pixel: [-1810, 2346] }, // LA-787
+    { game: [2346, -1612], pixel: [-1842, 2359] }, // LA-788
+    { game: [2398, -1714], pixel: [-1874, 2372] }, // LA-789
+    { game: [2450, -1816], pixel: [-1906, 2385] }, // LA-790
+    { game: [2502, -1918], pixel: [-1938, 2398] }, // LA-791
+    { game: [2554, -2020], pixel: [-1970, 2411] }, // LA-792
+    { game: [2606, -2122], pixel: [-2002, 2424] }, // LA-793
+    { game: [2658, -2224], pixel: [-2034, 2437] }, // LA-794
+    { game: [2710, -2326], pixel: [-2066, 2450] }, // LA-795
+    { game: [2762, -2428], pixel: [-2098, 2463] }, // LA-796
+    { game: [2814, -2530], pixel: [-2130, 2476] }, // LA-797
+    { game: [2866, -2632], pixel: [-2162, 2489] }, // LA-798
+    { game: [2918, -2734], pixel: [-2194, 2502] }, // LA-799
+    { game: [2970, -2836], pixel: [-2226, 2515] }, // LA-800
+];
+
+const LANAYRU_AFFINE = fitAffine2D(LANAYRU_ANCHORS);
+
+function gameToPixel(gameX, gameY, region) {
+    // Use Gerudo region-specific calibration if region is 'Gerudo' or id starts with 'GE-'
+    if (region === 'Gerudo' || (typeof region === 'undefined' && typeof gameX === 'string' && gameX.startsWith('GE-'))) {
+        const [a, b, c, d, e, f] = GERUDO_AFFINE;
+        const pixelY = a * gameX + b * gameY + c;
+        const pixelX = d * gameX + e * gameY + f;
+        return [pixelY, pixelX];
+    }
+    // Use NE region-specific calibration if region is 'Necluda' or id starts with 'NE-'
+    if (region === 'Necluda' || (typeof region === 'undefined' && typeof gameX === 'string' && gameX.startsWith('NE-'))) {
+        const [a, b, c, d, e, f] = NE_AFFINE;
+        const pixelY = a * gameX + b * gameY + c;
+        const pixelX = d * gameX + e * gameY + f;
+        return [pixelY, pixelX];
+    }
+    // Use Lanayru region-specific calibration if region is 'Lanayru' or id starts with 'LA-'
+    if (region === 'Lanayru' || (typeof region === 'undefined' && typeof gameX === 'string' && gameX.startsWith('LA-'))) {
+        const [a, b, c, d, e, f] = LANAYRU_AFFINE;
+        const pixelY = a * gameX + b * gameY + c;
+        const pixelX = d * gameX + e * gameY + f;
+        return [pixelY, pixelX];
+    }
+    // ... existing code ...
     const ref1GameX = -4429;  // HE-62 (Top Left)
     const ref1GameY = 3684;
     const ref1PixelX = 347;
